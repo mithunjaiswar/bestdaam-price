@@ -1,0 +1,122 @@
+[
+  {
+    "id": "iphone-15-128gb",
+    "name": "Apple iPhone 15 (128GB, Black)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      { "store": "Amazon", "price": 52999, "url": "#" },
+      { "store": "Flipkart", "price": 51999, "url": "#" },
+      { "store": "Croma", "price": 53490, "url": "#" },
+      { "store": "Reliance Digital", "price": 52490, "url": "#" }
+    ]
+  },
+  {
+    "id": "samsung-galaxy-m35",
+    "name": "Samsung Galaxy M35 5G (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      { "store": "Amazon", "price": 16499, "url": "#" },
+      { "store": "Flipkart", "price": 16999, "url": "#" },
+      { "store": "Croma", "price": 17250, "url": "#" },
+      { "store": "Reliance Digital", "price": 16799, "url": "#" }
+    ]
+  },
+  {
+    "id": "boat-airdopes-141",
+    "name": "boAt Airdopes 141 Wireless Earbuds",
+    "category": "Electronics",
+    "emoji": "🎧",
+    "prices": [
+      { "store": "Amazon", "price": 1099, "url": "#" },
+      { "store": "Flipkart", "price": 999, "url": "#" },
+      { "store": "Croma", "price": 1199, "url": "#" },
+      { "store": "Reliance Digital", "price": 1149, "url": "#" }
+    ]
+  },
+  {
+    "id": "sony-wh-ch520",
+    "name": "Sony WH-CH520 Wireless Headphones",
+    "category": "Electronics",
+    "emoji": "🎧",
+    "prices": [
+      { "store": "Amazon", "price": 3989, "url": "#" },
+      { "store": "Flipkart", "price": 4290, "url": "#" },
+      { "store": "Croma", "price": 3999, "url": "#" },
+      { "store": "Reliance Digital", "price": 4199, "url": "#" }
+    ]
+  },
+  {
+    "id": "noise-colorfit-pro-5",
+    "name": "Noise ColorFit Pro 5 Smartwatch",
+    "category": "Electronics",
+    "emoji": "⌚",
+    "prices": [
+      { "store": "Amazon", "price": 2999, "url": "#" },
+      { "store": "Flipkart", "price": 3199, "url": "#" },
+      { "store": "Croma", "price": 3499, "url": "#" },
+      { "store": "Reliance Digital", "price": 3299, "url": "#" }
+    ]
+  },
+  {
+    "id": "hp-15s-i5-laptop",
+    "name": "HP 15s Laptop (Intel i5, 16GB, 512GB)",
+    "category": "Electronics",
+    "emoji": "💻",
+    "prices": [
+      { "store": "Amazon", "price": 54990, "url": "#" },
+      { "store": "Flipkart", "price": 53990, "url": "#" },
+      { "store": "Croma", "price": 55990, "url": "#" },
+      { "store": "Reliance Digital", "price": 54490, "url": "#" }
+    ]
+  },
+  {
+    "id": "prestige-mixer-750w",
+    "name": "Prestige Iris 750W Mixer Grinder",
+    "category": "Kitchen",
+    "emoji": "🥤",
+    "prices": [
+      { "store": "Amazon", "price": 3249, "url": "#" },
+      { "store": "Flipkart", "price": 3099, "url": "#" },
+      { "store": "Croma", "price": 3499, "url": "#" },
+      { "store": "Reliance Digital", "price": 3399, "url": "#" }
+    ]
+  },
+  {
+    "id": "philips-air-fryer-hd9200",
+    "name": "Philips Air Fryer HD9200 (4.1L)",
+    "category": "Kitchen",
+    "emoji": "🍟",
+    "prices": [
+      { "store": "Amazon", "price": 8499, "url": "#" },
+      { "store": "Flipkart", "price": 8999, "url": "#" },
+      { "store": "Croma", "price": 8790, "url": "#" },
+      { "store": "Reliance Digital", "price": 8599, "url": "#" }
+    ]
+  },
+  {
+    "id": "lg-7kg-washing-machine",
+    "name": "LG 7kg Front Load Washing Machine",
+    "category": "Home",
+    "emoji": "🧺",
+    "prices": [
+      { "store": "Amazon", "price": 30990, "url": "#" },
+      { "store": "Flipkart", "price": 31490, "url": "#" },
+      { "store": "Croma", "price": 29990, "url": "#" },
+      { "store": "Reliance Digital", "price": 30490, "url": "#" }
+    ]
+  },
+  {
+    "id": "milton-thermosteel-1l",
+    "name": "Milton Thermosteel Flask (1 Litre)",
+    "category": "Home",
+    "emoji": "🍶",
+    "prices": [
+      { "store": "Amazon", "price": 899, "url": "#" },
+      { "store": "Flipkart", "price": 949, "url": "#" },
+      { "store": "Croma", "price": 999, "url": "#" },
+      { "store": "Reliance Digital", "price": 929, "url": "#" }
+    ]
+  }
+]
