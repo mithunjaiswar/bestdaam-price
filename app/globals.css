@@ -266,6 +266,16 @@ body {
   background: var(--saffron-dark);
 }
 
+.buy-btn.coming-soon {
+  background: #e5e7eb;
+  color: var(--muted);
+  cursor: default;
+}
+
+.buy-btn.coming-soon:hover {
+  background: #e5e7eb;
+}
+
 /* Price history chart */
 .section-title {
   font-size: 1.15rem;

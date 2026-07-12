@@ -6,6 +6,7 @@ import {
   getLowestPrice,
   getHighestPrice,
   getPriceHistory,
+  getStoreUrl,
   formatINR,
 } from "../../../lib/products";
 import PriceHistoryChart from "../../components/PriceHistoryChart";
@@ -78,6 +79,7 @@ export default function ProductPage({ params }) {
         <tbody>
           {sortedPrices.map((entry) => {
             const isBest = entry.price === lowest;
+            const href = getStoreUrl(product, entry);
             return (
               <tr key={entry.store} className={isBest ? "best-row" : ""}>
                 <td>
@@ -89,9 +91,18 @@ export default function ProductPage({ params }) {
                   {isBest ? "—" : `+${formatINR(entry.price - lowest)}`}
                 </td>
                 <td>
-                  <a href={entry.url} className="buy-btn">
-                    Store par dekho
-                  </a>
+                  {href ? (
+                    <a
+                      href={href}
+                      className="buy-btn"
+                      target="_blank"
+                      rel="nofollow sponsored noopener"
+                    >
+                      Store par dekho
+                    </a>
+                  ) : (
+                    <span className="buy-btn coming-soon">Jald aayega</span>
+                  )}
                 </td>
               </tr>
             );
