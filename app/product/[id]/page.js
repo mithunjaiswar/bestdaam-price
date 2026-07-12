@@ -1,22 +1,25 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { fetchProducts, getLocalProducts } from "../../../lib/products";
 import {
-  getAllProducts,
-  getProductById,
   getLowestPrice,
   getHighestPrice,
   getPriceHistory,
   getStoreUrl,
   formatINR,
-} from "../../../lib/products";
+} from "../../../lib/helpers";
 import PriceHistoryChart from "../../components/PriceHistoryChart";
 
+export const revalidate = 600;
+export const dynamicParams = true;
+
 export function generateStaticParams() {
-  return getAllProducts().map((p) => ({ id: p.id }));
+  return getLocalProducts().map((p) => ({ id: p.id }));
 }
 
-export function generateMetadata({ params }) {
-  const product = getProductById(params.id);
+export async function generateMetadata({ params }) {
+  const products = await fetchProducts();
+  const product = products.find((p) => p.id === params.id);
   if (!product) return {};
   return {
     title: `${product.name} — Price Comparison | BestDaam`,
@@ -26,8 +29,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function ProductPage({ params }) {
-  const product = getProductById(params.id);
+export default async function ProductPage({ params }) {
+  const products = await fetchProducts();
+  const product = products.find((p) => p.id === params.id);
   if (!product) notFound();
 
   const lowest = getLowestPrice(product);
