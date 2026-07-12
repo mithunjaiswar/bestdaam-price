@@ -44,12 +44,25 @@ Goal: Ek poori chalne wali website, demo data ke saath.
 **Note:** Phase 1 me prices demo/sample hain — asli nahi. Ye sirf dikhane ke liye hai
 ki website kaisi dikhegi aur kaam karegi.
 
-### Phase 2 — Asli price data
-Goal: Demo data hatakar asli prices dikhana.
-- Amazon Associates account banana (affiliate) → Amazon PA-API se prices
-- Flipkart Affiliate account → Flipkart API se prices
-- Database me products aur prices store karna
-- Din me kai baar prices auto-update hona
+### Phase 2 — Website live + affiliate accounts + asli prices
+Goal: Site ko internet par laana aur asli prices ki taraf pehla kadam.
+
+**Zaroori jaankari (July 2026 me check ki gayi):**
+- Flipkart ka apna affiliate program **2018 se naye registrations ke liye band hai**.
+  Iska hal: **EarnKaro** ya **Cuelinks** (free platforms, Flipkart se inka tie-up hai,
+  website ki zaroorat nahi, 12% tak commission).
+- Amazon Associates ke liye **live website ka URL zaroori hai** — isliye pehle
+  site live karni hogi.
+- Amazon ka price API (PA-API) tabhi milta hai jab affiliate links se
+  **3 sales** ho jayen. Isliye shuru me prices haath se update hongi.
+
+**Steps (isi order me):**
+1. Website Vercel (free) par live karna + GoDaddy me `bestdaam.in` domain jodna
+2. EarnKaro ya Cuelinks par account banana → Flipkart + Amazon ke commission links
+3. Amazon Associates par apply karna (bestdaam.in URL ke saath)
+4. Demo prices ki jagah asli prices daalna (shuru me haath se update),
+   har product par asli affiliate "Buy" links lagana
+5. 3 sales hone ke baad Amazon PA-API se prices auto-update karna
 
 ### Phase 3 — User features
 Goal: Users ko baar-baar wapas laana.
@@ -57,12 +70,11 @@ Goal: Users ko baar-baar wapas laana.
 - Price drop alert ("jab ₹50,000 se kam ho, mujhe email karo")
 - User login (Google se sign-in)
 
-### Phase 4 — Launch aur kamai
-Goal: Website ko duniya ke saamne laana.
-- Vercel par deploy + **bestdaam.in** domain connect (GoDaddy DNS setting)
+### Phase 4 — Growth aur kamai badhana
+Goal: Zyada users, zyada kamai. (Deploy ab Phase 2 me ho jayega.)
 - SEO — Google search me aane ke liye
-- Affiliate links active karna (kamai shuru)
 - Aur stores jodna (Croma, Reliance, Tata CLiQ, Vijay Sales)
+- Prices ka auto-update system (database + scheduler)
 
 ---
 
