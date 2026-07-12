@@ -15,6 +15,10 @@ export default function HomePage() {
 
   const categories = ["Sab", ...getCategories()];
 
+  const looksLikeUrl =
+    query.trim().startsWith("http") || query.includes("www.") ||
+    query.includes(".com") || query.includes(".in/");
+
   const results = getAllProducts().filter((p) => {
     const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
     const matchesCategory = category === "Sab" || p.category === category;
@@ -50,10 +54,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {results.length === 0 ? (
+      {looksLikeUrl ? (
+        <p className="no-results">
+          Link se search abhi kaam nahi karta 🙏 — product ka <strong>naam</strong>{" "}
+          likho (jaise “iPhone 15” ya “mixer”). Jo product yahan na mile, hume{" "}
+          <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod denge!
+        </p>
+      ) : results.length === 0 ? (
         <p className="no-results">
           Kuch nahi mila 😕 — koi aur naam try karo (jaise “laptop” ya
-          “watch”).
+          “watch”). Jo product yahan nahi hai, hume{" "}
+          <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod denge!
         </p>
       ) : (
         <div className="grid">

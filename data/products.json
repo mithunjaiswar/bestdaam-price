@@ -5,10 +5,26 @@
     "category": "Mobile",
     "emoji": "📱",
     "prices": [
-      { "store": "Amazon", "price": 52999, "url": "#" },
-      { "store": "Flipkart", "price": 51999, "url": "https://fktr.in/eS3FhVs" },
-      { "store": "Croma", "price": 53490, "url": "#" },
-      { "store": "Reliance Digital", "price": 52490, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 52999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 51999,
+        "url": "https://fktr.in/eS3FhVs"
+      },
+      {
+        "store": "Croma",
+        "price": 53490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 52490,
+        "url": "#"
+      }
     ]
   },
   {
@@ -17,10 +33,26 @@
     "category": "Mobile",
     "emoji": "📱",
     "prices": [
-      { "store": "Amazon", "price": 16499, "url": "#" },
-      { "store": "Flipkart", "price": 16999, "url": "https://fktr.in/k379lVU" },
-      { "store": "Croma", "price": 17250, "url": "#" },
-      { "store": "Reliance Digital", "price": 16799, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 16499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 16999,
+        "url": "https://fktr.in/k379lVU"
+      },
+      {
+        "store": "Croma",
+        "price": 17250,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 16799,
+        "url": "#"
+      }
     ]
   },
   {
@@ -29,10 +61,26 @@
     "category": "Electronics",
     "emoji": "🎧",
     "prices": [
-      { "store": "Amazon", "price": 1099, "url": "#" },
-      { "store": "Flipkart", "price": 999, "url": "https://fktr.in/Us1pm0T" },
-      { "store": "Croma", "price": 1199, "url": "#" },
-      { "store": "Reliance Digital", "price": 1149, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 1099,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 999,
+        "url": "https://fktr.in/Us1pm0T"
+      },
+      {
+        "store": "Croma",
+        "price": 1199,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 1149,
+        "url": "#"
+      }
     ]
   },
   {
@@ -41,10 +89,26 @@
     "category": "Electronics",
     "emoji": "🎧",
     "prices": [
-      { "store": "Amazon", "price": 3989, "url": "#" },
-      { "store": "Flipkart", "price": 4290, "url": "#" },
-      { "store": "Croma", "price": 3999, "url": "#" },
-      { "store": "Reliance Digital", "price": 4199, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 3989,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 4290,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 3999,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 4199,
+        "url": "#"
+      }
     ]
   },
   {
@@ -53,10 +117,26 @@
     "category": "Electronics",
     "emoji": "⌚",
     "prices": [
-      { "store": "Amazon", "price": 2999, "url": "#" },
-      { "store": "Flipkart", "price": 3199, "url": "https://fktr.in/yeCwmll" },
-      { "store": "Croma", "price": 3499, "url": "#" },
-      { "store": "Reliance Digital", "price": 3299, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 2999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3199,
+        "url": "https://fktr.in/yeCwmll"
+      },
+      {
+        "store": "Croma",
+        "price": 3499,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 3299,
+        "url": "#"
+      }
     ]
   },
   {
@@ -65,10 +145,26 @@
     "category": "Electronics",
     "emoji": "💻",
     "prices": [
-      { "store": "Amazon", "price": 54990, "url": "#" },
-      { "store": "Flipkart", "price": 53990, "url": "#" },
-      { "store": "Croma", "price": 55990, "url": "#" },
-      { "store": "Reliance Digital", "price": 54490, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 54990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 53990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 55990,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 54490,
+        "url": "#"
+      }
     ]
   },
   {
@@ -77,10 +173,26 @@
     "category": "Kitchen",
     "emoji": "🥤",
     "prices": [
-      { "store": "Amazon", "price": 3249, "url": "#" },
-      { "store": "Flipkart", "price": 3099, "url": "https://fktr.in/DF1L4v5" },
-      { "store": "Croma", "price": 3499, "url": "#" },
-      { "store": "Reliance Digital", "price": 3399, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 3249,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3099,
+        "url": "https://fktr.in/DF1L4v5"
+      },
+      {
+        "store": "Croma",
+        "price": 3499,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 3399,
+        "url": "#"
+      }
     ]
   },
   {
@@ -89,10 +201,26 @@
     "category": "Kitchen",
     "emoji": "🍟",
     "prices": [
-      { "store": "Amazon", "price": 8499, "url": "#" },
-      { "store": "Flipkart", "price": 8999, "url": "#" },
-      { "store": "Croma", "price": 8790, "url": "#" },
-      { "store": "Reliance Digital", "price": 8599, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 8499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 8999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 8790,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 8599,
+        "url": "#"
+      }
     ]
   },
   {
@@ -101,10 +229,26 @@
     "category": "Home",
     "emoji": "🧺",
     "prices": [
-      { "store": "Amazon", "price": 30990, "url": "#" },
-      { "store": "Flipkart", "price": 31490, "url": "#" },
-      { "store": "Croma", "price": 29990, "url": "#" },
-      { "store": "Reliance Digital", "price": 30490, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 30990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 31490,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 29990,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 30490,
+        "url": "#"
+      }
     ]
   },
   {
@@ -113,10 +257,26 @@
     "category": "Home",
     "emoji": "🍶",
     "prices": [
-      { "store": "Amazon", "price": 899, "url": "#" },
-      { "store": "Flipkart", "price": 949, "url": "#" },
-      { "store": "Croma", "price": 999, "url": "#" },
-      { "store": "Reliance Digital", "price": 929, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 899,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 949,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 999,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 929,
+        "url": "#"
+      }
     ]
   },
   {
@@ -125,10 +285,26 @@
     "category": "Mobile",
     "emoji": "📱",
     "prices": [
-      { "store": "Amazon", "price": 18999, "url": "#" },
-      { "store": "Flipkart", "price": 18499, "url": "#" },
-      { "store": "Croma", "price": 19299, "url": "#" },
-      { "store": "Reliance Digital", "price": 18799, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 18999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 18499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 19299,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 18799,
+        "url": "#"
+      }
     ]
   },
   {
@@ -137,10 +313,26 @@
     "category": "Mobile",
     "emoji": "📱",
     "prices": [
-      { "store": "Amazon", "price": 19499, "url": "#" },
-      { "store": "Flipkart", "price": 18999, "url": "#" },
-      { "store": "Croma", "price": 19999, "url": "#" },
-      { "store": "Reliance Digital", "price": 19499, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 19499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 18999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 19999,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 19499,
+        "url": "#"
+      }
     ]
   },
   {
@@ -149,10 +341,26 @@
     "category": "Mobile",
     "emoji": "📱",
     "prices": [
-      { "store": "Amazon", "price": 22999, "url": "#" },
-      { "store": "Flipkart", "price": 23499, "url": "#" },
-      { "store": "Croma", "price": 23999, "url": "#" },
-      { "store": "Reliance Digital", "price": 23499, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 22999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 23499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 23999,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 23499,
+        "url": "#"
+      }
     ]
   },
   {
@@ -161,10 +369,26 @@
     "category": "Electronics",
     "emoji": "📺",
     "prices": [
-      { "store": "Amazon", "price": 28990, "url": "#" },
-      { "store": "Flipkart", "price": 27990, "url": "#" },
-      { "store": "Croma", "price": 29490, "url": "#" },
-      { "store": "Reliance Digital", "price": 28490, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 28990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 27990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 29490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 28490,
+        "url": "#"
+      }
     ]
   },
   {
@@ -173,10 +397,26 @@
     "category": "Electronics",
     "emoji": "🔊",
     "prices": [
-      { "store": "Amazon", "price": 8999, "url": "#" },
-      { "store": "Flipkart", "price": 9499, "url": "#" },
-      { "store": "Croma", "price": 8790, "url": "#" },
-      { "store": "Reliance Digital", "price": 9199, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 8999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 9499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 8790,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 9199,
+        "url": "#"
+      }
     ]
   },
   {
@@ -185,10 +425,26 @@
     "category": "Electronics",
     "emoji": "🖨️",
     "prices": [
-      { "store": "Amazon", "price": 3299, "url": "#" },
-      { "store": "Flipkart", "price": 3199, "url": "#" },
-      { "store": "Croma", "price": 3499, "url": "#" },
-      { "store": "Reliance Digital", "price": 3399, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 3299,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3199,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 3499,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 3399,
+        "url": "#"
+      }
     ]
   },
   {
@@ -197,10 +453,26 @@
     "category": "Kitchen",
     "emoji": "🔥",
     "prices": [
-      { "store": "Amazon", "price": 4299, "url": "#" },
-      { "store": "Flipkart", "price": 3999, "url": "#" },
-      { "store": "Croma", "price": 4599, "url": "#" },
-      { "store": "Reliance Digital", "price": 4399, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 4299,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 4599,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 4399,
+        "url": "#"
+      }
     ]
   },
   {
@@ -209,10 +481,26 @@
     "category": "Kitchen",
     "emoji": "🍲",
     "prices": [
-      { "store": "Amazon", "price": 1349, "url": "#" },
-      { "store": "Flipkart", "price": 1249, "url": "#" },
-      { "store": "Croma", "price": 1449, "url": "#" },
-      { "store": "Reliance Digital", "price": 1399, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 1349,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1249,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 1449,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 1399,
+        "url": "#"
+      }
     ]
   },
   {
@@ -221,10 +509,26 @@
     "category": "Home",
     "emoji": "🧊",
     "prices": [
-      { "store": "Amazon", "price": 27490, "url": "#" },
-      { "store": "Flipkart", "price": 26990, "url": "#" },
-      { "store": "Croma", "price": 27990, "url": "#" },
-      { "store": "Reliance Digital", "price": 26790, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 27490,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 26990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 27990,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 26790,
+        "url": "#"
+      }
     ]
   },
   {
@@ -233,8 +537,16 @@
     "category": "Fashion",
     "emoji": "🎒",
     "prices": [
-      { "store": "Amazon", "price": 2099, "url": "#" },
-      { "store": "Flipkart", "price": 1999, "url": "https://fktr.in/SJputej" }
+      {
+        "store": "Amazon",
+        "price": 2099,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1999,
+        "url": "https://fktr.in/SJputej"
+      }
     ]
   },
   {
@@ -243,10 +555,653 @@
     "category": "Home",
     "emoji": "❄️",
     "prices": [
-      { "store": "Amazon", "price": 33990, "url": "#" },
-      { "store": "Flipkart", "price": 32990, "url": "#" },
-      { "store": "Croma", "price": 34490, "url": "#" },
-      { "store": "Reliance Digital", "price": 33490, "url": "#" }
+      {
+        "store": "Amazon",
+        "price": 33990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 32990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 34490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 33490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "iphone-16-128gb",
+    "name": "Apple iPhone 16 (128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 67999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 66999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 68490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 67490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "samsung-s24-fe",
+    "name": "Samsung Galaxy S24 FE (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 34999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 35999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 36490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 35490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "redmi-14c",
+    "name": "Redmi 14C (6GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 9999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 9499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 10299,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 9999,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "realme-narzo-70",
+    "name": "Realme Narzo 70 5G (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 15999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 15499,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 15999,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "poco-x7-5g",
+    "name": "POCO X7 5G (8GB, 256GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 21999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 20999,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "motorola-g85",
+    "name": "Motorola G85 5G (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 17999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 17499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 18299,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 17999,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "lenovo-ideapad-slim3",
+    "name": "Lenovo IdeaPad Slim 3 (i5, 16GB, 512GB)",
+    "category": "Electronics",
+    "emoji": "💻",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 52990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 51990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 53490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 52490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "dell-inspiron-15",
+    "name": "Dell Inspiron 15 (i5, 16GB, 512GB)",
+    "category": "Electronics",
+    "emoji": "💻",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 58990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 59990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 59490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 58490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "mi-32-hd-tv",
+    "name": "Xiaomi 32\" HD Smart TV",
+    "category": "Electronics",
+    "emoji": "📺",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 12999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 12499,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 13490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 12990,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "lg-55-4k-tv",
+    "name": "LG 55\" UHD 4K Smart TV",
+    "category": "Electronics",
+    "emoji": "📺",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 44990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 43990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 45490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 44490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "boat-rockerz-450",
+    "name": "boAt Rockerz 450 Headphones",
+    "category": "Electronics",
+    "emoji": "🎧",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 1499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1399,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 1599,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 1499,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "jbl-tune-235nc",
+    "name": "JBL Tune 235NC Earbuds",
+    "category": "Electronics",
+    "emoji": "🎧",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 4999,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 4799,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 5199,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 4999,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "fire-boltt-ninja",
+    "name": "Fire-Boltt Ninja Call Pro Plus Smartwatch",
+    "category": "Electronics",
+    "emoji": "⌚",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 1799,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1699,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 1899,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "ps5-slim",
+    "name": "Sony PlayStation 5 Slim (1TB)",
+    "category": "Electronics",
+    "emoji": "🎮",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 54990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 53990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 54990,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 54490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "hawkins-cooker-5l",
+    "name": "Hawkins Contura 5L Pressure Cooker",
+    "category": "Kitchen",
+    "emoji": "🍲",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 2149,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 2049,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 2249,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "philips-kettle-1-5l",
+    "name": "Philips 1.5L Electric Kettle",
+    "category": "Kitchen",
+    "emoji": "☕",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 1299,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1199,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 1399,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 1299,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "bajaj-otg-30l",
+    "name": "Bajaj 30L OTG Oven",
+    "category": "Kitchen",
+    "emoji": "🍞",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 7499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 6999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 7799,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 7299,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "kent-ro-purifier",
+    "name": "Kent Supreme RO Water Purifier",
+    "category": "Kitchen",
+    "emoji": "💧",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 16499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 15999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 16999,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 16499,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "ifb-6-5kg-washing-machine",
+    "name": "IFB 6.5kg Front Load Washing Machine",
+    "category": "Home",
+    "emoji": "🧺",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 28990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 27990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 29490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 28490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "samsung-236l-fridge",
+    "name": "Samsung 236L Double Door Refrigerator",
+    "category": "Home",
+    "emoji": "🧊",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 24990,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 23990,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 25490,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 24490,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "havells-geyser-15l",
+    "name": "Havells Monza 15L Water Geyser",
+    "category": "Home",
+    "emoji": "🚿",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 8499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 7999,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 8799,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 8299,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "atomberg-fan",
+    "name": "Atomberg Renesa 1200mm Ceiling Fan",
+    "category": "Home",
+    "emoji": "🌀",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 3299,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3199,
+        "url": "#"
+      },
+      {
+        "store": "Croma",
+        "price": 3499,
+        "url": "#"
+      },
+      {
+        "store": "Reliance Digital",
+        "price": 3399,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "nike-revolution-7",
+    "name": "Nike Revolution 7 Running Shoes",
+    "category": "Fashion",
+    "emoji": "👟",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 3495,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 3295,
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "id": "american-tourister-32l",
+    "name": "American Tourister 32L Backpack",
+    "category": "Fashion",
+    "emoji": "🎒",
+    "prices": [
+      {
+        "store": "Amazon",
+        "price": 1499,
+        "url": "#"
+      },
+      {
+        "store": "Flipkart",
+        "price": 1399,
+        "url": "#"
+      }
     ]
   }
 ]
