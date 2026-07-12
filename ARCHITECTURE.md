@@ -66,13 +66,17 @@ Goal: Site ko internet par laana aur asli prices ki taraf pehla kadam.
 
 ### Phase 3 — User features
 Goal: Users ko baar-baar wapas laana.
-- Price history graph ("ye product pichle mahine kitne ka tha?")
+- [x] Price history graph ("ye product pichle mahine kitne ka tha?") — ban gaya,
+      abhi demo data par chalta hai; asli data Phase 2 ke baad
 - Price drop alert ("jab ₹50,000 se kam ho, mujhe email karo")
 - User login (Google se sign-in)
 
 ### Phase 4 — Growth aur kamai badhana
 Goal: Zyada users, zyada kamai. (Deploy ab Phase 2 me ho jayega.)
-- SEO — Google search me aane ke liye
+- [x] SEO basics — sitemap, robots.txt, Google product schema, social sharing
+      tags ban gaye
+- [x] About / Privacy Policy / Affiliate Disclosure pages (Amazon Associates
+      approval ke liye zaroori)
 - Aur stores jodna (Croma, Reliance, Tata CLiQ, Vijay Sales)
 - Prices ka auto-update system (database + scheduler)
 

@@ -118,5 +118,125 @@
       { "store": "Croma", "price": 999, "url": "#" },
       { "store": "Reliance Digital", "price": 929, "url": "#" }
     ]
+  },
+  {
+    "id": "redmi-note-14-5g",
+    "name": "Redmi Note 14 5G (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      { "store": "Amazon", "price": 18999, "url": "#" },
+      { "store": "Flipkart", "price": 18499, "url": "#" },
+      { "store": "Croma", "price": 19299, "url": "#" },
+      { "store": "Reliance Digital", "price": 18799, "url": "#" }
+    ]
+  },
+  {
+    "id": "vivo-t3-5g",
+    "name": "Vivo T3 5G (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      { "store": "Amazon", "price": 19499, "url": "#" },
+      { "store": "Flipkart", "price": 18999, "url": "#" },
+      { "store": "Croma", "price": 19999, "url": "#" },
+      { "store": "Reliance Digital", "price": 19499, "url": "#" }
+    ]
+  },
+  {
+    "id": "oneplus-nord-ce4",
+    "name": "OnePlus Nord CE4 (8GB, 128GB)",
+    "category": "Mobile",
+    "emoji": "📱",
+    "prices": [
+      { "store": "Amazon", "price": 22999, "url": "#" },
+      { "store": "Flipkart", "price": 23499, "url": "#" },
+      { "store": "Croma", "price": 23999, "url": "#" },
+      { "store": "Reliance Digital", "price": 23499, "url": "#" }
+    ]
+  },
+  {
+    "id": "samsung-43-crystal-4k-tv",
+    "name": "Samsung 43\" Crystal 4K Smart TV",
+    "category": "Electronics",
+    "emoji": "📺",
+    "prices": [
+      { "store": "Amazon", "price": 28990, "url": "#" },
+      { "store": "Flipkart", "price": 27990, "url": "#" },
+      { "store": "Croma", "price": 29490, "url": "#" },
+      { "store": "Reliance Digital", "price": 28490, "url": "#" }
+    ]
+  },
+  {
+    "id": "jbl-flip-6-speaker",
+    "name": "JBL Flip 6 Bluetooth Speaker",
+    "category": "Electronics",
+    "emoji": "🔊",
+    "prices": [
+      { "store": "Amazon", "price": 8999, "url": "#" },
+      { "store": "Flipkart", "price": 9499, "url": "#" },
+      { "store": "Croma", "price": 8790, "url": "#" },
+      { "store": "Reliance Digital", "price": 9199, "url": "#" }
+    ]
+  },
+  {
+    "id": "canon-pixma-printer",
+    "name": "Canon PIXMA MG2577s Printer",
+    "category": "Electronics",
+    "emoji": "🖨️",
+    "prices": [
+      { "store": "Amazon", "price": 3299, "url": "#" },
+      { "store": "Flipkart", "price": 3199, "url": "#" },
+      { "store": "Croma", "price": 3499, "url": "#" },
+      { "store": "Reliance Digital", "price": 3399, "url": "#" }
+    ]
+  },
+  {
+    "id": "butterfly-gas-stove-3b",
+    "name": "Butterfly 3-Burner Gas Stove (Glass Top)",
+    "category": "Kitchen",
+    "emoji": "🔥",
+    "prices": [
+      { "store": "Amazon", "price": 4299, "url": "#" },
+      { "store": "Flipkart", "price": 3999, "url": "#" },
+      { "store": "Croma", "price": 4599, "url": "#" },
+      { "store": "Reliance Digital", "price": 4399, "url": "#" }
+    ]
+  },
+  {
+    "id": "pigeon-pressure-cooker-5l",
+    "name": "Pigeon Pressure Cooker (5 Litre)",
+    "category": "Kitchen",
+    "emoji": "🍲",
+    "prices": [
+      { "store": "Amazon", "price": 1349, "url": "#" },
+      { "store": "Flipkart", "price": 1249, "url": "#" },
+      { "store": "Croma", "price": 1449, "url": "#" },
+      { "store": "Reliance Digital", "price": 1399, "url": "#" }
+    ]
+  },
+  {
+    "id": "lg-260l-fridge",
+    "name": "LG 260L Double Door Refrigerator",
+    "category": "Home",
+    "emoji": "🧊",
+    "prices": [
+      { "store": "Amazon", "price": 27490, "url": "#" },
+      { "store": "Flipkart", "price": 26990, "url": "#" },
+      { "store": "Croma", "price": 27990, "url": "#" },
+      { "store": "Reliance Digital", "price": 26790, "url": "#" }
+    ]
+  },
+  {
+    "id": "voltas-1-5t-inverter-ac",
+    "name": "Voltas 1.5 Ton 3-Star Inverter AC",
+    "category": "Home",
+    "emoji": "❄️",
+    "prices": [
+      { "store": "Amazon", "price": 33990, "url": "#" },
+      { "store": "Flipkart", "price": 32990, "url": "#" },
+      { "store": "Croma", "price": 34490, "url": "#" },
+      { "store": "Reliance Digital", "price": 33490, "url": "#" }
+    ]
   }
 ]

@@ -266,7 +266,119 @@ body {
   background: var(--saffron-dark);
 }
 
+/* Price history chart */
+.section-title {
+  font-size: 1.15rem;
+  margin: 4px 0 12px;
+}
+
+.chart-wrap {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 40px;
+}
+
+.chart-summary {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.chart-summary strong {
+  color: var(--ink);
+}
+
+.price-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: crosshair;
+}
+
+.chart-tooltip {
+  min-height: 1.3em;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.chart-table summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.chart-table table {
+  width: 100%;
+  max-width: 320px;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.chart-table th,
+.chart-table td {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Content pages (About, Privacy, Disclosure) */
+.content-page {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px;
+  margin: 24px 0 40px;
+  max-width: 720px;
+}
+
+.content-page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.content-page h2 {
+  font-size: 1.15rem;
+  margin: 20px 0 8px;
+}
+
+.content-page p,
+.content-page li {
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.content-page ul {
+  padding-left: 22px;
+}
+
+.content-page a {
+  color: var(--saffron-dark);
+}
+
 /* Footer */
+.footer-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--saffron-dark);
+  text-decoration: underline;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: #fff;

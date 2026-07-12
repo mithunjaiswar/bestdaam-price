@@ -5,8 +5,10 @@ import {
   getProductById,
   getLowestPrice,
   getHighestPrice,
+  getPriceHistory,
   formatINR,
 } from "../../../lib/products";
+import PriceHistoryChart from "../../components/PriceHistoryChart";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ id: p.id }));
@@ -31,6 +33,21 @@ export default function ProductPage({ params }) {
   const highest = getHighestPrice(product);
   const savings = highest - lowest;
   const sortedPrices = [...product.prices].sort((a, b) => a.price - b.price);
+  const history = getPriceHistory(product);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    category: product.category,
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "INR",
+      lowPrice: lowest,
+      highPrice: highest,
+      offerCount: product.prices.length,
+    },
+  };
 
   return (
     <>
@@ -81,6 +98,14 @@ export default function ProductPage({ params }) {
           })}
         </tbody>
       </table>
+
+      <h2 className="section-title">Pichle 30 din ka daam 📉</h2>
+      <PriceHistoryChart points={history} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }

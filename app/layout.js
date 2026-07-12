@@ -2,9 +2,19 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
+  metadataBase: new URL("https://bestdaam.in"),
   title: "BestDaam — Sabse Sasta Daam, Ek Jagah",
   description:
     "India ke top online stores (Amazon, Flipkart, Croma, Reliance Digital) par products ke prices compare karo aur sabse saste daam par kharido.",
+  openGraph: {
+    title: "BestDaam — Sabse Sasta Daam, Ek Jagah",
+    description:
+      "Amazon, Flipkart, Croma aur Reliance Digital ke prices ek jagah compare karo.",
+    url: "https://bestdaam.in",
+    siteName: "BestDaam",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -22,9 +32,13 @@ export default function RootLayout({ children }) {
         <main className="container">{children}</main>
         <footer className="site-footer">
           <div className="container">
+            <nav className="footer-links">
+              <Link href="/about">About</Link>
+              <Link href="/disclosure">Affiliate Disclosure</Link>
+              <Link href="/privacy">Privacy Policy</Link>
+            </nav>
             <p>
               ⚠️ Abhi ye demo version hai — prices sample hain, asli nahi.
-              (Phase 1)
             </p>
             <p>© {new Date().getFullYear()} BestDaam.in</p>
           </div>
