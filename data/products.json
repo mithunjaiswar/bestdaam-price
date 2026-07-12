@@ -6,7 +6,7 @@
     "emoji": "📱",
     "prices": [
       { "store": "Amazon", "price": 52999, "url": "#" },
-      { "store": "Flipkart", "price": 51999, "url": "#" },
+      { "store": "Flipkart", "price": 51999, "url": "https://fktr.in/eS3FhVs" },
       { "store": "Croma", "price": 53490, "url": "#" },
       { "store": "Reliance Digital", "price": 52490, "url": "#" }
     ]
@@ -18,7 +18,7 @@
     "emoji": "📱",
     "prices": [
       { "store": "Amazon", "price": 16499, "url": "#" },
-      { "store": "Flipkart", "price": 16999, "url": "#" },
+      { "store": "Flipkart", "price": 16999, "url": "https://fktr.in/k379lVU" },
       { "store": "Croma", "price": 17250, "url": "#" },
       { "store": "Reliance Digital", "price": 16799, "url": "#" }
     ]
@@ -30,7 +30,7 @@
     "emoji": "🎧",
     "prices": [
       { "store": "Amazon", "price": 1099, "url": "#" },
-      { "store": "Flipkart", "price": 999, "url": "#" },
+      { "store": "Flipkart", "price": 999, "url": "https://fktr.in/Us1pm0T" },
       { "store": "Croma", "price": 1199, "url": "#" },
       { "store": "Reliance Digital", "price": 1149, "url": "#" }
     ]
@@ -54,7 +54,7 @@
     "emoji": "⌚",
     "prices": [
       { "store": "Amazon", "price": 2999, "url": "#" },
-      { "store": "Flipkart", "price": 3199, "url": "#" },
+      { "store": "Flipkart", "price": 3199, "url": "https://fktr.in/yeCwmll" },
       { "store": "Croma", "price": 3499, "url": "#" },
       { "store": "Reliance Digital", "price": 3299, "url": "#" }
     ]
@@ -78,7 +78,7 @@
     "emoji": "🥤",
     "prices": [
       { "store": "Amazon", "price": 3249, "url": "#" },
-      { "store": "Flipkart", "price": 3099, "url": "#" },
+      { "store": "Flipkart", "price": 3099, "url": "https://fktr.in/DF1L4v5" },
       { "store": "Croma", "price": 3499, "url": "#" },
       { "store": "Reliance Digital", "price": 3399, "url": "#" }
     ]
@@ -225,6 +225,16 @@
       { "store": "Flipkart", "price": 26990, "url": "#" },
       { "store": "Croma", "price": 27990, "url": "#" },
       { "store": "Reliance Digital", "price": 26790, "url": "#" }
+    ]
+  },
+  {
+    "id": "wildcraft-backpack",
+    "name": "Wildcraft Backpack",
+    "category": "Fashion",
+    "emoji": "🎒",
+    "prices": [
+      { "store": "Amazon", "price": 2099, "url": "#" },
+      { "store": "Flipkart", "price": 1999, "url": "https://fktr.in/SJputej" }
     ]
   },
   {
