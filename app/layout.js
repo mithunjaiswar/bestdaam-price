@@ -3,6 +3,9 @@ import Link from "next/link";
 
 export const metadata = {
   metadataBase: new URL("https://bestdaam.in"),
+  other: {
+    "verify-admitad": "f9807017ed",
+  },
   title: "BestDaam — Sabse Sasta Daam, Ek Jagah",
   description:
     "India ke top online stores (Amazon, Flipkart, Croma, Reliance Digital) par products ke prices compare karo aur sabse saste daam par kharido.",
