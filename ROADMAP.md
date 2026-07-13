@@ -39,6 +39,15 @@
 - [ ] Social media + WhatsApp channel
 - [ ] User login, wishlist, price-watch
 
+## Stage 7 — Apna BestDaam Store 🏪 (FINAL GOAL)
+> Comparison table me ek store hamara bhi — "BestDaam Store" — aur daam sabse
+> kam. Customer hamse hi kharide: commission nahi, poora munafa apna.
+- [ ] Business setup — GST registration, current account
+- [ ] Sourcing — wholesale/distributor se saste me saman (pehle 1-2 category)
+- [ ] Store website — cart, checkout, UPI/card payment (Razorpay)
+- [ ] Delivery — courier partner (Shiprocket/Delhivery)
+- [ ] Har comparison me "BestDaam Store" row — sabse sasta, "Direct kharido" button
+
 ## Is hafte ke 4 kaam
 1. Site share karo (3 Amazon sales ka target)
 2. Amazon tax info bharo
