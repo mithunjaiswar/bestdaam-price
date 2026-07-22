@@ -1,3 +1,8 @@
+### 2026-07-22 — ChatGPT — 996-product catalog with images
+- Kya badla: Local scraper output se 996 product catalog generate kiya, 10 categories ke saath. Product cards aur product detail pages par real Flipkart product images show karne ka UI add kiya.
+- Kyun: BestDaam live site ko demo/sample products se real product catalog experience tak le jaane ke liye.
+- Kaunsi files: data/products.json, app/components/HomeClient.js, app/product/[id]/page.js, app/globals.css, local exporter used: export_catalog_to_bestdaam.py.
+- Dhyan rakhna: Images Flipkart product image URLs se aa rahe hain. Amazon scraped images live par use nahi kiye. Amazon direct scraping code live repo me push nahi kiya gaya.
 # 📒 BestDaam.in — PROJECT LOG (sab AI ke liye)
 
 > **YE FILE KYUN HAI:** Is project par 3 AI kaam karte hain — **Claude**, **Gemini**,

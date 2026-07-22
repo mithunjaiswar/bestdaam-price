@@ -15,12 +15,15 @@ export default function HomeClient({ products }) {
   const categories = ["Sab", ...getCategories(products)];
 
   const looksLikeUrl =
-    query.trim().startsWith("http") || query.includes("www.") ||
-    query.includes(".com") || query.includes(".in/");
+    query.trim().startsWith("http") ||
+    query.includes("www.") ||
+    query.includes(".com") ||
+    query.includes(".in/");
 
   const results = products.filter((p) => {
     const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
     const matchesCategory = category === "Sab" || p.category === category;
+
     return matchesQuery && matchesCategory;
   });
 
@@ -32,14 +35,16 @@ export default function HomeClient({ products }) {
           Amazon, Flipkart, Croma aur Reliance Digital ke prices compare karo —
           sabse sasta chuno.
         </p>
+
         <input
           type="search"
           className="search-box"
-          placeholder="Product search karo... jaise iPhone, mixer, earbuds"
+          placeholder="Product search karo... jaise iPhone, laptop, earbuds"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           autoFocus
         />
+
         <div className="category-row">
           {categories.map((c) => (
             <button
@@ -55,25 +60,43 @@ export default function HomeClient({ products }) {
 
       {looksLikeUrl ? (
         <p className="no-results">
-          Link se search abhi kaam nahi karta 🙏 — product ka <strong>naam</strong>{" "}
-          likho (jaise “iPhone 15” ya “mixer”). Jo product yahan na mile, hume{" "}
+          Link se search abhi kaam nahi karta 🙏 — product ka{" "}
+          <strong>naam</strong> likho. Jo product yahan na mile, hume{" "}
           <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod denge!
         </p>
       ) : results.length === 0 ? (
         <p className="no-results">
-          Kuch nahi mila 😕 — koi aur naam try karo (jaise “laptop” ya
-          “watch”). Jo product yahan nahi hai, hume{" "}
-          <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod denge!
+          Kuch nahi mila 😕 — koi aur naam try karo. Jo product yahan nahi hai,
+          hume <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod
+          denge!
         </p>
       ) : (
         <div className="grid">
           {results.map((p) => (
             <Link key={p.id} href={`/product/${p.id}`} className="card">
-              <div className="emoji">{p.emoji}</div>
+              <div className="card-media">
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="card-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="emoji">{p.emoji}</div>
+                )}
+              </div>
+
               <h3>{p.name}</h3>
+
               <div className="from">Sabse sasta daam</div>
+
               <div className="price">{formatINR(getLowestPrice(p))} se</div>
-              <div className="stores">{p.prices.length} stores par compare</div>
+
+              <div className="stores">
+                {p.prices.length} store{p.prices.length > 1 ? "s" : ""} par
+                compare
+              </div>
             </Link>
           ))}
         </div>

@@ -20,7 +20,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const products = await fetchProducts();
   const product = products.find((p) => p.id === params.id);
+
   if (!product) return {};
+
   return {
     title: `${product.name} — Price Comparison | BestDaam`,
     description: `${product.name} ka sabse sasta daam dekho — ${formatINR(
@@ -32,6 +34,7 @@ export async function generateMetadata({ params }) {
 export default async function ProductPage({ params }) {
   const products = await fetchProducts();
   const product = products.find((p) => p.id === params.id);
+
   if (!product) notFound();
 
   const lowest = getLowestPrice(product);
@@ -45,6 +48,7 @@ export default async function ProductPage({ params }) {
     "@type": "Product",
     name: product.name,
     category: product.category,
+    image: product.image || undefined,
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "INR",
@@ -60,9 +64,24 @@ export default async function ProductPage({ params }) {
         ← Wapas search par
       </Link>
 
-      <div className="product-head">
-        <div className="emoji">{product.emoji}</div>
-        <h1>{product.name}</h1>
+      <div className="product-head product-head-with-image">
+        <div className="product-detail-media">
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-detail-image"
+              loading="eager"
+            />
+          ) : (
+            <div className="emoji">{product.emoji}</div>
+          )}
+        </div>
+
+        <div>
+          <p className="product-category-label">{product.category}</p>
+          <h1>{product.name}</h1>
+        </div>
       </div>
 
       {savings > 0 && (
@@ -84,6 +103,7 @@ export default async function ProductPage({ params }) {
           {sortedPrices.map((entry) => {
             const isBest = entry.price === lowest;
             const href = getStoreUrl(product, entry);
+
             return (
               <tr key={entry.store} className={isBest ? "best-row" : ""}>
                 <td>
@@ -91,9 +111,7 @@ export default async function ProductPage({ params }) {
                   {isBest && <span className="best-badge">SABSE SASTA</span>}
                 </td>
                 <td className="amount">{formatINR(entry.price)}</td>
-                <td>
-                  {isBest ? "—" : `+${formatINR(entry.price - lowest)}`}
-                </td>
+                <td>{isBest ? "—" : `+${formatINR(entry.price - lowest)}`}</td>
                 <td>
                   {href ? (
                     <a
