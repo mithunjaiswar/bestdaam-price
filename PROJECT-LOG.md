@@ -1,3 +1,8 @@
+### 2026-07-22 — ChatGPT — EarnKaro affiliate links enabled
+- Kya badla: 996 Flipkart product URLs ko EK Affiliaters/EarnKaro API se affiliate short links me convert karke products.json me affiliateUrl field add kiya.
+- Kyun: BestDaam ke Flipkart outbound clicks ko EarnKaro affiliate tracking ke through route karne ke liye.
+- Kaunsi files: data/products.json, lib/helpers.js, PROJECT-LOG.md. Local script used: apply_ekaro_api_links.py.
+- Dhyan rakhna: API token local environment variable me use hua; token repo me commit nahi kiya gaya. AffiliateUrl missing ho to normal URL fallback rahega.
 ### 2026-07-22 — ChatGPT — 996-product catalog with images
 - Kya badla: Local scraper output se 996 product catalog generate kiya, 10 categories ke saath. Product cards aur product detail pages par real Flipkart product images show karne ka UI add kiya.
 - Kyun: BestDaam live site ko demo/sample products se real product catalog experience tak le jaane ke liye.
