@@ -1,3 +1,15 @@
+### 2026-07-23 — Codex — Wired Earphones category added
+- Kya badla: Wired Earphones ki 96-product category catalog me add ki aur sabhi naye Flipkart links par EK Affiliaters/EarnKaro affiliateUrl lagaya.
+- Kyun: BestDaam par wired earphones ko earbuds/headphones se alag category me dikhane aur outbound Flipkart clicks ko affiliate tracking ke through route karne ke liye.
+- Kaunsi files: data/products.json, PROJECT-LOG.md. Local scraper me categories.json, single-category runners, category filter aur exporter preservation logic update hua.
+- Dhyan rakhna: Catalog me ab 1092 products, 96 Wired Earphones aur 1092/1092 Flipkart affiliate links hain. Generated backup scraper ke output/backups folder me rakha hai; repo me commit nahi karna.
+
+### 2026-07-22 — ChatGPT — EarnKaro affiliate links enabled
+- Kya badla: 996 Flipkart product URLs ko EK Affiliaters/EarnKaro API se affiliate short links me convert karke products.json me affiliateUrl field add kiya.
+- Kyun: BestDaam ke Flipkart outbound clicks ko EarnKaro affiliate tracking ke through route karne ke liye.
+- Kaunsi files: data/products.json, lib/helpers.js, PROJECT-LOG.md. Local script used: apply_ekaro_api_links.py.
+- Dhyan rakhna: API token local environment variable me use hua; token repo me commit nahi kiya gaya. AffiliateUrl missing ho to normal URL fallback rahega.
+
 ### 2026-07-22 — ChatGPT — EarnKaro affiliate links enabled
 - Kya badla: 996 Flipkart product URLs ko EK Affiliaters/EarnKaro API se affiliate short links me convert karke products.json me affiliateUrl field add kiya.
 - Kyun: BestDaam ke Flipkart outbound clicks ko EarnKaro affiliate tracking ke through route karne ke liye.
