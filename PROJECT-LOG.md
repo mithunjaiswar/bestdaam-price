@@ -1,3 +1,9 @@
+### 2026-07-24 — Codex — Single-price cards se suffix removed
+- Kya badla: Homepage par single verified price wale product se “se” suffix hata diya. Multiple verified stores hone par lowest price ke saath “se” ab bhi dikhega.
+- Kyun: Ek hi verified price ko starting price batana misleading tha.
+- Kaunsi files: app/components/HomeClient.js, PROJECT-LOG.md.
+- Dhyan rakhna: “se” ka use sirf multiple verified price entries par karna.
+
 ### 2026-07-24 — Codex — Single-store card wording clarified
 - Kya badla: Homepage cards par single verified store hone par “1 store par compare” ki jagah “1 verified price • Amazon par bhi dekhein” dikhaya. Actual multi-store matches par existing comparison count rahega.
 - Kyun: Amazon search fallback available hone ke bawajood single store ko comparison bolna confusing tha.

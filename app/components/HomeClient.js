@@ -91,7 +91,10 @@ export default function HomeClient({ products }) {
 
               <div className="from">Sabse sasta daam</div>
 
-              <div className="price">{formatINR(getLowestPrice(p))} se</div>
+              <div className="price">
+                {formatINR(getLowestPrice(p))}
+                {p.prices.length > 1 ? " se" : ""}
+              </div>
 
               <div className="stores">
                 {p.prices.length > 1
