@@ -1,3 +1,9 @@
+### 2026-07-23 — Codex — Amazon matcher quality hardening
+- Kya badla: Existing local Amazon dataset ko Flipkart catalog se model-aware matching ke through compare kiya. Brand position, product model tokens, laptop family aur product-line checks add hue; har Amazon listing ab sirf ek exact comparison me use hoti hai.
+- Kyun: Store count badhane ke chakkar me alag models (jaise Samsung M36/F70e ya HP Victus/Omen) ko galat compare hone se rokna.
+- Kaunsi files: data/products.json, PROJECT-LOG.md. Local scraper me matcher/normalize.py, matcher/matcher.py, compare.py, export_catalog_to_bestdaam.py aur test_matcher.py update hue.
+- Dhyan rakhna: 953 existing Amazon rows me se 15 unique exact-model comparisons live catalog ke liye qualify hue. Amazon catalog/price expansion direct scraping se nahi; official Creators API SearchItems/GetItems se karna hai after account eligibility.
+
 ### 2026-07-23 — Codex — Wired Earphones category added
 - Kya badla: Wired Earphones ki 96-product category catalog me add ki aur sabhi naye Flipkart links par EK Affiliaters/EarnKaro affiliateUrl lagaya.
 - Kyun: BestDaam par wired earphones ko earbuds/headphones se alag category me dikhane aur outbound Flipkart clicks ko affiliate tracking ke through route karne ke liye.
