@@ -1,3 +1,9 @@
+### 2026-07-23 — Codex — Amazon affiliate search fallback
+- Kya badla: Exact Amazon price match na hone wale products par “Amazon par search karein” CTA add hua. Link product name ke Amazon search URL me Associates tag `bestdaam0a-21` automatically lagata hai; verified match hone par existing Amazon price row hi dikhti hai.
+- Kyun: Har catalog product se Amazon commission opportunity dene ke liye, bina scraped/outdated Amazon price ko verified comparison bataye.
+- Kaunsi files: lib/helpers.js, app/product/[id]/page.js, app/globals.css, PROJECT-LOG.md.
+- Dhyan rakhna: Search fallback ko price comparison na samjhein; UI intentionally “Price Amazon par dekhein” aur disclaimer show karti hai. Affiliate link par `nofollow sponsored noopener` preserve karna.
+
 ### 2026-07-23 — Codex — Amazon matcher quality hardening
 - Kya badla: Existing local Amazon dataset ko Flipkart catalog se model-aware matching ke through compare kiya. Brand position, product model tokens, laptop family aur product-line checks add hue; har Amazon listing ab sirf ek exact comparison me use hoti hai.
 - Kyun: Store count badhane ke chakkar me alag models (jaise Samsung M36/F70e ya HP Victus/Omen) ko galat compare hone se rokna.

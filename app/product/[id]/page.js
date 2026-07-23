@@ -6,6 +6,7 @@ import {
   getHighestPrice,
   getPriceHistory,
   getStoreUrl,
+  getAmazonSearchUrl,
   formatINR,
 } from "../../../lib/helpers";
 import PriceHistoryChart from "../../components/PriceHistoryChart";
@@ -41,6 +42,9 @@ export default async function ProductPage({ params }) {
   const highest = getHighestPrice(product);
   const savings = highest - lowest;
   const sortedPrices = [...product.prices].sort((a, b) => a.price - b.price);
+  const hasAmazonPrice = sortedPrices.some((entry) =>
+    String(entry.store || "").toLowerCase().includes("amazon")
+  );
   const history = getPriceHistory(product);
 
   const jsonLd = {
@@ -129,8 +133,32 @@ export default async function ProductPage({ params }) {
               </tr>
             );
           })}
+          {!hasAmazonPrice && (
+            <tr className="amazon-search-row">
+              <td>Amazon</td>
+              <td className="amazon-search-price">Price Amazon par dekhein</td>
+              <td>—</td>
+              <td>
+                <a
+                  href={getAmazonSearchUrl(product)}
+                  className="buy-btn amazon-search-btn"
+                  target="_blank"
+                  rel="nofollow sponsored noopener"
+                >
+                  Amazon par search karein
+                </a>
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
+
+      {!hasAmazonPrice && (
+        <p className="amazon-search-note">
+          Amazon ka verified live price abhi compare nahi hua hai. Button Amazon
+          search kholta hai; final price Amazon par check karein.
+        </p>
+      )}
 
       <h2 className="section-title">Pichle 30 din ka daam 📉</h2>
       <PriceHistoryChart points={history} />

@@ -463,3 +463,27 @@ a {
     min-width: 640px;
   }
 }
+.amazon-search-row {
+  background: #fffaf2;
+}
+
+.amazon-search-price {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.amazon-search-btn {
+  background: #ff9900;
+  color: #111827;
+}
+
+.amazon-search-btn:hover {
+  background: #e88b00;
+}
+
+.amazon-search-note {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0.75rem 0 1.5rem;
+}
