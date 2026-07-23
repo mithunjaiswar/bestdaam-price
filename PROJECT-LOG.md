@@ -1,3 +1,9 @@
+### 2026-07-24 — Codex — Single-store card wording clarified
+- Kya badla: Homepage cards par single verified store hone par “1 store par compare” ki jagah “1 verified price • Amazon par bhi dekhein” dikhaya. Actual multi-store matches par existing comparison count rahega.
+- Kyun: Amazon search fallback available hone ke bawajood single store ko comparison bolna confusing tha.
+- Kaunsi files: app/components/HomeClient.js, PROJECT-LOG.md.
+- Dhyan rakhna: Amazon search fallback verified Amazon price nahi hai; use store-count me include mat karna.
+
 ### 2026-07-23 — Codex — Amazon affiliate search fallback
 - Kya badla: Exact Amazon price match na hone wale products par “Amazon par search karein” CTA add hua. Link product name ke Amazon search URL me Associates tag `bestdaam0a-21` automatically lagata hai; verified match hone par existing Amazon price row hi dikhti hai.
 - Kyun: Har catalog product se Amazon commission opportunity dene ke liye, bina scraped/outdated Amazon price ko verified comparison bataye.

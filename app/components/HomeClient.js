@@ -94,8 +94,9 @@ export default function HomeClient({ products }) {
               <div className="price">{formatINR(getLowestPrice(p))} se</div>
 
               <div className="stores">
-                {p.prices.length} store{p.prices.length > 1 ? "s" : ""} par
-                compare
+                {p.prices.length > 1
+                  ? `${p.prices.length} stores par compare`
+                  : "1 verified price • Amazon par bhi dekhein"}
               </div>
             </Link>
           ))}
