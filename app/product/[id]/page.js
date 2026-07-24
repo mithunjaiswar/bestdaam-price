@@ -24,11 +24,13 @@ export async function generateMetadata({ params }) {
 
   if (!product) return {};
 
+  const priceSuffix = product.prices.length > 1 ? " se shuru" : "";
+
   return {
     title: `${product.name} — Price Comparison | BestDaam`,
     description: `${product.name} ka sabse sasta daam dekho — ${formatINR(
       getLowestPrice(product)
-    )} se shuru.`,
+    )}${priceSuffix}.`,
   };
 }
 
@@ -85,6 +87,11 @@ export default async function ProductPage({ params }) {
         <div>
           <p className="product-category-label">{product.category}</p>
           <h1>{product.name}</h1>
+          {product.lastUpdated && (
+            <p className="last-updated">
+              Price last updated: {product.lastUpdated}
+            </p>
+          )}
         </div>
       </div>
 
@@ -160,7 +167,7 @@ export default async function ProductPage({ params }) {
         </p>
       )}
 
-      <h2 className="section-title">Pichle 30 din ka daam 📉</h2>
+      <h2 className="section-title">Asli price history 📉</h2>
       <PriceHistoryChart points={history} />
 
       <script

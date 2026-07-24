@@ -18,6 +18,25 @@ function shortDate(iso) {
 export default function PriceHistoryChart({ points }) {
   const [hover, setHover] = useState(null);
 
+  if (!Array.isArray(points) || points.length === 0) {
+    return (
+      <div className="chart-empty">
+        Price history abhi available nahi hai.
+      </div>
+    );
+  }
+
+  if (points.length === 1) {
+    return (
+      <div className="chart-empty">
+        <strong>{shortDate(points[0].date)}:</strong>{" "}
+        {formatINR(points[0].price)}
+        <br />
+        Daily updates ke baad yahan asli price trend dikhega.
+      </div>
+    );
+  }
+
   const prices = points.map((p) => p.price);
   const min = Math.min(...prices);
   const max = Math.max(...prices);
@@ -49,14 +68,14 @@ export default function PriceHistoryChart({ points }) {
   return (
     <div className="chart-wrap">
       <div className="chart-summary">
-        30 din me sabse kam: <strong>{formatINR(min)}</strong> · sabse zyada:{" "}
+        Is period me sabse kam: <strong>{formatINR(min)}</strong> · sabse zyada:{" "}
         <strong>{formatINR(max)}</strong>
       </div>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         className="price-chart"
         role="img"
-        aria-label={`Pichle 30 din ka price history. Sabse kam ${formatINR(min)}, sabse zyada ${formatINR(max)}.`}
+        aria-label={`Asli price history. Sabse kam ${formatINR(min)}, sabse zyada ${formatINR(max)}.`}
         onMouseMove={onMove}
         onMouseLeave={() => setHover(null)}
       >

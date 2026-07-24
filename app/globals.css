@@ -216,6 +216,57 @@ a {
   font-weight: 800;
 }
 
+.missing-product h2 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+.missing-product p {
+  margin: 0;
+}
+
+.missing-product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.missing-product .amazon-search-btn {
+  color: #111827;
+}
+
+.request-product-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--orange);
+}
+
+.last-updated {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chart-empty {
+  margin: 16px 0 30px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--muted);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
 .back-link {
   display: inline-flex;
   margin-bottom: 22px;

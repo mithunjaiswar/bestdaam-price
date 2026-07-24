@@ -41,7 +41,8 @@ export default function RootLayout({ children }) {
               <Link href="/privacy">Privacy Policy</Link>
             </nav>
             <p>
-              ⚠️ Abhi ye demo version hai — prices sample hain, asli nahi.
+              ⚠️ Prices time ke saath badal sakte hain — kharidne se pehle store
+              par final price check karein.
             </p>
             <p>© {new Date().getFullYear()} BestDaam.in</p>
           </div>

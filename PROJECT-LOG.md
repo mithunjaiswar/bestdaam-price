@@ -1,3 +1,9 @@
+### 2026-07-24 — Codex — Real price history and smart product search
+- Kya badla: Demo price graph ko real database snapshots se replace kiya; product page par last-updated date aur real-history empty/one-point states add hue. Homepage search fuzzy name matching aur Flipkart PID/Amazon ASIN URL lookup support karti hai. Missing product par tagged Amazon search aur pre-filled request email milta hai.
+- Kyun: Daily current-price tracking ko genuine banana aur customer ko name/link se product jaldi dhoondhne dena.
+- Kaunsi files: data/products.json, lib/helpers.js, lib/search.js, app/components/HomeClient.js, app/components/PriceHistoryChart.js, app/product/[id]/page.js, app/layout.js, app/globals.css, PROJECT-LOG.md. Local scraper me database/db.py, export_catalog_to_bestdaam.py, daily_update.py aur apply_ekaro_api_links.py update hue.
+- Dhyan rakhna: Daily automation sirf Flipkart ko refresh karti hai; Amazon verified prices official Creators API ke bina refresh nahi honge. Missing-product request abhi email-based hai; persistent automatic queue ke liye external database/webhook chahiye.
+
 ### 2026-07-24 — Codex — Single-price cards se suffix removed
 - Kya badla: Homepage par single verified price wale product se “se” suffix hata diya. Multiple verified stores hone par lowest price ke saath “se” ab bhi dikhega.
 - Kyun: Ek hi verified price ko starting price batana misleading tha.

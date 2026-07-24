@@ -5,27 +5,34 @@ import Link from "next/link";
 import {
   getCategories,
   getLowestPrice,
+  getAmazonSearchUrl,
   formatINR,
 } from "../../lib/helpers";
+import {
+  getSearchLabel,
+  searchProducts,
+} from "../../lib/search";
 
 export default function HomeClient({ products }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Sab");
 
   const categories = ["Sab", ...getCategories(products)];
+  const hasQuery = query.trim().length > 0;
 
-  const looksLikeUrl =
-    query.trim().startsWith("http") ||
-    query.includes("www.") ||
-    query.includes(".com") ||
-    query.includes(".in/");
-
-  const results = products.filter((p) => {
-    const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
-    const matchesCategory = category === "Sab" || p.category === category;
-
-    return matchesQuery && matchesCategory;
+  const results = searchProducts(products, query).filter((p) => {
+    const matchesCategory =
+      hasQuery || category === "Sab" || p.category === category;
+    return matchesCategory;
   });
+  const missingProduct = hasQuery && results.length === 0;
+  const searchLabel = getSearchLabel(query);
+  const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
+  const requestEmail = `mailto:contact@bestdaam.in?subject=${encodeURIComponent(
+    "BestDaam product request"
+  )}&body=${encodeURIComponent(
+    `Please add this product to BestDaam:\n\n${query.trim()}`
+  )}`;
 
   return (
     <>
@@ -58,18 +65,27 @@ export default function HomeClient({ products }) {
         </div>
       </section>
 
-      {looksLikeUrl ? (
-        <p className="no-results">
-          Link se search abhi kaam nahi karta 🙏 — product ka{" "}
-          <strong>naam</strong> likho. Jo product yahan na mile, hume{" "}
-          <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod denge!
-        </p>
-      ) : results.length === 0 ? (
-        <p className="no-results">
-          Kuch nahi mila 😕 — koi aur naam try karo. Jo product yahan nahi hai,
-          hume <a href="mailto:contact@bestdaam.in">email</a> kar do — hum jod
-          denge!
-        </p>
+      {missingProduct ? (
+        <div className="no-results missing-product">
+          <h2>Ye product abhi BestDaam catalog me nahi mila</h2>
+          <p>
+            Amazon par abhi search kar sakte ho, ya hume request bhejo. Hum
+            verified price milne par product catalog me add karenge.
+          </p>
+          <div className="missing-product-actions">
+            <a
+              href={amazonSearchUrl}
+              className="buy-btn amazon-search-btn"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+            >
+              Amazon par search karein
+            </a>
+            <a href={requestEmail} className="request-product-btn">
+              Product add karne ki request bhejein
+            </a>
+          </div>
+        </div>
       ) : (
         <div className="grid">
           {results.map((p) => (
