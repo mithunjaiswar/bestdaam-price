@@ -13,9 +13,14 @@ import {
   searchProducts,
 } from "../../lib/search";
 
+const PRODUCT_REQUEST_URL =
+  process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
+  "https://script.google.com/macros/s/AKfycbwAtwt08dqP0Hx2QonKSrJITCR_CxIKY_FUZmjn_qJUabK_1ueIxuG0xwESbwa5TSH0/exec";
+
 export default function HomeClient({ products }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Sab");
+  const [requestState, setRequestState] = useState("idle");
 
   const categories = ["Sab", ...getCategories(products)];
   const hasQuery = query.trim().length > 0;
@@ -28,11 +33,38 @@ export default function HomeClient({ products }) {
   const missingProduct = hasQuery && results.length === 0;
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
-  const requestEmail = `mailto:contact@bestdaam.in?subject=${encodeURIComponent(
-    "BestDaam product request"
-  )}&body=${encodeURIComponent(
-    `Please add this product to BestDaam:\n\n${query.trim()}`
-  )}`;
+  const requestEndpoint = PRODUCT_REQUEST_URL;
+
+  async function requestProduct() {
+    if (!requestEndpoint || requestState === "sending") {
+      return;
+    }
+
+    setRequestState("sending");
+
+    try {
+      const body = new URLSearchParams({
+        action: "submit",
+        query: query.trim(),
+        label: searchLabel,
+        source: "bestdaam.in",
+        website: "",
+      });
+
+      await fetch(requestEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body,
+      });
+
+      setRequestState("sent");
+    } catch {
+      setRequestState("error");
+    }
+  }
 
   return (
     <>
@@ -48,7 +80,10 @@ export default function HomeClient({ products }) {
           className="search-box"
           placeholder="Product search karo... jaise iPhone, laptop, earbuds"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setRequestState("idle");
+          }}
           autoFocus
         />
 
@@ -69,8 +104,9 @@ export default function HomeClient({ products }) {
         <div className="no-results missing-product">
           <h2>Ye product abhi BestDaam catalog me nahi mila</h2>
           <p>
-            Amazon par abhi search kar sakte ho, ya hume request bhejo. Hum
-            verified price milne par product catalog me add karenge.
+            Amazon par abhi search kar sakte ho, ya ek click me request save
+            karo. Subah ke daily update me hum verified product add karne ki
+            koshish karenge.
           </p>
           <div className="missing-product-actions">
             <a
@@ -81,10 +117,36 @@ export default function HomeClient({ products }) {
             >
               Amazon par search karein
             </a>
-            <a href={requestEmail} className="request-product-btn">
-              Product add karne ki request bhejein
-            </a>
+            <button
+              type="button"
+              className="request-product-btn"
+              onClick={requestProduct}
+              disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
+            >
+              {requestState === "sending"
+                ? "Request save ho rahi hai..."
+                : requestState === "sent"
+                  ? "Request save ho gayi ✓"
+                  : "Is product ko add karein"}
+            </button>
           </div>
+          {requestState === "sent" ? (
+            <p className="request-status success">
+              Ho gaya! Request note ho gayi. Verified listing milne par agle
+              daily update me product dikhega.
+            </p>
+          ) : null}
+          {requestState === "error" ? (
+            <p className="request-status error">
+              Request save nahi hui. Thodi der baad dobara try karein.
+            </p>
+          ) : null}
+          {!requestEndpoint ? (
+            <p className="request-status error">
+              Product-request service setup ho rahi hai. Filhaal Amazon search
+              use karein.
+            </p>
+          ) : null}
         </div>
       ) : (
         <div className="grid">

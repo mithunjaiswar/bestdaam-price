@@ -538,3 +538,38 @@ a {
   font-size: 0.85rem;
   margin: 0.75rem 0 1.5rem;
 }
+
+.request-product-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+}
+
+.request-product-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.request-status {
+  margin: 14px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.request-status.success {
+  color: var(--green);
+}
+
+.request-status.error {
+  color: #b42318;
+}

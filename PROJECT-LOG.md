@@ -1,3 +1,9 @@
+### 2026-07-24 — Codex — One-click product request queue
+- Kya badla: Missing search result par email hata kar one-click “Is product ko add karein” flow add kiya. Request Google Sheet-backed Apps Script queue me save hogi; daily local updater pending requests ko safely process karke successful publish ke baad Added mark karega.
+- Kyun: Customer ko email/form fill karaye bina din bhar missing-product requests collect karne aur subah ke catalog update me automatically pick karne ke liye.
+- Kaunsi files: app/components/HomeClient.js, app/globals.css, .env.example, .gitignore, PROJECT-LOG.md. Local scraper me google_apps_script/ProductRequests.gs, process_product_requests.py aur daily_update.py update hue.
+- Dhyan rakhna: Live build me `NEXT_PUBLIC_PRODUCT_REQUEST_URL` configure hona zaroori hai. Google Sheet deployment token sirf local scraper environment me rahega; repo me secret commit nahi karna. Automatic addition sirf high-confidence Flipkart match par hoti hai; unclear requests Pending/Needs Review rahengi.
+
 ### 2026-07-24 — Codex — Real price history and smart product search
 - Kya badla: Demo price graph ko real database snapshots se replace kiya; product page par last-updated date aur real-history empty/one-point states add hue. Homepage search fuzzy name matching aur Flipkart PID/Amazon ASIN URL lookup support karti hai. Missing product par tagged Amazon search aur pre-filled request email milta hai.
 - Kyun: Daily current-price tracking ko genuine banana aur customer ko name/link se product jaldi dhoondhne dena.
