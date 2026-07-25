@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchProducts, getLocalProducts } from "../../../lib/products";
 import {
@@ -10,6 +9,7 @@ import {
   formatINR,
 } from "../../../lib/helpers";
 import PriceHistoryChart from "../../components/PriceHistoryChart";
+import BackToSearchLink from "../../components/BackToSearchLink";
 
 export const revalidate = 600;
 export const dynamicParams = true;
@@ -66,9 +66,7 @@ export default async function ProductPage({ params }) {
 
   return (
     <>
-      <Link href="/" className="back-link">
-        ← Wapas search par
-      </Link>
+      <BackToSearchLink />
 
       <div className="product-head product-head-with-image">
         <div className="product-detail-media">

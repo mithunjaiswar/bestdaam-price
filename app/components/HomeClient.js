@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   getCategories,
   getLowestPrice,
@@ -18,22 +19,82 @@ const PRODUCT_REQUEST_URL =
   "https://script.google.com/macros/s/AKfycbwAtwt08dqP0Hx2QonKSrJITCR_CxIKY_FUZmjn_qJUabK_1ueIxuG0xwESbwa5TSH0/exec";
 
 export default function HomeClient({ products }) {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("Sab");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialQuery = searchParams.get("q") || "";
+  const initialCategory = searchParams.get("category") || "Sab";
+  const [query, setQuery] = useState(initialQuery);
+  const [category, setCategory] = useState(initialCategory);
   const [requestState, setRequestState] = useState("idle");
+  const restoredScroll = useRef(false);
 
   const categories = ["Sab", ...getCategories(products)];
+  const selectedCategory = categories.includes(category) ? category : "Sab";
   const hasQuery = query.trim().length > 0;
 
   const results = searchProducts(products, query).filter((p) => {
     const matchesCategory =
-      hasQuery || category === "Sab" || p.category === category;
+      hasQuery ||
+      selectedCategory === "Sab" ||
+      p.category === selectedCategory;
     return matchesCategory;
   });
   const missingProduct = hasQuery && results.length === 0;
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
   const requestEndpoint = PRODUCT_REQUEST_URL;
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    const normalizedQuery = query.trim();
+
+    if (normalizedQuery) {
+      params.set("q", normalizedQuery);
+    }
+
+    if (selectedCategory !== "Sab") {
+      params.set("category", selectedCategory);
+    }
+
+    const nextUrl = params.toString() ? `/?${params.toString()}` : "/";
+    const currentUrl = `${window.location.pathname}${window.location.search}`;
+
+    if (nextUrl !== currentUrl) {
+      router.replace(nextUrl, { scroll: false });
+    }
+  }, [query, router, selectedCategory]);
+
+  useEffect(() => {
+    if (restoredScroll.current) {
+      return;
+    }
+
+    restoredScroll.current = true;
+    const savedScroll = Number(
+      window.sessionStorage.getItem("bestdaam-home-scroll")
+    );
+
+    if (!Number.isFinite(savedScroll) || savedScroll <= 0) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: savedScroll, behavior: "auto" });
+      });
+    });
+  }, []);
+
+  function rememberHomePosition() {
+    window.sessionStorage.setItem(
+      "bestdaam-home-scroll",
+      String(window.scrollY)
+    );
+    window.sessionStorage.setItem(
+      "bestdaam-home-url",
+      `${window.location.pathname}${window.location.search}`
+    );
+  }
 
   async function requestProduct() {
     if (!requestEndpoint || requestState === "sending") {
@@ -91,7 +152,7 @@ export default function HomeClient({ products }) {
           {categories.map((c) => (
             <button
               key={c}
-              className={`chip ${category === c ? "active" : ""}`}
+              className={`chip ${selectedCategory === c ? "active" : ""}`}
               onClick={() => setCategory(c)}
             >
               {c}
@@ -151,7 +212,12 @@ export default function HomeClient({ products }) {
       ) : (
         <div className="grid">
           {results.map((p) => (
-            <Link key={p.id} href={`/product/${p.id}`} className="card">
+            <Link
+              key={p.id}
+              href={`/product/${p.id}`}
+              className="card"
+              onClick={rememberHomePosition}
+            >
               <div className="card-media">
                 {p.image ? (
                   <img

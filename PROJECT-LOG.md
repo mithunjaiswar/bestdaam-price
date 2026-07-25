@@ -1,3 +1,9 @@
+### 2026-07-25 — Codex — Product back-navigation state
+- Kya badla: Homepage search, selected category aur scroll position navigation ke across preserve kiye. Product page ka “Wapas search par” button ab saved results par lautata hai.
+- Kyun: Product dekhne ke baad Back karne par homepage filters reset hone aur scroll top par jane ka issue fix karne ke liye.
+- Kaunsi files: app/components/HomeClient.js, app/components/BackToSearchLink.js, app/product/[id]/page.js, app/page.js, PROJECT-LOG.md.
+- Dhyan rakhna: Search/category URL query parameters me save hote hain; scroll position current browser tab ke session storage me rehti hai.
+
 ### 2026-07-25 — Codex — Men's Clothing category
 - Kya badla: Men's Clothing category ke 100 Flipkart products aur affiliate links catalog me add kiye. Name-only product requests me chhoti spelling mistakes ko safely recognize karne ke liye fuzzy token matching add hui.
 - Kyun: Shirts/clothing ki genuine customer demand cover karne aur typo wali requests ko better evaluate karne ke liye.
