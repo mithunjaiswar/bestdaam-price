@@ -1,3 +1,9 @@
+### 2026-07-25 — Codex — Men's Clothing category
+- Kya badla: Men's Clothing category ke 100 Flipkart products aur affiliate links catalog me add kiye. Name-only product requests me chhoti spelling mistakes ko safely recognize karne ke liye fuzzy token matching add hui.
+- Kyun: Shirts/clothing ki genuine customer demand cover karne aur typo wali requests ko better evaluate karne ke liye.
+- Kaunsi files: data/products.json, PROJECT-LOG.md. Local scraper me categories.json, export_catalog_to_bestdaam.py aur process_product_requests.py update hue.
+- Dhyan rakhna: Customer search se category automatically create nahi hoti. Unclear request `Needs Review` rahegi; sirf reliable product matches publish honge.
+
 ### 2026-07-25 — Daily automation — Catalog price refresh
 - Kya badla: Daily validated catalog refresh complete hua; 1100 products export hue.
 - Kyun: BestDaam par current Flipkart prices aur real price-history snapshots maintain karne ke liye.
