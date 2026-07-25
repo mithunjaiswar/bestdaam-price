@@ -1,3 +1,9 @@
+### 2026-07-25 — Codex — Product price sorting
+- Kya badla: Homepage par Default, Price Low to High aur Price High to Low sorting add hui; visible product count bhi dikhaya.
+- Kyun: Customer ko budget ya premium price order me products browse karne dene ke liye.
+- Kaunsi files: app/components/HomeClient.js, app/globals.css, PROJECT-LOG.md.
+- Dhyan rakhna: Selected sort URL me save hota hai, isliye product page se Back karne par sorting preserve rehti hai.
+
 ### 2026-07-25 — Codex — Product back-navigation state
 - Kya badla: Homepage search, selected category aur scroll position navigation ke across preserve kiye. Product page ka “Wapas search par” button ab saved results par lautata hai.
 - Kyun: Product dekhne ke baad Back karne par homepage filters reset hone aur scroll top par jane ka issue fix karne ke liye.

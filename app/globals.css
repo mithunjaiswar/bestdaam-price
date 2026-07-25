@@ -104,6 +104,45 @@ a {
   flex-wrap: wrap;
 }
 
+.results-toolbar {
+  width: min(100%, 1200px);
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.results-toolbar p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sort-control select {
+  min-height: 44px;
+  padding: 0 40px 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.sort-control select:focus {
+  outline: 3px solid rgba(255, 123, 84, 0.22);
+  border-color: var(--orange);
+}
+
 .chip {
   border: 1px solid var(--border);
   background: #fff;
@@ -480,6 +519,20 @@ a {
 
   .hero {
     padding-top: 18px;
+  }
+
+  .results-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sort-control {
+    justify-content: space-between;
+  }
+
+  .sort-control select {
+    flex: 1;
+    max-width: 230px;
   }
 
   .grid {

@@ -23,8 +23,10 @@ export default function HomeClient({ products }) {
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
   const initialCategory = searchParams.get("category") || "Sab";
+  const initialSort = searchParams.get("sort") || "default";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
+  const [sortOrder, setSortOrder] = useState(initialSort);
   const [requestState, setRequestState] = useState("idle");
   const restoredScroll = useRef(false);
 
@@ -32,13 +34,27 @@ export default function HomeClient({ products }) {
   const selectedCategory = categories.includes(category) ? category : "Sab";
   const hasQuery = query.trim().length > 0;
 
-  const results = searchProducts(products, query).filter((p) => {
+  const filteredResults = searchProducts(products, query).filter((p) => {
     const matchesCategory =
       hasQuery ||
       selectedCategory === "Sab" ||
       p.category === selectedCategory;
     return matchesCategory;
   });
+  const selectedSort = [
+    "default",
+    "price-low-high",
+    "price-high-low",
+  ].includes(sortOrder)
+    ? sortOrder
+    : "default";
+  const results = [...filteredResults];
+
+  if (selectedSort === "price-low-high") {
+    results.sort((a, b) => getLowestPrice(a) - getLowestPrice(b));
+  } else if (selectedSort === "price-high-low") {
+    results.sort((a, b) => getLowestPrice(b) - getLowestPrice(a));
+  }
   const missingProduct = hasQuery && results.length === 0;
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
@@ -56,13 +72,17 @@ export default function HomeClient({ products }) {
       params.set("category", selectedCategory);
     }
 
+    if (selectedSort !== "default") {
+      params.set("sort", selectedSort);
+    }
+
     const nextUrl = params.toString() ? `/?${params.toString()}` : "/";
     const currentUrl = `${window.location.pathname}${window.location.search}`;
 
     if (nextUrl !== currentUrl) {
       router.replace(nextUrl, { scroll: false });
     }
-  }, [query, router, selectedCategory]);
+  }, [query, router, selectedCategory, selectedSort]);
 
   useEffect(() => {
     if (restoredScroll.current) {
@@ -158,6 +178,22 @@ export default function HomeClient({ products }) {
               {c}
             </button>
           ))}
+        </div>
+
+        <div className="results-toolbar">
+          <p>{results.length} products</p>
+          <label className="sort-control">
+            <span>Sort by</span>
+            <select
+              value={selectedSort}
+              onChange={(event) => setSortOrder(event.target.value)}
+              aria-label="Products sort karein"
+            >
+              <option value="default">Default</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+            </select>
+          </label>
         </div>
       </section>
 
