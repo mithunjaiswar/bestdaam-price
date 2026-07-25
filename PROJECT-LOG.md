@@ -1,3 +1,9 @@
+### 2026-07-25 — Daily automation — Catalog price refresh
+- Kya badla: Daily validated catalog refresh complete hua; 1100 products export hue.
+- Kyun: BestDaam par current Flipkart prices aur real price-history snapshots maintain karne ke liye.
+- Kaunsi files: data/products.json, PROJECT-LOG.md.
+- Dhyan rakhna: Affiliate coverage 1100/1100; Amazon verified prices official API ke bina refresh nahi hue.
+
 ### 2026-07-24 — Codex — One-click product request queue
 - Kya badla: Missing search result par email hata kar one-click “Is product ko add karein” flow add kiya. Request Google Sheet-backed Apps Script queue me save hogi; daily local updater pending requests ko safely process karke successful publish ke baad Added mark karega.
 - Kyun: Customer ko email/form fill karaye bina din bhar missing-product requests collect karne aur subah ke catalog update me automatically pick karne ke liye.
