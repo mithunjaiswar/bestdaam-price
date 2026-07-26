@@ -10,6 +10,8 @@ import {
 } from "../../../lib/helpers";
 import PriceHistoryChart from "../../components/PriceHistoryChart";
 import BackToSearchLink from "../../components/BackToSearchLink";
+import ShareButtons from "../../components/ShareButtons";
+import StoreDealLink from "../../components/StoreDealLink";
 
 export const revalidate = 600;
 export const dynamicParams = true;
@@ -100,6 +102,8 @@ export default async function ProductPage({ params }) {
         </p>
       )}
 
+      <ShareButtons product={product} price={lowest} />
+
       <table className="price-table">
         <thead>
           <tr>
@@ -124,14 +128,14 @@ export default async function ProductPage({ params }) {
                 <td>{isBest ? "—" : `+${formatINR(entry.price - lowest)}`}</td>
                 <td>
                   {href ? (
-                    <a
+                    <StoreDealLink
                       href={href}
-                      className="buy-btn"
-                      target="_blank"
-                      rel="nofollow sponsored noopener"
+                      product={product}
+                      store={entry.store}
+                      price={entry.price}
                     >
                       View deal
-                    </a>
+                    </StoreDealLink>
                   ) : (
                     <span className="buy-btn coming-soon">Coming soon</span>
                   )}
@@ -145,14 +149,15 @@ export default async function ProductPage({ params }) {
               <td className="amazon-search-price">Check current price</td>
               <td>—</td>
               <td>
-                <a
+                <StoreDealLink
                   href={getAmazonSearchUrl(product)}
                   className="buy-btn amazon-search-btn"
-                  target="_blank"
-                  rel="nofollow sponsored noopener"
+                  product={product}
+                  store="Amazon search"
+                  price={0}
                 >
                   Search Amazon
-                </a>
+                </StoreDealLink>
               </td>
             </tr>
           )}

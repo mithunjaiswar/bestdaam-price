@@ -13,6 +13,9 @@ import {
   getSearchLabel,
   searchProducts,
 } from "../../lib/search";
+import { getFeaturedDeals } from "../../lib/deals";
+import { trackEvent } from "../../lib/tracking";
+import DealGrid from "./DealGrid";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -112,6 +115,7 @@ export default function HomeClient({ products }) {
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
   const requestEndpoint = PRODUCT_REQUEST_URL;
+  const featuredDeals = getFeaturedDeals(products, 8);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -184,6 +188,19 @@ export default function HomeClient({ products }) {
     );
   }
 
+  function submitSearch() {
+    const normalizedQuery = query.trim();
+
+    if (!normalizedQuery) {
+      return;
+    }
+
+    trackEvent("search", {
+      query: normalizedQuery,
+      value: searchedResults.length,
+    });
+  }
+
   async function requestProduct() {
     if (!requestEndpoint || requestState === "sending") {
       return;
@@ -242,9 +259,38 @@ export default function HomeClient({ products }) {
               setQuery(e.target.value);
               setRequestState("idle");
             }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                submitSearch();
+              }
+            }}
             autoFocus
           />
-          <span className="search-hint">Search</span>
+          <button
+            type="button"
+            className="search-hint"
+            onClick={submitSearch}
+          >
+            Search
+          </button>
+        </div>
+
+        <div className="quick-searches">
+          <span>Quick searches</span>
+          {["Wired Earphones", "Earbuds", "Speakers", "Smartwatch"].map(
+            (term) => (
+              <button
+                type="button"
+                key={term}
+                onClick={() => {
+                  setQuery(term);
+                  trackEvent("search", { query: term });
+                }}
+              >
+                {term}
+              </button>
+            )
+          )}
         </div>
 
         <div className="category-row">
@@ -330,6 +376,24 @@ export default function HomeClient({ products }) {
         </div>
       </section>
 
+      {!hasQuery &&
+      selectedCategory === "All" &&
+      selectedStore === "All" &&
+      selectedBudget === "all" ? (
+        <section className="featured-deals-section">
+          <div className="section-heading-row">
+            <div>
+              <span className="results-kicker">Affordable picks</span>
+              <h2>Today&apos;s deals</h2>
+            </div>
+            <Link href="/deals" className="text-link">
+              View all deals →
+            </Link>
+          </div>
+          <DealGrid products={featuredDeals} />
+        </section>
+      ) : null}
+
       {missingProduct ? (
         <div className="no-results missing-product">
           <span className="empty-icon">⌕</span>
@@ -391,7 +455,15 @@ export default function HomeClient({ products }) {
               key={p.id}
               href={`/product/${p.id}`}
               className="card"
-              onClick={rememberHomePosition}
+              onClick={() => {
+                rememberHomePosition();
+                trackEvent("select_product", {
+                  productId: p.id,
+                  productName: p.name,
+                  category: p.category,
+                  value: priceForSelectedStore(p),
+                });
+              }}
             >
               <div className="card-media">
                 {p.image ? (

@@ -1,3 +1,9 @@
+### 2026-07-26 — Codex — Deals, social sharing and growth tracking
+- What changed: Added automatic Today’s Deals, Under ₹500/₹1,000/₹5,000 and indexable category pages; WhatsApp, Telegram and copy-link sharing; UTM source preservation; search, page-view, product-select, share and outbound store-click tracking hooks; quick searches; and expanded sitemap coverage.
+- Why: Make daily deal promotion easy, measure which channels and products create store traffic, capture customer demand, and build organic search landing pages.
+- Files changed: app/deals, app/category, app/components, app/layout.js, app/sitemap.js, app/globals.css, lib/deals.js, lib/slugs.js, lib/tracking.js, .env.example, PROJECT-LOG.md. The local Google Apps Script ProductRequests.gs was extended with a Site Analytics sheet.
+- Notes: Deals are derived automatically from the refreshed catalog. Google Apps Script must be updated to the latest deployment before live analytics rows begin recording.
+
 ### 2026-07-26 — Codex — Affordable-first shopping
 - What changed: Homepage now starts with Price Low to High ordering and includes quick Under ₹500, Under ₹1,000 and Under ₹5,000 buttons plus a complete budget dropdown.
 - Why: The catalog already has hundreds of affordable items, but expensive camera and electronics listings appeared first. Budget discovery is now immediate for conversion-focused promotion.
