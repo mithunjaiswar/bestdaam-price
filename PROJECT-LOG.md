@@ -1,3 +1,9 @@
+### 2026-07-26 — Codex — Affordable-first shopping
+- What changed: Homepage now starts with Price Low to High ordering and includes quick Under ₹500, Under ₹1,000 and Under ₹5,000 buttons plus a complete budget dropdown.
+- Why: The catalog already has hundreds of affordable items, but expensive camera and electronics listings appeared first. Budget discovery is now immediate for conversion-focused promotion.
+- Files changed: app/components/HomeClient.js, app/globals.css, PROJECT-LOG.md.
+- Notes: Budget, store, category and sorting selections persist in the URL and back navigation.
+
 ### 2026-07-26 — Codex — Store filter
 - What changed: Added an All stores / Amazon / Flipkart store filter to the homepage. Available stores are discovered automatically from the catalog, selected-store pricing is used for cards and sorting, and the selection is preserved in the URL and back navigation.
 - Why: Let shoppers browse only the products and prices available from their preferred retailer.

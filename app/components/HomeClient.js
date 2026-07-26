@@ -24,10 +24,12 @@ export default function HomeClient({ products }) {
   const initialQuery = searchParams.get("q") || "";
   const initialCategory = searchParams.get("category") || "All";
   const initialStore = searchParams.get("store") || "All";
-  const initialSort = searchParams.get("sort") || "default";
+  const initialBudget = searchParams.get("budget") || "all";
+  const initialSort = searchParams.get("sort") || "price-low-high";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
   const [store, setStore] = useState(initialStore);
+  const [budget, setBudget] = useState(initialBudget);
   const [sortOrder, setSortOrder] = useState(initialSort);
   const [requestState, setRequestState] = useState("idle");
   const restoredScroll = useRef(false);
@@ -45,27 +47,18 @@ export default function HomeClient({ products }) {
   ];
   const selectedCategory = categories.includes(category) ? category : "All";
   const selectedStore = stores.includes(store) ? store : "All";
+  const selectedBudget = [
+    "all",
+    "under-500",
+    "under-1000",
+    "under-5000",
+    "5000-20000",
+    "above-20000",
+  ].includes(budget)
+    ? budget
+    : "all";
   const hasQuery = query.trim().length > 0;
 
-  const searchedResults = searchProducts(products, query);
-  const filteredResults = searchedResults.filter((p) => {
-    const matchesCategory =
-      hasQuery ||
-      selectedCategory === "All" ||
-      p.category === selectedCategory;
-    const matchesStore =
-      selectedStore === "All" ||
-      (p.prices || []).some((entry) => entry.store === selectedStore);
-    return matchesCategory && matchesStore;
-  });
-  const selectedSort = [
-    "default",
-    "price-low-high",
-    "price-high-low",
-  ].includes(sortOrder)
-    ? sortOrder
-    : "default";
-  const results = [...filteredResults];
   const priceForSelectedStore = (product) => {
     if (selectedStore === "All") {
       return getLowestPrice(product);
@@ -78,6 +71,36 @@ export default function HomeClient({ products }) {
 
     return storePrices.length ? Math.min(...storePrices) : getLowestPrice(product);
   };
+
+  const searchedResults = searchProducts(products, query);
+  const filteredResults = searchedResults.filter((p) => {
+    const matchesCategory =
+      hasQuery ||
+      selectedCategory === "All" ||
+      p.category === selectedCategory;
+    const matchesStore =
+      selectedStore === "All" ||
+      (p.prices || []).some((entry) => entry.store === selectedStore);
+    const productPrice = priceForSelectedStore(p);
+    const matchesBudget =
+      selectedBudget === "all" ||
+      (selectedBudget === "under-500" && productPrice <= 500) ||
+      (selectedBudget === "under-1000" && productPrice <= 1000) ||
+      (selectedBudget === "under-5000" && productPrice <= 5000) ||
+      (selectedBudget === "5000-20000" &&
+        productPrice > 5000 &&
+        productPrice <= 20000) ||
+      (selectedBudget === "above-20000" && productPrice > 20000);
+    return matchesCategory && matchesStore && matchesBudget;
+  });
+  const selectedSort = [
+    "default",
+    "price-low-high",
+    "price-high-low",
+  ].includes(sortOrder)
+    ? sortOrder
+    : "price-low-high";
+  const results = [...filteredResults];
 
   if (selectedSort === "price-low-high") {
     results.sort((a, b) => priceForSelectedStore(a) - priceForSelectedStore(b));
@@ -106,7 +129,11 @@ export default function HomeClient({ products }) {
       params.set("store", selectedStore);
     }
 
-    if (selectedSort !== "default") {
+    if (selectedBudget !== "all") {
+      params.set("budget", selectedBudget);
+    }
+
+    if (selectedSort !== "price-low-high") {
       params.set("sort", selectedSort);
     }
 
@@ -116,7 +143,14 @@ export default function HomeClient({ products }) {
     if (nextUrl !== currentUrl) {
       router.replace(nextUrl, { scroll: false });
     }
-  }, [query, router, selectedCategory, selectedSort, selectedStore]);
+  }, [
+    query,
+    router,
+    selectedBudget,
+    selectedCategory,
+    selectedSort,
+    selectedStore,
+  ]);
 
   useEffect(() => {
     if (restoredScroll.current) {
@@ -225,12 +259,47 @@ export default function HomeClient({ products }) {
           ))}
         </div>
 
+        <div className="budget-row" aria-label="Quick budget filters">
+          <span>Shop by budget</span>
+          {[
+            ["under-500", "Under ₹500"],
+            ["under-1000", "Under ₹1,000"],
+            ["under-5000", "Under ₹5,000"],
+          ].map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              className={`budget-chip ${selectedBudget === value ? "active" : ""}`}
+              onClick={() =>
+                setBudget(selectedBudget === value ? "all" : value)
+              }
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <div className="results-toolbar">
           <div>
             <span className="results-kicker">Explore our catalog</span>
             <p>{results.length.toLocaleString("en-IN")} products found</p>
           </div>
           <div className="filter-controls">
+            <label className="sort-control">
+              <span>Budget</span>
+              <select
+                value={selectedBudget}
+                onChange={(event) => setBudget(event.target.value)}
+                aria-label="Filter products by budget"
+              >
+                <option value="all">All prices</option>
+                <option value="under-500">Under ₹500</option>
+                <option value="under-1000">Under ₹1,000</option>
+                <option value="under-5000">Under ₹5,000</option>
+                <option value="5000-20000">₹5,000–₹20,000</option>
+                <option value="above-20000">Above ₹20,000</option>
+              </select>
+            </label>
             <label className="sort-control">
               <span>Store</span>
               <select
@@ -252,7 +321,7 @@ export default function HomeClient({ products }) {
                 onChange={(event) => setSortOrder(event.target.value)}
                 aria-label="Sort products"
               >
-                <option value="default">Default</option>
+                <option value="default">Catalog order</option>
                 <option value="price-low-high">Price: Low to High</option>
                 <option value="price-high-low">Price: High to Low</option>
               </select>
