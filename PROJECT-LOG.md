@@ -1,3 +1,9 @@
+### 2026-07-26 — Codex — Premium English redesign
+- What changed: Rebuilt the BestDaam interface with a premium navy, cobalt and emerald design system; converted all customer-facing Hinglish copy to clear English; upgraded the header, hero search, category filters, sort controls, product cards, comparison table, price history, empty states, footer and mobile layout.
+- Why: Give the site a more trustworthy, modern price-comparison experience while keeping it easy to scan and use.
+- Files changed: app/layout.js, app/page.js, app/globals.css, app/components/HomeClient.js, app/components/BackToSearchLink.js, app/components/PriceHistoryChart.js, app/product/[id]/page.js, PROJECT-LOG.md.
+- Notes: Existing catalog data, search state, sorting, price history, product requests, affiliate routing and SEO product pages remain unchanged.
+
 ### 2026-07-26 — Daily automation — Catalog price refresh
 - Kya badla: Daily validated catalog refresh complete hua; 1200 products export hue.
 - Kyun: BestDaam par current Flipkart prices aur real price-history snapshots maintain karne ke liye.

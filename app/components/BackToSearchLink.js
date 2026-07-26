@@ -22,7 +22,7 @@ export default function BackToSearchLink() {
 
   return (
     <a href="/" className="back-link" onClick={goBack}>
-      ← Wapas search par
+      ← Back to results
     </a>
   );
 }

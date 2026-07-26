@@ -8,7 +8,7 @@ export default async function HomePage() {
   const products = await fetchProducts();
 
   return (
-    <Suspense fallback={<p className="loading-state">Products load ho rahe hain...</p>}>
+    <Suspense fallback={<p className="loading-state">Loading the latest prices…</p>}>
       <HomeClient products={products} />
     </Suspense>
   );

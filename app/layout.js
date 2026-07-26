@@ -6,13 +6,13 @@ export const metadata = {
   other: {
     "verify-admitad": "f9807017ed",
   },
-  title: "BestDaam — Sabse Sasta Daam, Ek Jagah",
+  title: "BestDaam — Compare Prices. Buy Smarter.",
   description:
-    "India ke top online stores (Amazon, Flipkart, Croma, Reliance Digital) par products ke prices compare karo aur sabse saste daam par kharido.",
+    "Compare product prices across leading Indian online stores and find the best deal before you buy.",
   openGraph: {
-    title: "BestDaam — Sabse Sasta Daam, Ek Jagah",
+    title: "BestDaam — Compare Prices. Buy Smarter.",
     description:
-      "Amazon, Flipkart, Croma aur Reliance Digital ke prices ek jagah compare karo.",
+      "Compare prices across leading Indian stores and choose the best deal.",
     url: "https://bestdaam.in",
     siteName: "BestDaam",
     locale: "en_IN",
@@ -26,10 +26,16 @@ export default function RootLayout({ children }) {
       <body>
         <header className="site-header">
           <div className="container header-inner">
-            <Link href="/" className="logo">
-              Best<span>Daam</span>.in
-            </Link>
-            <p className="tagline">Sabse Sasta Daam, Ek Jagah 🇮🇳</p>
+            <div className="brand-lockup">
+              <Link href="/" className="logo" aria-label="BestDaam home">
+                Best<span>Daam</span>
+              </Link>
+              <span className="brand-dot">IN</span>
+            </div>
+            <nav className="header-nav" aria-label="Main navigation">
+              <Link href="/about">How it works</Link>
+              <Link href="/disclosure">Affiliate disclosure</Link>
+            </nav>
           </div>
         </header>
         <main className="container">{children}</main>
@@ -41,10 +47,10 @@ export default function RootLayout({ children }) {
               <Link href="/privacy">Privacy Policy</Link>
             </nav>
             <p>
-              ⚠️ Prices time ke saath badal sakte hain — kharidne se pehle store
-              par final price check karein.
+              Prices and availability can change. Always confirm the final
+              price on the retailer&apos;s website before purchasing.
             </p>
-            <p>© {new Date().getFullYear()} BestDaam.in</p>
+            <p>© {new Date().getFullYear()} BestDaam. Made for smarter shopping in India.</p>
           </div>
         </footer>
       </body>

@@ -22,7 +22,7 @@ export default function HomeClient({ products }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
-  const initialCategory = searchParams.get("category") || "Sab";
+  const initialCategory = searchParams.get("category") || "All";
   const initialSort = searchParams.get("sort") || "default";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
@@ -30,14 +30,14 @@ export default function HomeClient({ products }) {
   const [requestState, setRequestState] = useState("idle");
   const restoredScroll = useRef(false);
 
-  const categories = ["Sab", ...getCategories(products)];
-  const selectedCategory = categories.includes(category) ? category : "Sab";
+  const categories = ["All", ...getCategories(products)];
+  const selectedCategory = categories.includes(category) ? category : "All";
   const hasQuery = query.trim().length > 0;
 
   const filteredResults = searchProducts(products, query).filter((p) => {
     const matchesCategory =
       hasQuery ||
-      selectedCategory === "Sab" ||
+      selectedCategory === "All" ||
       p.category === selectedCategory;
     return matchesCategory;
   });
@@ -68,7 +68,7 @@ export default function HomeClient({ products }) {
       params.set("q", normalizedQuery);
     }
 
-    if (selectedCategory !== "Sab") {
+    if (selectedCategory !== "All") {
       params.set("category", selectedCategory);
     }
 
@@ -150,23 +150,34 @@ export default function HomeClient({ products }) {
   return (
     <>
       <section className="hero">
-        <h1>Ek product, saare stores ke daam 💰</h1>
+        <div className="hero-eyebrow">
+          <span className="status-dot" />
+          Prices refreshed daily
+        </div>
+        <h1>
+          Find the best price.
+          <span> Before you buy.</span>
+        </h1>
         <p>
-          Amazon, Flipkart, Croma aur Reliance Digital ke prices compare karo —
-          sabse sasta chuno.
+          Search once, compare trusted stores, and shop with confidence.
+          BestDaam makes every deal easier to understand.
         </p>
 
-        <input
-          type="search"
-          className="search-box"
-          placeholder="Product search karo... jaise iPhone, laptop, earbuds"
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setRequestState("idle");
-          }}
-          autoFocus
-        />
+        <div className="search-shell">
+          <span className="search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            className="search-box"
+            placeholder="Search by product name or paste a product link"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setRequestState("idle");
+            }}
+            autoFocus
+          />
+          <span className="search-hint">Search</span>
+        </div>
 
         <div className="category-row">
           {categories.map((c) => (
@@ -181,13 +192,16 @@ export default function HomeClient({ products }) {
         </div>
 
         <div className="results-toolbar">
-          <p>{results.length} products</p>
+          <div>
+            <span className="results-kicker">Explore our catalog</span>
+            <p>{results.length.toLocaleString("en-IN")} products found</p>
+          </div>
           <label className="sort-control">
             <span>Sort by</span>
             <select
               value={selectedSort}
               onChange={(event) => setSortOrder(event.target.value)}
-              aria-label="Products sort karein"
+              aria-label="Sort products"
             >
               <option value="default">Default</option>
               <option value="price-low-high">Price: Low to High</option>
@@ -199,11 +213,11 @@ export default function HomeClient({ products }) {
 
       {missingProduct ? (
         <div className="no-results missing-product">
-          <h2>Ye product abhi BestDaam catalog me nahi mila</h2>
+          <span className="empty-icon">⌕</span>
+          <h2>We could not find this product yet</h2>
           <p>
-            Amazon par abhi search kar sakte ho, ya ek click me request save
-            karo. Subah ke daily update me hum verified product add karne ki
-            koshish karenge.
+            Search for it on Amazon now, or send us a one-click request. We
+            will try to include a verified listing in an upcoming catalog update.
           </p>
           <div className="missing-product-actions">
             <a
@@ -212,7 +226,7 @@ export default function HomeClient({ products }) {
               target="_blank"
               rel="nofollow sponsored noopener"
             >
-              Amazon par search karein
+              Search on Amazon
             </a>
             <button
               type="button"
@@ -221,27 +235,27 @@ export default function HomeClient({ products }) {
               disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
             >
               {requestState === "sending"
-                ? "Request save ho rahi hai..."
+                ? "Saving request…"
                 : requestState === "sent"
-                  ? "Request save ho gayi ✓"
-                  : "Is product ko add karein"}
+                  ? "Request saved ✓"
+                  : "Request this product"}
             </button>
           </div>
           {requestState === "sent" ? (
             <p className="request-status success">
-              Ho gaya! Request note ho gayi. Verified listing milne par agle
-              daily update me product dikhega.
+              Request received. Once verified, the product may appear in a
+              future catalog update.
             </p>
           ) : null}
           {requestState === "error" ? (
             <p className="request-status error">
-              Request save nahi hui. Thodi der baad dobara try karein.
+              We could not save the request. Please try again shortly.
             </p>
           ) : null}
           {!requestEndpoint ? (
             <p className="request-status error">
-              Product-request service setup ho rahi hai. Filhaal Amazon search
-              use karein.
+              Product requests are temporarily unavailable. Please use Amazon
+              search for now.
             </p>
           ) : null}
         </div>
@@ -267,19 +281,23 @@ export default function HomeClient({ products }) {
                 )}
               </div>
 
+              <span className="card-category">{p.category}</span>
               <h3>{p.name}</h3>
 
-              <div className="from">Sabse sasta daam</div>
+              <div className="from">Best available price</div>
 
               <div className="price">
                 {formatINR(getLowestPrice(p))}
-                {p.prices.length > 1 ? " se" : ""}
+                {p.prices.length > 1 ? " onwards" : ""}
               </div>
 
               <div className="stores">
                 {p.prices.length > 1
-                  ? `${p.prices.length} stores par compare`
-                  : "1 verified price • Amazon par bhi dekhein"}
+                  ? `Compare across ${p.prices.length} stores`
+                  : "1 verified price"}
+              </div>
+              <div className="card-cta">
+                Compare prices <span aria-hidden="true">→</span>
               </div>
             </Link>
           ))}

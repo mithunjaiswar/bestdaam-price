@@ -24,11 +24,11 @@ export async function generateMetadata({ params }) {
 
   if (!product) return {};
 
-  const priceSuffix = product.prices.length > 1 ? " se shuru" : "";
+  const priceSuffix = product.prices.length > 1 ? " onwards" : "";
 
   return {
     title: `${product.name} — Price Comparison | BestDaam`,
-    description: `${product.name} ka sabse sasta daam dekho — ${formatINR(
+    description: `Compare the best available price for ${product.name} — ${formatINR(
       getLowestPrice(product)
     )}${priceSuffix}.`,
   };
@@ -87,7 +87,7 @@ export default async function ProductPage({ params }) {
           <h1>{product.name}</h1>
           {product.lastUpdated && (
             <p className="last-updated">
-              Price last updated: {product.lastUpdated}
+              Last price update: {product.lastUpdated}
             </p>
           )}
         </div>
@@ -95,7 +95,8 @@ export default async function ProductPage({ params }) {
 
       {savings > 0 && (
         <p className="savings-note">
-          💡 Sahi store chunkar {formatINR(savings)} tak bachat kar sakte ho!
+          <span>Best deal</span>
+          Save up to {formatINR(savings)} by choosing the right store.
         </p>
       )}
 
@@ -104,8 +105,8 @@ export default async function ProductPage({ params }) {
           <tr>
             <th>Store</th>
             <th>Price</th>
-            <th>Farak</th>
-            <th></th>
+            <th>Difference</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -117,7 +118,7 @@ export default async function ProductPage({ params }) {
               <tr key={entry.store} className={isBest ? "best-row" : ""}>
                 <td>
                   {entry.store}
-                  {isBest && <span className="best-badge">SABSE SASTA</span>}
+                  {isBest && <span className="best-badge">BEST PRICE</span>}
                 </td>
                 <td className="amount">{formatINR(entry.price)}</td>
                 <td>{isBest ? "—" : `+${formatINR(entry.price - lowest)}`}</td>
@@ -129,10 +130,10 @@ export default async function ProductPage({ params }) {
                       target="_blank"
                       rel="nofollow sponsored noopener"
                     >
-                      Store par dekho
+                      View deal
                     </a>
                   ) : (
-                    <span className="buy-btn coming-soon">Jald aayega</span>
+                    <span className="buy-btn coming-soon">Coming soon</span>
                   )}
                 </td>
               </tr>
@@ -141,7 +142,7 @@ export default async function ProductPage({ params }) {
           {!hasAmazonPrice && (
             <tr className="amazon-search-row">
               <td>Amazon</td>
-              <td className="amazon-search-price">Price Amazon par dekhein</td>
+              <td className="amazon-search-price">Check current price</td>
               <td>—</td>
               <td>
                 <a
@@ -150,7 +151,7 @@ export default async function ProductPage({ params }) {
                   target="_blank"
                   rel="nofollow sponsored noopener"
                 >
-                  Amazon par search karein
+                  Search Amazon
                 </a>
               </td>
             </tr>
@@ -160,12 +161,12 @@ export default async function ProductPage({ params }) {
 
       {!hasAmazonPrice && (
         <p className="amazon-search-note">
-          Amazon ka verified live price abhi compare nahi hua hai. Button Amazon
-          search kholta hai; final price Amazon par check karein.
+          A verified Amazon price is not available for this listing yet. The
+          button opens an Amazon search; please confirm the final price there.
         </p>
       )}
 
-      <h2 className="section-title">Asli price history 📉</h2>
+      <h2 className="section-title">Price history</h2>
       <PriceHistoryChart points={history} />
 
       <script

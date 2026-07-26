@@ -21,7 +21,7 @@ export default function PriceHistoryChart({ points }) {
   if (!Array.isArray(points) || points.length === 0) {
     return (
       <div className="chart-empty">
-        Price history abhi available nahi hai.
+        Price history is not available yet.
       </div>
     );
   }
@@ -32,7 +32,7 @@ export default function PriceHistoryChart({ points }) {
         <strong>{shortDate(points[0].date)}:</strong>{" "}
         {formatINR(points[0].price)}
         <br />
-        Daily updates ke baad yahan asli price trend dikhega.
+        The price trend will appear here after more daily updates.
       </div>
     );
   }
@@ -68,14 +68,14 @@ export default function PriceHistoryChart({ points }) {
   return (
     <div className="chart-wrap">
       <div className="chart-summary">
-        Is period me sabse kam: <strong>{formatINR(min)}</strong> · sabse zyada:{" "}
+        Period low: <strong>{formatINR(min)}</strong> · period high:{" "}
         <strong>{formatINR(max)}</strong>
       </div>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         className="price-chart"
         role="img"
-        aria-label={`Asli price history. Sabse kam ${formatINR(min)}, sabse zyada ${formatINR(max)}.`}
+        aria-label={`Price history. Lowest ${formatINR(min)}, highest ${formatINR(max)}.`}
         onMouseMove={onMove}
         onMouseLeave={() => setHover(null)}
       >
@@ -149,12 +149,12 @@ export default function PriceHistoryChart({ points }) {
           : " "}
       </div>
       <details className="chart-table">
-        <summary>Table me dekho</summary>
+        <summary>View price history table</summary>
         <table>
           <thead>
             <tr>
               <th>Date</th>
-              <th>Sabse sasta daam</th>
+              <th>Best price</th>
             </tr>
           </thead>
           <tbody>
