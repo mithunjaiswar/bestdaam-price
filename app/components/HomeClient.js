@@ -23,23 +23,40 @@ export default function HomeClient({ products }) {
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
   const initialCategory = searchParams.get("category") || "All";
+  const initialStore = searchParams.get("store") || "All";
   const initialSort = searchParams.get("sort") || "default";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
+  const [store, setStore] = useState(initialStore);
   const [sortOrder, setSortOrder] = useState(initialSort);
   const [requestState, setRequestState] = useState("idle");
   const restoredScroll = useRef(false);
 
   const categories = ["All", ...getCategories(products)];
+  const stores = [
+    "All",
+    ...Array.from(
+      new Set(
+        products.flatMap((product) =>
+          (product.prices || []).map((entry) => entry.store).filter(Boolean)
+        )
+      )
+    ).sort((a, b) => a.localeCompare(b)),
+  ];
   const selectedCategory = categories.includes(category) ? category : "All";
+  const selectedStore = stores.includes(store) ? store : "All";
   const hasQuery = query.trim().length > 0;
 
-  const filteredResults = searchProducts(products, query).filter((p) => {
+  const searchedResults = searchProducts(products, query);
+  const filteredResults = searchedResults.filter((p) => {
     const matchesCategory =
       hasQuery ||
       selectedCategory === "All" ||
       p.category === selectedCategory;
-    return matchesCategory;
+    const matchesStore =
+      selectedStore === "All" ||
+      (p.prices || []).some((entry) => entry.store === selectedStore);
+    return matchesCategory && matchesStore;
   });
   const selectedSort = [
     "default",
@@ -49,13 +66,26 @@ export default function HomeClient({ products }) {
     ? sortOrder
     : "default";
   const results = [...filteredResults];
+  const priceForSelectedStore = (product) => {
+    if (selectedStore === "All") {
+      return getLowestPrice(product);
+    }
+
+    const storePrices = (product.prices || [])
+      .filter((entry) => entry.store === selectedStore)
+      .map((entry) => entry.price)
+      .filter((price) => typeof price === "number" && price > 0);
+
+    return storePrices.length ? Math.min(...storePrices) : getLowestPrice(product);
+  };
 
   if (selectedSort === "price-low-high") {
-    results.sort((a, b) => getLowestPrice(a) - getLowestPrice(b));
+    results.sort((a, b) => priceForSelectedStore(a) - priceForSelectedStore(b));
   } else if (selectedSort === "price-high-low") {
-    results.sort((a, b) => getLowestPrice(b) - getLowestPrice(a));
+    results.sort((a, b) => priceForSelectedStore(b) - priceForSelectedStore(a));
   }
-  const missingProduct = hasQuery && results.length === 0;
+  const missingProduct = hasQuery && searchedResults.length === 0;
+  const emptyStoreResults = !missingProduct && results.length === 0;
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
   const requestEndpoint = PRODUCT_REQUEST_URL;
@@ -72,6 +102,10 @@ export default function HomeClient({ products }) {
       params.set("category", selectedCategory);
     }
 
+    if (selectedStore !== "All") {
+      params.set("store", selectedStore);
+    }
+
     if (selectedSort !== "default") {
       params.set("sort", selectedSort);
     }
@@ -82,7 +116,7 @@ export default function HomeClient({ products }) {
     if (nextUrl !== currentUrl) {
       router.replace(nextUrl, { scroll: false });
     }
-  }, [query, router, selectedCategory, selectedSort]);
+  }, [query, router, selectedCategory, selectedSort, selectedStore]);
 
   useEffect(() => {
     if (restoredScroll.current) {
@@ -196,18 +230,34 @@ export default function HomeClient({ products }) {
             <span className="results-kicker">Explore our catalog</span>
             <p>{results.length.toLocaleString("en-IN")} products found</p>
           </div>
-          <label className="sort-control">
-            <span>Sort by</span>
-            <select
-              value={selectedSort}
-              onChange={(event) => setSortOrder(event.target.value)}
-              aria-label="Sort products"
-            >
-              <option value="default">Default</option>
-              <option value="price-low-high">Price: Low to High</option>
-              <option value="price-high-low">Price: High to Low</option>
-            </select>
-          </label>
+          <div className="filter-controls">
+            <label className="sort-control">
+              <span>Store</span>
+              <select
+                value={selectedStore}
+                onChange={(event) => setStore(event.target.value)}
+                aria-label="Filter products by store"
+              >
+                {stores.map((storeName) => (
+                  <option key={storeName} value={storeName}>
+                    {storeName === "All" ? "All stores" : storeName}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="sort-control">
+              <span>Sort by</span>
+              <select
+                value={selectedSort}
+                onChange={(event) => setSortOrder(event.target.value)}
+                aria-label="Sort products"
+              >
+                <option value="default">Default</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+              </select>
+            </label>
+          </div>
         </div>
       </section>
 
@@ -259,6 +309,12 @@ export default function HomeClient({ products }) {
             </p>
           ) : null}
         </div>
+      ) : emptyStoreResults ? (
+        <div className="no-results">
+          <span className="empty-icon">⌕</span>
+          <h2>No products available for these filters</h2>
+          <p>Try selecting another store or category.</p>
+        </div>
       ) : (
         <div className="grid">
           {results.map((p) => (
@@ -287,12 +343,14 @@ export default function HomeClient({ products }) {
               <div className="from">Best available price</div>
 
               <div className="price">
-                {formatINR(getLowestPrice(p))}
-                {p.prices.length > 1 ? " onwards" : ""}
+                {formatINR(priceForSelectedStore(p))}
+                {selectedStore === "All" && p.prices.length > 1 ? " onwards" : ""}
               </div>
 
               <div className="stores">
-                {p.prices.length > 1
+                {selectedStore !== "All"
+                  ? `Available on ${selectedStore}`
+                  : p.prices.length > 1
                   ? `Compare across ${p.prices.length} stores`
                   : "1 verified price"}
               </div>

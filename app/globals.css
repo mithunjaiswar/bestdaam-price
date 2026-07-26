@@ -309,6 +309,12 @@ main.container {
   font-weight: 700;
 }
 
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .sort-control select {
   min-height: 46px;
   padding: 0 38px 0 14px;
@@ -877,6 +883,12 @@ main.container {
 
   .sort-control {
     justify-content: space-between;
+  }
+
+  .filter-controls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .sort-control select {
