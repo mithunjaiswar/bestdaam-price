@@ -1,3 +1,9 @@
+### 2026-07-27 — Daily automation — Catalog price refresh
+- Kya badla: Daily validated catalog refresh complete hua; 1200 products export hue.
+- Kyun: BestDaam par current Flipkart prices aur real price-history snapshots maintain karne ke liye.
+- Kaunsi files: data/products.json, PROJECT-LOG.md.
+- Dhyan rakhna: Affiliate coverage 1200/1200; Amazon verified prices official API ke bina refresh nahi hue.
+
 ### 2026-07-26 — Codex — Deals, social sharing and growth tracking
 - What changed: Added automatic Today’s Deals, Under ₹500/₹1,000/₹5,000 and indexable category pages; WhatsApp, Telegram and copy-link sharing; UTM source preservation; search, page-view, product-select, share and outbound store-click tracking hooks; quick searches; and expanded sitemap coverage.
 - Why: Make daily deal promotion easy, measure which channels and products create store traffic, capture customer demand, and build organic search landing pages.
