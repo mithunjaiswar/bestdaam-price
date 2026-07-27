@@ -118,7 +118,7 @@ export default function HomeClient({ products }) {
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
   const requestEndpoint = PRODUCT_REQUEST_URL;
   const featuredDeals = getFeaturedDeals(products, 8);
-  const trendingProducts = getTrendingProducts(products, "week", 8);
+  const trendingProducts = getTrendingProducts(products, "week", 10);
 
   useEffect(() => {
     const params = new URLSearchParams();
