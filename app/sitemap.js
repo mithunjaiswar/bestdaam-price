@@ -6,7 +6,7 @@ import { slugify } from "../lib/slugs";
 const BASE = "https://bestdaam.in";
 
 export default async function sitemap() {
-  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals"].map((p) => ({
+  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/trending"].map((p) => ({
     url: `${BASE}${p}`,
     lastModified: new Date(),
   }));

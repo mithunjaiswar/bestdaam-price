@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
               <span className="brand-dot">IN</span>
             </div>
             <nav className="header-nav" aria-label="Main navigation">
+              <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
               <Link href="/about">How it works</Link>
               <Link href="/disclosure">Affiliate disclosure</Link>

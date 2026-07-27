@@ -246,3 +246,8 @@
   (SABSE SASTA badge), 30-din price history graph (demo data), plain CSS.
 - Dhyan rakhna: Price history abhi DEMO hai (asli nahi) — footer me disclaimer
   hai. Asli data PA-API ke baad aayega.
+### 2026-07-27 — Codex — Trending This Week ranking
+- What changed: Added a Trending page with weekly/monthly views, category filters, ranking cards, and a homepage Trending This Week section.
+- Why: Help shoppers discover products gaining interest without presenting an unsupported units-sold claim.
+- Files: app/trending/page.js, app/components/TrendingGrid.js, app/components/HomeClient.js, lib/trending.js, app/layout.js, app/sitemap.js, app/globals.css.
+- Notes: Ranking uses a 70-point Flipkart signal model and up to 30 points from available BestDaam activity. It automatically recalculates whenever the daily products catalog refreshes.

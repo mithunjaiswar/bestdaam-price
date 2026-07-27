@@ -14,8 +14,10 @@ import {
   searchProducts,
 } from "../../lib/search";
 import { getFeaturedDeals } from "../../lib/deals";
+import { getTrendingProducts } from "../../lib/trending";
 import { trackEvent } from "../../lib/tracking";
 import DealGrid from "./DealGrid";
+import TrendingGrid from "./TrendingGrid";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -116,6 +118,7 @@ export default function HomeClient({ products }) {
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
   const requestEndpoint = PRODUCT_REQUEST_URL;
   const featuredDeals = getFeaturedDeals(products, 8);
+  const trendingProducts = getTrendingProducts(products, "week", 8);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -375,6 +378,27 @@ export default function HomeClient({ products }) {
           </div>
         </div>
       </section>
+
+      {!hasQuery &&
+      selectedCategory === "All" &&
+      selectedStore === "All" &&
+      selectedBudget === "all" ? (
+        <section className="featured-deals-section trending-section">
+          <div className="section-heading-row">
+            <div>
+              <span className="results-kicker">Shopping pulse</span>
+              <h2>Trending this week</h2>
+              <p className="section-subtitle">
+                Popularity signals from Flipkart and BestDaam shopper activity.
+              </p>
+            </div>
+            <Link href="/trending" className="text-link">
+              See full ranking →
+            </Link>
+          </div>
+          <TrendingGrid products={trendingProducts} />
+        </section>
+      ) : null}
 
       {!hasQuery &&
       selectedCategory === "All" &&
