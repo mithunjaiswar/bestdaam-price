@@ -251,3 +251,8 @@
 - Why: Help shoppers discover products gaining interest without presenting an unsupported units-sold claim.
 - Files: app/trending/page.js, app/components/TrendingGrid.js, app/components/HomeClient.js, lib/trending.js, app/layout.js, app/sitemap.js, app/globals.css.
 - Notes: Ranking uses a 70-point Flipkart signal model and up to 30 points from available BestDaam activity. It automatically recalculates whenever the daily products catalog refreshes.
+### 2026-07-27 — Codex — Google search discovery improvements
+- What changed: Added canonical URLs, richer product/rating/offer structured data, breadcrumbs, category ItemList schema, stronger page metadata and sitemap freshness hints.
+- Why: Help Google understand BestDaam's product, category and trending pages and improve eligibility for richer search appearances.
+- Files: lib/seo.js, app/layout.js, app/page.js, app/product/[id]/page.js, app/category/[slug]/page.js, app/trending/page.js, app/sitemap.js.
+- Notes: Search ranking is never guaranteed. Google must recrawl the pages, and useful content, genuine user engagement and reputable links remain important.

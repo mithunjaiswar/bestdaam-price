@@ -14,7 +14,9 @@ export default async function sitemap() {
   const products = await fetchProducts();
   const productPages = products.map((p) => ({
     url: `${BASE}/product/${p.id}`,
-    lastModified: new Date(),
+    lastModified: p.lastUpdated ? new Date(p.lastUpdated) : new Date(),
+    changeFrequency: "daily",
+    priority: 0.7,
   }));
   const budgetPages = Object.keys(BUDGET_PAGES).map((budget) => ({
     url: `${BASE}/deals/${budget}`,
@@ -23,6 +25,8 @@ export default async function sitemap() {
   const categoryPages = getCategories(products).map((category) => ({
     url: `${BASE}/category/${slugify(category)}`,
     lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.8,
   }));
 
   return [...staticPages, ...budgetPages, ...categoryPages, ...productPages];

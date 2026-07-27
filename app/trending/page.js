@@ -9,6 +9,7 @@ export const metadata = {
   title: "Trending Products This Week | BestDaam",
   description:
     "Discover products gaining shopper interest this week and compare their current prices.",
+  alternates: { canonical: "/trending" },
 };
 
 export default async function TrendingPage({ searchParams }) {

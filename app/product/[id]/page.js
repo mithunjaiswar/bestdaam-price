@@ -12,6 +12,12 @@ import PriceHistoryChart from "../../components/PriceHistoryChart";
 import BackToSearchLink from "../../components/BackToSearchLink";
 import ShareButtons from "../../components/ShareButtons";
 import StoreDealLink from "../../components/StoreDealLink";
+import {
+  absoluteUrl,
+  buildBreadcrumbJsonLd,
+  parseRatingCount,
+  safeJsonLd,
+} from "../../../lib/seo";
 
 export const revalidate = 600;
 export const dynamicParams = true;
@@ -33,6 +39,18 @@ export async function generateMetadata({ params }) {
     description: `Compare the best available price for ${product.name} — ${formatINR(
       getLowestPrice(product)
     )}${priceSuffix}.`,
+    alternates: {
+      canonical: `/product/${product.id}`,
+    },
+    openGraph: {
+      title: `${product.name} — Price Comparison | BestDaam`,
+      description: `Compare current prices for ${product.name} from ${formatINR(
+        getLowestPrice(product)
+      )}.`,
+      url: `/product/${product.id}`,
+      type: "website",
+      images: product.image ? [{ url: product.image, alt: product.name }] : [],
+    },
   };
 }
 
@@ -50,6 +68,8 @@ export default async function ProductPage({ params }) {
     String(entry.store || "").toLowerCase().includes("amazon")
   );
   const history = getPriceHistory(product);
+  const ratingValue = Number(product.rating);
+  const ratingCount = parseRatingCount(product.ratings_reviews);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -57,14 +77,38 @@ export default async function ProductPage({ params }) {
     name: product.name,
     category: product.category,
     image: product.image || undefined,
+    url: absoluteUrl(`/product/${product.id}`),
+    aggregateRating:
+      ratingValue > 0 && ratingCount > 0
+        ? {
+            "@type": "AggregateRating",
+            ratingValue,
+            ratingCount,
+            bestRating: 5,
+            worstRating: 1,
+          }
+        : undefined,
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "INR",
       lowPrice: lowest,
       highPrice: highest,
       offerCount: product.prices.length,
+      availability: "https://schema.org/InStock",
+      url: absoluteUrl(`/product/${product.id}`),
     },
   };
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    {
+      name: product.category,
+      path: `/category/${String(product.category)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "")}`,
+    },
+    { name: product.name, path: `/product/${product.id}` },
+  ]);
 
   return (
     <>
@@ -176,7 +220,11 @@ export default async function ProductPage({ params }) {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
       />
     </>
   );

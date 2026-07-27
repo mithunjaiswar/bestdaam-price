@@ -3,6 +3,11 @@ import { fetchProducts, getLocalProducts } from "../../../lib/products";
 import { getCategories } from "../../../lib/helpers";
 import { findCategoryBySlug, slugify } from "../../../lib/slugs";
 import DealGrid from "../../components/DealGrid";
+import {
+  absoluteUrl,
+  buildBreadcrumbJsonLd,
+  safeJsonLd,
+} from "../../../lib/seo";
 
 export const revalidate = 600;
 
@@ -37,6 +42,22 @@ export default async function CategoryPage({ params }) {
   }
 
   const matches = products.filter((product) => product.category === category);
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${category} price comparison`,
+    numberOfItems: matches.length,
+    itemListElement: matches.slice(0, 100).map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      url: absoluteUrl(`/product/${product.id}`),
+    })),
+  };
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: category, path: `/category/${params.slug}` },
+  ]);
 
   return (
     <>
@@ -49,6 +70,14 @@ export default async function CategoryPage({ params }) {
         </p>
       </section>
       <DealGrid products={matches} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
+      />
     </>
   );
 }

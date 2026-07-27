@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Suspense } from "react";
 import VisitTracker from "./components/VisitTracker";
+import { absoluteUrl, safeJsonLd } from "../lib/seo";
 
 export const metadata = {
   metadataBase: new URL("https://bestdaam.in"),
@@ -20,9 +21,38 @@ export const metadata = {
     locale: "en_IN",
     type: "website",
   },
+  alternates: {
+    canonical: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BestDaam — Compare Prices. Buy Smarter.",
+    description:
+      "Compare prices across leading Indian stores and choose the best deal.",
+  },
 };
 
 export default function RootLayout({ children }) {
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${absoluteUrl("/")}#website`,
+        url: absoluteUrl("/"),
+        name: "BestDaam",
+        alternateName: "Best Daam",
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "Organization",
+        "@id": `${absoluteUrl("/")}#organization`,
+        name: "BestDaam",
+        url: absoluteUrl("/"),
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <body>
@@ -46,6 +76,10 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <VisitTracker />
         </Suspense>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteJsonLd) }}
+        />
         <footer className="site-footer">
           <div className="container">
             <nav className="footer-links">
