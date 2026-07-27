@@ -256,3 +256,8 @@
 - Why: Help Google understand BestDaam's product, category and trending pages and improve eligibility for richer search appearances.
 - Files: lib/seo.js, app/layout.js, app/page.js, app/product/[id]/page.js, app/category/[slug]/page.js, app/trending/page.js, app/sitemap.js.
 - Notes: Search ranking is never guaranteed. Google must recrawl the pages, and useful content, genuine user engagement and reputable links remain important.
+### 2026-07-27 — Codex — Cloud-ready daily catalog automation
+- What changed: Added a scheduled GitHub workflow for headless catalog refresh, build validation and safe publication. Prepared a separate scraper repository with Supabase sync and history restoration.
+- Why: Allow BestDaam prices to refresh without keeping the Mac awake, while retaining current valid data if a cloud refresh fails.
+- Files: .github/workflows/daily-catalog.yml and the bestdaam-scraper automation repository.
+- Notes: Supabase storage activates after its URL/service key are added as GitHub Secrets. Flipkart may occasionally challenge cloud IPs; failed runs do not publish partial data.
