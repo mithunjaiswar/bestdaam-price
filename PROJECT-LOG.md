@@ -273,3 +273,9 @@
 - Why: Expand BestDaam into affordable everyday products that are easier to promote and purchase.
 - Files: data/products.json. Scraper configuration and exporter were updated locally to keep the Stationery target at 200 products.
 - Notes: The catalog now contains 1,394 products. Existing affiliate links were preserved and all 200 Stationery products received new affiliate links with zero conversion failures.
+
+### 2026-07-29 — Codex — Catalog-wide duplicate removal
+- What changed: Removed repeated product cards across every category, including Stationery and Men's Clothing. The scraper now rejects repeated normalized product names, and the exporter keeps one current listing per displayed product name.
+- Why: Flipkart can repeat the same item with different tracking URLs across pages, which previously made identical products appear multiple times on BestDaam.
+- Files: data/products.json. Scraper paginator, exporter and affiliate conversion workflow were updated in the scraper repository.
+- Notes: The refreshed catalog contains 1,347 unique products with zero repeated display-name rows. Stationery remains at 200 unique products and Men's Clothing at 100 unique products. All newly selected Flipkart listings received affiliate links with zero conversion failures.
