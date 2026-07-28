@@ -261,3 +261,9 @@
 - Why: Allow BestDaam prices to refresh without keeping the Mac awake, while retaining current valid data if a cloud refresh fails.
 - Files: .github/workflows/daily-catalog.yml and the bestdaam-scraper automation repository.
 - Notes: Supabase storage activates after its URL/service key are added as GitHub Secrets. Flipkart may occasionally challenge cloud IPs; failed runs do not publish partial data.
+
+### 2026-07-28 — Codex — Saved products watchlist
+- What changed: Added Save & Track controls on catalog cards and product pages, a live Saved count in the header, and a dedicated `/saved` watchlist where shoppers can revisit or remove products.
+- Why: Let shoppers keep products they are considering and return later to compare the latest available prices.
+- Files: app/components/HomeClient.js, app/components/SaveProductButton.js, app/components/SavedProductsClient.js, app/components/SavedProductsNav.js, app/saved/page.js, app/layout.js, app/globals.css, lib/saved-products.js.
+- Notes: Saved products currently use browser local storage, so the list remains on the same browser/device. Account sync and automatic price-drop alerts can be added later.

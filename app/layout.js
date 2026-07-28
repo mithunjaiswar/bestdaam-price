@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Suspense } from "react";
 import VisitTracker from "./components/VisitTracker";
+import SavedProductsNav from "./components/SavedProductsNav";
 import { absoluteUrl, safeJsonLd } from "../lib/seo";
 
 export const metadata = {
@@ -65,6 +66,7 @@ export default function RootLayout({ children }) {
               <span className="brand-dot">IN</span>
             </div>
             <nav className="header-nav" aria-label="Main navigation">
+              <SavedProductsNav />
               <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
               <Link href="/about">How it works</Link>

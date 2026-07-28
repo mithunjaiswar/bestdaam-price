@@ -12,6 +12,7 @@ import PriceHistoryChart from "../../components/PriceHistoryChart";
 import BackToSearchLink from "../../components/BackToSearchLink";
 import ShareButtons from "../../components/ShareButtons";
 import StoreDealLink from "../../components/StoreDealLink";
+import SaveProductButton from "../../components/SaveProductButton";
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
@@ -145,6 +146,11 @@ export default async function ProductPage({ params }) {
           Save up to {formatINR(savings)} by choosing the right store.
         </p>
       )}
+
+      <div className="product-save-row">
+        <SaveProductButton product={product} />
+        <p>Save this product and return later to check its latest price.</p>
+      </div>
 
       <ShareButtons product={product} price={lowest} />
 

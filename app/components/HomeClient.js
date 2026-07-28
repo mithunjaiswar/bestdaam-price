@@ -18,6 +18,7 @@ import { getTrendingProducts } from "../../lib/trending";
 import { trackEvent } from "../../lib/tracking";
 import DealGrid from "./DealGrid";
 import TrendingGrid from "./TrendingGrid";
+import SaveProductButton from "./SaveProductButton";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -475,54 +476,58 @@ export default function HomeClient({ products }) {
       ) : (
         <div className="grid">
           {results.map((p) => (
-            <Link
-              key={p.id}
-              href={`/product/${p.id}`}
-              className="card"
-              onClick={() => {
-                rememberHomePosition();
-                trackEvent("select_product", {
-                  productId: p.id,
-                  productName: p.name,
-                  category: p.category,
-                  value: priceForSelectedStore(p),
-                });
-              }}
-            >
-              <div className="card-media">
-                {p.image ? (
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    className="card-image"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="emoji">{p.emoji}</div>
-                )}
-              </div>
+            <article key={p.id} className="card card-with-save">
+              <SaveProductButton product={p} compact />
+              <Link
+                href={`/product/${p.id}`}
+                className="card-main-link"
+                onClick={() => {
+                  rememberHomePosition();
+                  trackEvent("select_product", {
+                    productId: p.id,
+                    productName: p.name,
+                    category: p.category,
+                    value: priceForSelectedStore(p),
+                  });
+                }}
+              >
+                <div className="card-media">
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="card-image"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="emoji">{p.emoji}</div>
+                  )}
+                </div>
 
-              <span className="card-category">{p.category}</span>
-              <h3>{p.name}</h3>
+                <span className="card-category">{p.category}</span>
+                <h3>{p.name}</h3>
 
-              <div className="from">Best available price</div>
+                <div className="from">Best available price</div>
 
-              <div className="price">
-                {formatINR(priceForSelectedStore(p))}
-                {selectedStore === "All" && p.prices.length > 1 ? " onwards" : ""}
-              </div>
+                <div className="price">
+                  {formatINR(priceForSelectedStore(p))}
+                  {selectedStore === "All" && p.prices.length > 1
+                    ? " onwards"
+                    : ""}
+                </div>
 
-              <div className="stores">
-                {selectedStore !== "All"
-                  ? `Available on ${selectedStore}`
-                  : p.prices.length > 1
-                  ? `Compare across ${p.prices.length} stores`
-                  : "1 verified price"}
-              </div>
-              <div className="card-cta">
-                Compare prices <span aria-hidden="true">→</span>
-              </div>
-            </Link>
+                <div className="stores">
+                  {selectedStore !== "All"
+                    ? `Available on ${selectedStore}`
+                    : p.prices.length > 1
+                    ? `Compare across ${p.prices.length} stores`
+                    : "1 verified price"}
+                </div>
+                <div className="card-cta">
+                  Compare prices <span aria-hidden="true">→</span>
+                </div>
+              </Link>
+            </article>
           ))}
         </div>
       )}

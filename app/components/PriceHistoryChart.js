@@ -79,8 +79,8 @@ export default function PriceHistoryChart({ points }) {
         onMouseMove={onMove}
         onMouseLeave={() => setHover(null)}
       >
-        {gridVals.map((v) => (
-          <g key={v}>
+        {gridVals.map((v, index) => (
+          <g key={`${v}-${index}`}>
             <line
               x1={PAD.left}
               x2={W - PAD.right}

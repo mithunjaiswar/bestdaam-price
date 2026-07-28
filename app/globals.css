@@ -127,6 +127,31 @@ input {
   color: var(--primary);
 }
 
+.saved-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--primary);
+}
+
+.saved-nav-link > span {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.saved-nav-link strong {
+  min-width: 21px;
+  height: 21px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+}
+
 main.container {
   padding-top: 0;
   padding-bottom: 72px;
@@ -411,6 +436,187 @@ main.container {
   box-shadow: var(--shadow-sm);
   transition: transform 0.22s ease, box-shadow 0.22s ease,
     border-color 0.22s ease;
+}
+
+.card-main-link {
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.save-product-btn {
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid #cdd7f4;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.save-product-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary);
+  background: var(--surface-soft);
+}
+
+.save-product-btn > span {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.save-product-btn.saved {
+  border-color: #f4b8c3;
+  background: #fff1f3;
+  color: #c1154b;
+}
+
+.save-product-btn.compact {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 3;
+  width: 42px;
+  min-height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.12);
+}
+
+.product-save-row {
+  margin: 18px 0;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #d8e0fb;
+  border-radius: 15px;
+  background: var(--surface-soft);
+}
+
+.product-save-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.saved-page {
+  padding: 62px 0 20px;
+}
+
+.saved-page-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.saved-page-heading h1 {
+  margin: 4px 0 10px;
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.saved-page-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.saved-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.saved-card {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.saved-card-main {
+  min-width: 0;
+  display: grid;
+  flex: 1;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.saved-card-media {
+  width: 150px;
+  height: 130px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid #edf0f5;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff, #f4f6fb);
+}
+
+.saved-card-media img {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  object-fit: contain;
+}
+
+.saved-card h2 {
+  margin: 3px 0 8px;
+  font-size: clamp(18px, 3vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.saved-card p,
+.saved-card small {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+}
+
+.saved-card strong {
+  display: block;
+  margin: 2px 0;
+  color: #087c50;
+  font-size: 23px;
+}
+
+.saved-empty {
+  padding: 58px 24px;
+  border: 1px dashed #bdc8e7;
+  border-radius: 24px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.saved-empty > span {
+  color: var(--primary);
+  font-size: 52px;
+}
+
+.saved-empty h2 {
+  margin: 8px 0;
+}
+
+.saved-empty p {
+  max-width: 540px;
+  margin: 0 auto 22px;
+  color: var(--muted);
 }
 
 .deal-card {
@@ -1153,7 +1359,18 @@ main.container {
   }
 
   .header-nav {
+    gap: 0;
+  }
+
+  .header-nav > a:not(.saved-nav-link) {
     display: none;
+  }
+
+  .saved-nav-link {
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
   }
 
   .hero {
@@ -1237,6 +1454,26 @@ main.container {
   .product-detail-media {
     width: 100%;
     height: 260px;
+  }
+
+  .product-save-row,
+  .saved-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .product-save-row .save-product-btn,
+  .saved-card .save-product-btn {
+    width: 100%;
+  }
+
+  .saved-card-main {
+    grid-template-columns: 94px minmax(0, 1fr);
+  }
+
+  .saved-card-media {
+    width: 94px;
+    height: 94px;
   }
 
   .savings-note {
