@@ -267,3 +267,9 @@
 - Why: Let shoppers keep products they are considering and return later to compare the latest available prices.
 - Files: app/components/HomeClient.js, app/components/SaveProductButton.js, app/components/SavedProductsClient.js, app/components/SavedProductsNav.js, app/saved/page.js, app/layout.js, app/globals.css, lib/saved-products.js.
 - Notes: Saved products currently use browser local storage, so the list remains on the same browser/device. Account sync and automatic price-drop alerts can be added later.
+
+### 2026-07-28 — Codex — Stationery category with 200 products
+- What changed: Added a Stationery category containing 200 valid Flipkart products and generated an EarnKaro affiliate link for every new product.
+- Why: Expand BestDaam into affordable everyday products that are easier to promote and purchase.
+- Files: data/products.json. Scraper configuration and exporter were updated locally to keep the Stationery target at 200 products.
+- Notes: The catalog now contains 1,394 products. Existing affiliate links were preserved and all 200 Stationery products received new affiliate links with zero conversion failures.
