@@ -1,8 +1,10 @@
-name: Daily BestDaam catalog refresh
+name: Fast product request update
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    # Safety fallback. Normal requests trigger this workflow immediately
+    # from Google Apps Script, so frequent polling is unnecessary.
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,17 +15,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  publish-requests:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 30
     env:
       HEADLESS: "true"
       BESTDAAM_SITE_DIR: ${{ github.workspace }}/site
       EKARO_API_TOKEN: ${{ secrets.EKARO_API_TOKEN }}
       PRODUCT_REQUESTS_API_URL: ${{ secrets.PRODUCT_REQUESTS_API_URL }}
       PRODUCT_REQUESTS_API_TOKEN: ${{ secrets.PRODUCT_REQUESTS_API_TOKEN }}
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
     steps:
       - name: Check out BestDaam
@@ -45,33 +45,47 @@ jobs:
           cache: pip
           cache-dependency-path: scraper/requirements.txt
 
-      - name: Install catalog dependencies
+      - name: Install request processor
         run: |
           python -m pip install --upgrade pip
           pip install -r scraper/requirements.txt
           playwright install --with-deps chromium
 
-      - name: Refresh catalog safely
+      - name: Restore current catalog history
         working-directory: scraper
-        run: python cloud_update.py --site-dir ../site
+        run: python hydrate_database_from_catalog.py
 
-      - name: Validate website build
+      - name: Process pending customer requests
+        working-directory: scraper
+        run: python process_product_requests.py
+
+      - name: Export requested products
+        working-directory: scraper
+        run: |
+          python export_catalog_to_bestdaam.py
+          python apply_ekaro_api_links.py
+
+      - name: Validate website
         working-directory: site
         run: |
           npm ci
           npm run build
 
-      - name: Publish validated catalog
+      - name: Publish validated products
         working-directory: site
         run: |
-          git config user.name "BestDaam Daily Automation"
+          git config user.name "BestDaam Request Automation"
           git config user.email "actions@users.noreply.github.com"
           git add data/products.json
 
           if git diff --cached --quiet; then
-            echo "No catalog changes to publish."
-            exit 0
+            echo "No new catalog product to publish."
+          else
+            git commit -m "Add requested customer products"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
-          git commit -m "Daily cloud catalog refresh $(date -u +%F)"
-          git push
+      - name: Update request queue statuses
+        working-directory: scraper
+        run: python publish_product_request_statuses.py

@@ -285,3 +285,9 @@
 - Why: Fulfil direct customer product requests while avoiding fake AirPods, mismatched generations, AppleCare bundles and unrelated lead sizes/grades.
 - Files: data/products.json. The scraper matcher was updated to understand AirPods generations and exact 0.5 mm 4B lead identity.
 - Notes: Five exact two-store comparisons are available: JBL C200SI, AirPods 4, AirPods Pro 3, Brustro 4B leads and Pentel 4B leads. Other genuine AirPods remain Flipkart-only until the exact Amazon model is available.
+
+### 2026-07-29 — Codex — Fast customer-request publishing
+- What changed: Added a cloud workflow that Google Apps Script can trigger immediately when a customer submits a product request. It can also be started with the Run workflow button and has a six-hour safety fallback. Valid requests are scraped, exported, affiliate-converted, build-tested and published automatically.
+- Why: Urgent customer requests should not wait for the next morning's full catalog refresh.
+- Files: .github/workflows/instant-product-requests.yml and .github/workflows/daily-catalog.yml. The scraper repository now includes the request processor and queue-status publisher.
+- Notes: The Mac does not need to stay awake. GitHub Secrets for the request API and EarnKaro must remain configured, and Apps Script needs a GitHub workflow token once. Low-confidence matches are marked Needs Review instead of publishing the wrong item.
