@@ -279,3 +279,9 @@
 - Why: Flipkart can repeat the same item with different tracking URLs across pages, which previously made identical products appear multiple times on BestDaam.
 - Files: data/products.json. Scraper paginator, exporter and affiliate conversion workflow were updated in the scraper repository.
 - Notes: The refreshed catalog contains 1,347 unique products with zero repeated display-name rows. Stationery remains at 200 unique products and Men's Clothing at 100 unique products. All newly selected Flipkart listings received affiliate links with zero conversion failures.
+
+### 2026-07-29 — Codex — Requested product comparisons
+- What changed: Added JBL C200SI, genuine Apple AirPods models, and exact 0.5 mm 4B mechanical-pencil lead products under Requested Products. Exact Amazon comparisons were added where the same model was available, and all 11 new Flipkart listings received EarnKaro affiliate links.
+- Why: Fulfil direct customer product requests while avoiding fake AirPods, mismatched generations, AppleCare bundles and unrelated lead sizes/grades.
+- Files: data/products.json. The scraper matcher was updated to understand AirPods generations and exact 0.5 mm 4B lead identity.
+- Notes: Five exact two-store comparisons are available: JBL C200SI, AirPods 4, AirPods Pro 3, Brustro 4B leads and Pentel 4B leads. Other genuine AirPods remain Flipkart-only until the exact Amazon model is available.
