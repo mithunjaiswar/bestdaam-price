@@ -291,3 +291,9 @@
 - Why: Urgent customer requests should not wait for the next morning's full catalog refresh.
 - Files: .github/workflows/instant-product-requests.yml and .github/workflows/daily-catalog.yml. The scraper repository now includes the request processor and queue-status publisher.
 - Notes: The Mac does not need to stay awake. GitHub Secrets for the request API and EarnKaro must remain configured, and Apps Script needs a GitHub workflow token once. Low-confidence matches are marked Needs Review instead of publishing the wrong item.
+
+### 2026-07-30 — Codex — Full catalog restored after request update
+- What changed: Restored the complete BestDaam catalog and merged the latest requested products after the fast request workflow accidentally replaced the catalog with only two items.
+- Why: Customer-request publishing must add products without removing the existing catalog.
+- Files: data/products.json. The scraper catalog hydration logic was fixed separately so future request runs restore existing products before exporting.
+- Notes: The validated catalog contains 1,359 unique product IDs.
