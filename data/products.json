@@ -28154,6 +28154,218 @@
     ]
   },
   {
+    "id": "samsung-buds-samsung-galaxy-buds3-fe",
+    "name": "Samsung Galaxy Buds3 FE",
+    "rawName": "Samsung Samsung Galaxy Buds3 FE Bluetooth",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/8/0/4/-original-imahgpxh9qpry55z.jpeg?q=70",
+    "rating": "4.4",
+    "ratings_reviews": "(108)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 7999
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 7999,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds3-fe-bluetooth/p/itm0c6d1929c2018?pid=ACCHFKMBV7CMJHU5&lid=LSTACCHFKMBV7CMJHU5GVIIXD&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_1&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHFKMBV7CMJHU5.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/h3sDYiV"
+      },
+      {
+        "store": "Amazon",
+        "price": 7999,
+        "url": "https://www.amazon.in/dp/B0FPF9N2PJ"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds-core",
+    "name": "Samsung Galaxy Buds Core",
+    "rawName": "Samsung SM-R410N Galaxy Buds Core - White Bluetooth",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/m/9/r/sm-r410n-galaxy-buds-core-white-samsung-original-imahfrhadds8qe3q.jpeg?q=70",
+    "rating": "4.1",
+    "ratings_reviews": "(120)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 4499
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 4499,
+        "url": "https://www.flipkart.com/samsung-sm-r410n-galaxy-buds-core-white-bluetooth/p/itm4e455a9a775c0?pid=ACCHFRHATPG2Y7ZC&lid=LSTACCHFRHATPG2Y7ZCH6IMBT&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_2&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHFRHATPG2Y7ZC.SEARCH&ppt=sp&ppn=sp&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/hraXGzX"
+      },
+      {
+        "store": "Amazon",
+        "price": 4199,
+        "url": "https://www.amazon.in/dp/B0FDGVNSLH"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds3-pro",
+    "name": "Samsung Galaxy Buds3 Pro",
+    "rawName": "Samsung Galaxy Buds 3 Pro Bluetooth",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/8/i/w/-original-imahgpxhwrkzvrkz.jpeg?q=70",
+    "rating": "4.5",
+    "ratings_reviews": "(1,265)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 16999
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 16999,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds-3-pro-bluetooth/p/itm13f27472805c8?pid=ACCH28Z8MYZWVAEE&lid=LSTACCH28Z8MYZWVAEEZU7CFL&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_3&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCH28Z8MYZWVAEE.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/hhxcLnX"
+      },
+      {
+        "store": "Amazon",
+        "price": 16585,
+        "url": "https://www.amazon.in/dp/B0D7M4G3NP"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds3",
+    "name": "Samsung Galaxy Buds3",
+    "rawName": "Samsung Galaxy Buds 3 Bluetooth",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/f/n/m/-original-imah2nheebfhs6u2.jpeg?q=70",
+    "rating": "4",
+    "ratings_reviews": "(405)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 14999
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 14999,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds-3-bluetooth/p/itma79f55056b77f?pid=ACCH28ZAJSVH96G2&lid=LSTACCH28ZAJSVH96G2VARKER&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_4&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCH28ZAJSVH96G2.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/hlnPVC8"
+      },
+      {
+        "store": "Amazon",
+        "price": 12999,
+        "url": "https://www.amazon.in/dp/B0DGY2RBY9"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds4",
+    "name": "Samsung Galaxy Buds4",
+    "rawName": "Samsung Galaxy Buds4, Hi-Fi Audio, Live Translation, Ad",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/t/k/-original-imahhdjmcezffgwc.jpeg?q=70",
+    "rating": "4",
+    "ratings_reviews": "(54)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 16999
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 16999,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds4-hi-fi-audio-live-translation-adaptive-anc-eq-2-0-360-audio-bluetooth/p/itm9f4e49465b0e1?pid=ACCHKZ8YXUEAQVYG&lid=LSTACCHKZ8YXUEAQVYG8ZNL8E&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_6&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHKZ8YXUEAQVYG.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/hQZ9KaV"
+      },
+      {
+        "store": "Amazon",
+        "price": 16999,
+        "url": "https://www.amazon.in/dp/B0GMJHSKM3"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds-live",
+    "name": "Samsung Galaxy Buds Live",
+    "rawName": "Samsung Galaxy Buds Live Bluetooth",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/ktyp8cw0/headphone/e/f/v/galaxy-buds-live-sm-r180nzkainu-samsung-original-imag77fztywg5hnq.jpeg?q=70",
+    "rating": "4.1",
+    "ratings_reviews": "(15,047)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 6880
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 6880,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds-live-bluetooth/p/itm71bf0af24a0c6?pid=ACCGYH3MRGNYG8QG&lid=LSTACCGYH3MRGNYG8QG9MMAIS&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_10&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCGYH3MRGNYG8QG.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/h99TV36"
+      }
+    ]
+  },
+  {
+    "id": "samsung-buds-samsung-galaxy-buds4-pro",
+    "name": "Samsung Galaxy Buds4 Pro",
+    "rawName": "Samsung Galaxy Buds4 Pro, Hi-Fi Audio, Voice Detect, 2-",
+    "category": "Samsung Buds",
+    "categoryKey": "samsung_buds",
+    "emoji": "🎧",
+    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/q/q/-original-imahhdjmqrj7gzgv.jpeg?q=70",
+    "rating": "4.6",
+    "ratings_reviews": "(311)",
+    "priceHistory": [
+      {
+        "date": "2026-07-30",
+        "price": 22999
+      }
+    ],
+    "lastUpdated": "2026-07-30",
+    "prices": [
+      {
+        "store": "Flipkart",
+        "price": 22999,
+        "url": "https://www.flipkart.com/samsung-galaxy-buds4-pro-hi-fi-audio-voice-detect-2-way-speaker-adaptive-anc-2-0-bluetooth/p/itm7c20c9d33201f?pid=ACCHKZ8YHW2CZZQC&lid=LSTACCHKZ8YHW2CZZQCI5X6NV&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_11&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHKZ8YHW2CZZQC.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
+        "affiliateUrl": "https://fkrt.cc/hMchzEu"
+      },
+      {
+        "store": "Amazon",
+        "price": 20999,
+        "url": "https://www.amazon.in/dp/B0GMJLFCR7"
+      }
+    ]
+  },
+  {
     "id": "smartwatches-fire-boltt-ninja-calling-pro-plus-46-5mm-1-83-display",
     "name": "Fire-Boltt Ninja Calling Pro Plus 46.5mm (1.83) Display",
     "rawName": "Fire-Boltt Ninja Calling Pro Plus 46.5mm (1.83) Display",
@@ -54225,218 +54437,6 @@
         "price": 488,
         "url": "https://www.flipkart.com/jsd-type-c-in-ear-headset-wired/p/itm679bb01456f7a?pid=ACCHPCV3G8MVDKFF&lid=LSTACCHPCV3G8MVDKFF8KEGPR&marketplace=FLIPKART&q=wired+earphones&store=0pm%2Ffcn%2F821&srno=s_3_81&otracker=search&fm=organic&iid=en_OEH5bgtEcvkLfguNJItHmz5tgTUFQTWgYDrMNWJs2vDetz-l0HRikHznYT0u6fvGojjALHT1oh_CQ5_wYMDYweYSw6AQXgxcHzheDNr9v8fOhQpLlc_0_dLfJ-m5OAbl&ppt=None&ppn=None&ssid=4bccqewu000000001784943165627&qH=79c5a12b69a62bda&ov_redirect=true&ov_redirect=true",
         "affiliateUrl": "https://fkrt.cc/hTGOTKf"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds3-fe",
-    "name": "Samsung Galaxy Buds3 FE",
-    "rawName": "Samsung Samsung Galaxy Buds3 FE Bluetooth",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/8/0/4/-original-imahgpxh9qpry55z.jpeg?q=70",
-    "rating": "4.4",
-    "ratings_reviews": "(108)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 7999
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 7999,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds3-fe-bluetooth/p/itm0c6d1929c2018?pid=ACCHFKMBV7CMJHU5&lid=LSTACCHFKMBV7CMJHU5GVIIXD&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_1&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHFKMBV7CMJHU5.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/h3sDYiV"
-      },
-      {
-        "store": "Amazon",
-        "price": 7999,
-        "url": "https://www.amazon.in/dp/B0FPF9N2PJ"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds-core",
-    "name": "Samsung Galaxy Buds Core",
-    "rawName": "Samsung SM-R410N Galaxy Buds Core - White Bluetooth",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/m/9/r/sm-r410n-galaxy-buds-core-white-samsung-original-imahfrhadds8qe3q.jpeg?q=70",
-    "rating": "4.1",
-    "ratings_reviews": "(120)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 4499
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 4499,
-        "url": "https://www.flipkart.com/samsung-sm-r410n-galaxy-buds-core-white-bluetooth/p/itm4e455a9a775c0?pid=ACCHFRHATPG2Y7ZC&lid=LSTACCHFRHATPG2Y7ZCH6IMBT&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_2&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHFRHATPG2Y7ZC.SEARCH&ppt=sp&ppn=sp&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/hraXGzX"
-      },
-      {
-        "store": "Amazon",
-        "price": 4199,
-        "url": "https://www.amazon.in/dp/B0FDGVNSLH"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds3-pro",
-    "name": "Samsung Galaxy Buds3 Pro",
-    "rawName": "Samsung Galaxy Buds 3 Pro Bluetooth",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/8/i/w/-original-imahgpxhwrkzvrkz.jpeg?q=70",
-    "rating": "4.5",
-    "ratings_reviews": "(1,265)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 16999
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 16999,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds-3-pro-bluetooth/p/itm13f27472805c8?pid=ACCH28Z8MYZWVAEE&lid=LSTACCH28Z8MYZWVAEEZU7CFL&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_3&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCH28Z8MYZWVAEE.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/hhxcLnX"
-      },
-      {
-        "store": "Amazon",
-        "price": 16585,
-        "url": "https://www.amazon.in/dp/B0D7M4G3NP"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds3",
-    "name": "Samsung Galaxy Buds3",
-    "rawName": "Samsung Galaxy Buds 3 Bluetooth",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/f/n/m/-original-imah2nheebfhs6u2.jpeg?q=70",
-    "rating": "4",
-    "ratings_reviews": "(405)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 14999
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 14999,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds-3-bluetooth/p/itma79f55056b77f?pid=ACCH28ZAJSVH96G2&lid=LSTACCH28ZAJSVH96G2VARKER&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_4&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCH28ZAJSVH96G2.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/hlnPVC8"
-      },
-      {
-        "store": "Amazon",
-        "price": 12999,
-        "url": "https://www.amazon.in/dp/B0DGY2RBY9"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds4",
-    "name": "Samsung Galaxy Buds4",
-    "rawName": "Samsung Galaxy Buds4, Hi-Fi Audio, Live Translation, Ad",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/t/k/-original-imahhdjmcezffgwc.jpeg?q=70",
-    "rating": "4",
-    "ratings_reviews": "(54)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 16999
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 16999,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds4-hi-fi-audio-live-translation-adaptive-anc-eq-2-0-360-audio-bluetooth/p/itm9f4e49465b0e1?pid=ACCHKZ8YXUEAQVYG&lid=LSTACCHKZ8YXUEAQVYG8ZNL8E&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_6&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHKZ8YXUEAQVYG.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/hQZ9KaV"
-      },
-      {
-        "store": "Amazon",
-        "price": 16999,
-        "url": "https://www.amazon.in/dp/B0GMJHSKM3"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds-live",
-    "name": "Samsung Galaxy Buds Live",
-    "rawName": "Samsung Galaxy Buds Live Bluetooth",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/ktyp8cw0/headphone/e/f/v/galaxy-buds-live-sm-r180nzkainu-samsung-original-imag77fztywg5hnq.jpeg?q=70",
-    "rating": "4.1",
-    "ratings_reviews": "(15,047)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 6880
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 6880,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds-live-bluetooth/p/itm71bf0af24a0c6?pid=ACCGYH3MRGNYG8QG&lid=LSTACCGYH3MRGNYG8QG9MMAIS&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_10&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCGYH3MRGNYG8QG.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/h99TV36"
-      }
-    ]
-  },
-  {
-    "id": "samsung-buds-samsung-galaxy-buds4-pro",
-    "name": "Samsung Galaxy Buds4 Pro",
-    "rawName": "Samsung Galaxy Buds4 Pro, Hi-Fi Audio, Voice Detect, 2-",
-    "category": "Samsung Buds",
-    "categoryKey": "samsung_buds",
-    "emoji": "🎧",
-    "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/q/q/-original-imahhdjmqrj7gzgv.jpeg?q=70",
-    "rating": "4.6",
-    "ratings_reviews": "(311)",
-    "priceHistory": [
-      {
-        "date": "2026-07-30",
-        "price": 22999
-      }
-    ],
-    "lastUpdated": "2026-07-30",
-    "prices": [
-      {
-        "store": "Flipkart",
-        "price": 22999,
-        "url": "https://www.flipkart.com/samsung-galaxy-buds4-pro-hi-fi-audio-voice-detect-2-way-speaker-adaptive-anc-2-0-bluetooth/p/itm7c20c9d33201f?pid=ACCHKZ8YHW2CZZQC&lid=LSTACCHKZ8YHW2CZZQCI5X6NV&marketplace=FLIPKART&q=Samsung+Galaxy+Buds&store=0pm%2Ffcn%2F821&srno=s_1_11&otracker=search&fm=organic&iid=458bec91-3e46-4e06-8705-03b4325d1e2c.ACCHKZ8YHW2CZZQC.SEARCH&ppt=None&ppn=None&ssid=illp1rphpc0000001785432886912&qH=d9b9e2a528c2cd50&ov_redirect=true&ov_redirect=true",
-        "affiliateUrl": "https://fkrt.cc/hMchzEu"
-      },
-      {
-        "store": "Amazon",
-        "price": 20999,
-        "url": "https://www.amazon.in/dp/B0GMJLFCR7"
       }
     ]
   }
