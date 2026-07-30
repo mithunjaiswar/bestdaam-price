@@ -297,3 +297,9 @@
 - Why: Customer-request publishing must add products without removing the existing catalog.
 - Files: data/products.json. The scraper catalog hydration logic was fixed separately so future request runs restore existing products before exporting.
 - Notes: The validated catalog contains 1,359 unique product IDs.
+
+### 2026-07-30 — Codex — Samsung Galaxy Buds comparisons
+- What changed: Added a dedicated Samsung Buds category with seven genuine Galaxy Buds models, current Flipkart prices, exact Amazon comparisons where available, and EarnKaro links for every Flipkart listing.
+- Why: Give shoppers a reliable model-by-model Samsung earbuds comparison without mixing cases, compatible products, colors or unrelated third-party earbuds.
+- Files: data/products.json. Scraper categories, filtering, canonical naming and strict Samsung Buds matching were updated separately.
+- Notes: Six models have exact Flipkart/Amazon comparisons. Galaxy Buds Live remains Flipkart-only because a reliable current Amazon match was not available.
