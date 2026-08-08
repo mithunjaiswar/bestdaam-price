@@ -1088,6 +1088,54 @@ main.container {
   background: #d98b05;
 }
 
+.amazon-search-companion {
+  max-width: 1180px;
+  margin: 22px auto 30px;
+  padding: 20px 22px;
+  border: 1px solid #f1d399;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, #fffaf0, #ffffff 70%);
+  box-shadow: var(--shadow-sm);
+}
+
+.amazon-search-companion-copy {
+  min-width: 0;
+}
+
+.amazon-search-companion-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: #9a5b00;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.amazon-search-companion strong {
+  display: block;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amazon-search-companion p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.amazon-search-companion-btn {
+  flex: 0 0 auto;
+  min-width: 190px;
+}
+
 .section-title {
   margin: 40px 0 15px;
   font-size: 27px;
@@ -1393,6 +1441,24 @@ main.container {
 
   .search-hint {
     display: none;
+  }
+
+  .amazon-search-companion {
+    margin: 18px 16px 26px;
+    padding: 18px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .amazon-search-companion strong {
+    font-size: 17px;
+    white-space: normal;
+  }
+
+  .amazon-search-companion-btn {
+    width: 100%;
+    min-width: 0;
   }
 
   .results-toolbar {

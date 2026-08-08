@@ -205,6 +205,14 @@ export default function HomeClient({ products }) {
     });
   }
 
+  function openAmazonSearch() {
+    trackEvent("outbound_store_click", {
+      store: "Amazon",
+      source: "search_companion",
+      query: query.trim(),
+    });
+  }
+
   async function requestProduct() {
     if (!requestEndpoint || requestState === "sending") {
       return;
@@ -380,6 +388,28 @@ export default function HomeClient({ products }) {
         </div>
       </section>
 
+      {hasQuery ? (
+        <aside className="amazon-search-companion" aria-label="Search on Amazon">
+          <div className="amazon-search-companion-copy">
+            <span className="amazon-search-companion-kicker">Want more options?</span>
+            <strong>Search Amazon for “{searchLabel}”</strong>
+            <p>
+              Open the same search directly on Amazon India. Prices and product
+              availability will be shown by Amazon.
+            </p>
+          </div>
+          <a
+            href={amazonSearchUrl}
+            className="buy-btn amazon-search-btn amazon-search-companion-btn"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            onClick={openAmazonSearch}
+          >
+            Search on Amazon ↗
+          </a>
+        </aside>
+      ) : null}
+
       {!hasQuery &&
       selectedCategory === "All" &&
       selectedStore === "All" &&
@@ -424,18 +454,10 @@ export default function HomeClient({ products }) {
           <span className="empty-icon">⌕</span>
           <h2>We could not find this product yet</h2>
           <p>
-            Search for it on Amazon now, or send us a one-click request. We
-            will try to include a verified listing in an upcoming catalog update.
+            Use the Amazon search option above, or send us a one-click request.
+            We will try to include a verified listing in an upcoming catalog update.
           </p>
           <div className="missing-product-actions">
-            <a
-              href={amazonSearchUrl}
-              className="buy-btn amazon-search-btn"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-            >
-              Search on Amazon
-            </a>
             <button
               type="button"
               className="request-product-btn"

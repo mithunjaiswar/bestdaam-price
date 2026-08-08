@@ -308,3 +308,8 @@
 - Kyun: Laptop clear hone ke baad project safely recover karna, known Next.js vulnerabilities close karna, outdated demo/45-product documentation hatana aur malformed catalog ko live publish hone se rokna.
 - Kaunsi files: `README.md`, `ROADMAP.md`, `ARCHITECTURE.md`, `package.json`, `package-lock.json`, `scripts/validate-catalog.mjs`, `.github/workflows/daily-catalog.yml`, `.github/workflows/instant-product-requests.yml`, `PROJECT-LOG.md`.
 - Dhyan rakhna: 8 August daily workflow ka failure Flipkart storefront timeout tha. Project rule ke mutabik scraper ko expand nahi kiya; permanent fix approved feeds/APIs par migration hai.
+### 2026-08-08 — Codex — Always-available Amazon search
+- Kya badla: BestDaam par koi bhi search query type karte hi results milne ya na milne dono cases me current query ke saath prominent `Search on Amazon` option dikhaya; link Associates tag `bestdaam0a-21` preserve karta hai aur outbound click analytics record hoti hai. Missing-product state se duplicate Amazon button hata kar single clear action rakha.
+- Kyun: Local/fuzzy catalog match imperfect hone par customer ko Amazon par wahi product manually dobara type kiye bina search karne dena aur affiliate opportunity lose na karna.
+- Kaunsi files: `app/components/HomeClient.js`, `app/globals.css`, `PROJECT-LOG.md`.
+- Dhyan rakhna: Ye Amazon product data/API result nahi hai; Amazon India search page affiliate-tagged new tab me khulta hai. Creators API eligibility milne tak ye safe fallback hai.
