@@ -1,30 +1,41 @@
 # BestDaam.in — India Price Comparison
 
-Ek product, saare stores ke daam. Amazon, Flipkart, Croma aur Reliance Digital
-ke prices ek jagah compare karo aur sabse saste daam par kharido.
+BestDaam Indian shoppers ko products search karne, verified store prices compare
+karne aur affiliate links se store par jaane deta hai.
 
-**Poora plan padhne ke liye:** [ARCHITECTURE.md](./ARCHITECTURE.md)
+## Current status — 8 August 2026
 
-## Abhi kya status hai?
+- Live website: [bestdaam.in](https://bestdaam.in)
+- Next.js 15 website deployed on Vercel
+- 1,393 products across 15 categories
+- Flipkart price, image, price history and affiliate link on every catalog product
+- 31 products currently have an exact Amazon comparison
+- Search, category/store/budget filters, saved products, deals, trending, sharing and SEO pages are live
+- Customer product requests and catalog workflows run through GitHub Actions
 
-**Phase 1 (Website ka dhancha) — DONE ✅**
-Website poori tarah chalti hai, lekin prices abhi **demo/sample** hain.
-Asli prices Phase 2 me aayenge (Amazon/Flipkart affiliate API se).
+The catalog is no longer demo data. Multi-store coverage is still limited, so a
+single-store product is clearly shown as one verified price. Amazon prices must
+come from the official API after account eligibility; other stores should use
+approved affiliate feeds or APIs, not direct scraping.
 
-## Website apne computer par chalane ka tarika
+See [ROADMAP.md](./ROADMAP.md) for priorities and [ARCHITECTURE.md](./ARCHITECTURE.md)
+for the system design.
 
-1. [Node.js](https://nodejs.org) install karo (LTS version)
-2. Terminal me ye commands chalao:
+## Run locally
+
+Install Node.js LTS, then run:
 
 ```bash
-npm install
+npm ci
+npm test
 npm run dev
 ```
 
-3. Browser me kholo: http://localhost:3000
+Open <http://localhost:3000>. Use `npm run build` before publishing.
 
-## Live karne ka tarika (baad me, Phase 4)
+## Repositories
 
-- [vercel.com](https://vercel.com) par free account banao
-- Ye GitHub repo connect karo — website live ho jayegi
-- GoDaddy me DNS setting karke `bestdaam.in` domain jodo
+- `bestdaam-price`: website, catalog snapshot and GitHub workflows
+- `bestdaam-scraper`: legacy catalog automation and feed-processing utilities
+
+Never commit passwords, tokens, PAN/bank details or other secrets.

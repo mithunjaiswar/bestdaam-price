@@ -1,96 +1,73 @@
-# BestDaam.in — Architecture Plan (Master Plan)
+# BestDaam.in — Current Architecture
 
-> **Ye kya hai?** BestDaam ek India price comparison website hai. User koi bhi product
-> search karega (jaise "iPhone" ya "mixer grinder"), aur website dikhayegi ki wo product
-> Amazon, Flipkart, Croma, Reliance Digital jaise stores par **kitne me mil raha hai** —
-> taaki user sabse saste daam par kharide.
+## Product goal
 
-> **Domain:** `bestdaam.in` (GoDaddy se kharida hua). Website live hone par ye domain
-> use hoga.
+BestDaam ek India-focused shopping comparison platform hai. Customer product
+search karta hai, verified prices compare karta hai aur selected store ke
+affiliate link par jaata hai. Long-term goal comparison ke andar BestDaam ka
+apna store add karna hai.
 
----
+## Current system
 
-## Kamai ka tarika (Business Model)
-
-Website free rahegi. Jab user hamari site se kisi store ke link par click karke
-kharidari karega, to store humein **affiliate commission** dega (Amazon Associates,
-Flipkart Affiliate, etc.). User ko koi extra paisa nahi dena padta.
-
----
-
-## Technology (simple language me)
-
-| Cheez | Kya use karenge | Kyun |
+| Layer | Implementation | Status |
 |---|---|---|
-| Website banane ka tool | **Next.js** (React) | Google search me achhi ranking milti hai, free hosting possible |
-| Design | Simple CSS | Fast aur mobile-friendly |
-| Hosting | **Vercel** (free plan) | Free me website live hoti hai, bestdaam.in domain connect ho jata hai |
-| Data (shuru me) | Demo data (JSON file) | Pehle site ka dhancha ready karo, asli data baad me |
-| Data (baad me) | Amazon PA-API + Flipkart Affiliate API | Official tarika prices lene ka |
-| Database (baad me) | PostgreSQL (Supabase/Neon free plan) | Price history aur alerts ke liye |
+| Website | Next.js 15 App Router, React, JavaScript, plain CSS | Live on Vercel |
+| Domain | `bestdaam.in` | Live with HTTPS |
+| Catalog | `data/products.json` | 1,393 products, 15 categories |
+| Store coverage | Flipkart plus exact Amazon matches | Amazon coverage limited |
+| History | Catalog price-history snapshots | Available for current products |
+| Saved products | Browser local storage | Same-device only |
+| Requests | Google Apps Script queue + GitHub workflow | Automated |
+| Cloud data | Optional Supabase sync | Secrets configured in GitHub |
+| Validation | Catalog validator + production build | Required before publication |
 
----
+## Data flow
 
-## Phases (kaam ke stage)
+1. An approved feed/API or controlled catalog input produces product records.
+2. Existing exact Amazon matches and affiliate links are preserved.
+3. `scripts/validate-catalog.mjs` rejects malformed or duplicate catalog data.
+4. `next build` validates all generated website routes.
+5. Only validated `data/products.json` changes are committed by GitHub Actions.
+6. Vercel deploys the live branch automatically.
 
-### ✅ Phase 1 — Website ka dhancha (Foundation) — ABHI CHAL RAHA HAI
-Goal: Ek poori chalne wali website, demo data ke saath.
-- [x] Homepage — search box + popular products
-- [x] Product page — sabhi stores ke prices ki tulna (comparison), sabse sasta highlight
-- [x] Mobile-friendly design
-- [x] Demo products (10 popular Indian products, 4 stores ke prices)
-- [x] Categories (Mobile, Electronics, Kitchen, Home)
+## Catalog contract
 
-**Note:** Phase 1 me prices demo/sample hain — asli nahi. Ye sirf dikhane ke liye hai
-ki website kaisi dikhegi aur kaam karegi.
+Every product requires:
 
-### Phase 2 — Website live + affiliate accounts + asli prices
-Goal: Site ko internet par laana aur asli prices ki taraf pehla kadam.
+- unique `id`
+- `name`, `category` and `categoryKey`
+- HTTPS product image
+- one or more price entries with store, positive price and HTTPS URL
+- optional HTTPS affiliate URL
+- optional history entries using `YYYY-MM-DD` dates and positive prices
 
-**Zaroori jaankari (July 2026 me check ki gayi):**
-- Flipkart ka apna affiliate program **2018 se naye registrations ke liye band hai**.
-  Iska hal: **EarnKaro** ya **Cuelinks** (free platforms, Flipkart se inka tie-up hai,
-  website ki zaroorat nahi, 12% tak commission).
-- Amazon Associates ke liye **live website ka URL zaroori hai** — isliye pehle
-  site live karni hogi.
-- Amazon ka price API (PA-API) tabhi milta hai jab affiliate links se
-  **3 sales** ho jayen. Isliye shuru me prices haath se update hongi.
+Single-store availability must not be described as a multi-store comparison.
+Amazon search fallback is an affiliate discovery link, not a verified price.
 
-**Steps (isi order me):**
-1. Website Vercel (free) par live karna + GoDaddy me `bestdaam.in` domain jodna
-2. EarnKaro ya Cuelinks par account banana → Flipkart + Amazon ke commission links
-3. Amazon Associates par apply karna (bestdaam.in URL ke saath)
-4. Demo prices ki jagah asli prices daalna (shuru me haath se update),
-   har product par asli affiliate "Buy" links lagana
-5. 3 sales hone ke baad Amazon PA-API se prices auto-update karna
+## Safety rules
 
-### Phase 3 — User features
-Goal: Users ko baar-baar wapas laana.
-- [x] Price history graph ("ye product pichle mahine kitne ka tha?") — ban gaya,
-      abhi demo data par chalta hai; asli data Phase 2 ke baad
-- Price drop alert ("jab ₹50,000 se kam ho, mujhe email karo")
-- User login (Google se sign-in)
+- Never commit secrets, passwords, tokens, PAN or bank details.
+- Do not directly scrape Amazon or Flipkart. Use official APIs or approved
+  affiliate-network feeds. The legacy scraper repository should be migrated away
+  from storefront automation rather than expanded.
+- Preserve `rel="nofollow sponsored noopener"` on affiliate links.
+- Keep legal pages and the Admitad verification tag.
+- Publish only from `claude/india-price-comparison-zb7xou` until deployment is
+  deliberately migrated to a standard `main` branch.
 
-### Phase 4 — Growth aur kamai badhana
-Goal: Zyada users, zyada kamai. (Deploy ab Phase 2 me ho jayega.)
-- [x] SEO basics — sitemap, robots.txt, Google product schema, social sharing
-      tags ban gaye
-- [x] About / Privacy Policy / Affiliate Disclosure pages (Amazon Associates
-      approval ke liye zaroori)
-- Aur stores jodna (Croma, Reliance, Tata CLiQ, Vijay Sales)
-- Prices ka auto-update system (database + scheduler)
+## Main folders
 
----
-
-## Folder structure (repo me kya kahan hai)
-
+```text
+app/                         Pages and React components
+data/products.json           Deployable catalog snapshot
+lib/                         Search, pricing, SEO, tracking and saved-item logic
+scripts/validate-catalog.mjs Catalog safety checks
+.github/workflows/           Catalog/request validation and publication
 ```
-bestdaam-price/
-├── ARCHITECTURE.md   ← ye file (master plan)
-├── README.md         ← project chalane ka tarika
-├── app/              ← website ke pages
-│   ├── page.js       ← homepage (search + product list)
-│   └── product/[id]/ ← price comparison page
-├── data/products.json ← demo products aur prices
-└── lib/products.js   ← data padhne ke helper functions
-```
+
+## Next architecture target
+
+Move catalog ingestion to official Amazon APIs and approved affiliate feeds,
+store normalized products/history in Supabase, and generate the deployable
+catalog from that trusted database. This removes cloud-browser fragility and
+makes multi-store comparison auditable.

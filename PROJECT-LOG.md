@@ -303,3 +303,8 @@
 - Why: Give shoppers a reliable model-by-model Samsung earbuds comparison without mixing cases, compatible products, colors or unrelated third-party earbuds.
 - Files: data/products.json. Scraper categories, filtering, canonical naming and strict Samsung Buds matching were updated separately.
 - Notes: Six models have exact Flipkart/Amazon comparisons. Galaxy Buds Live remains Flipkart-only because a reliable current Amazon match was not available.
+### 2026-08-08 — Codex — Laptop recovery, security update and catalog safety gate
+- Kya badla: Dono GitHub repositories laptop par restore kiye; Next.js ko supported security-patched 15.5.21 par update kiya aur transitive PostCSS/Sharp security patches pin kiye; README, architecture aur roadmap ko 1,393-product current status se sync kiya; catalog ke unique IDs, required fields, HTTPS URLs, positive prices aur history validate karne wala `npm test` gate add kiya; dono catalog workflows ab build se pehle ye validation chalate hain.
+- Kyun: Laptop clear hone ke baad project safely recover karna, known Next.js vulnerabilities close karna, outdated demo/45-product documentation hatana aur malformed catalog ko live publish hone se rokna.
+- Kaunsi files: `README.md`, `ROADMAP.md`, `ARCHITECTURE.md`, `package.json`, `package-lock.json`, `scripts/validate-catalog.mjs`, `.github/workflows/daily-catalog.yml`, `.github/workflows/instant-product-requests.yml`, `PROJECT-LOG.md`.
+- Dhyan rakhna: 8 August daily workflow ka failure Flipkart storefront timeout tha. Project rule ke mutabik scraper ko expand nahi kiya; permanent fix approved feeds/APIs par migration hai.

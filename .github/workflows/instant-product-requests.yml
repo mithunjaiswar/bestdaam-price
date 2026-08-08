@@ -69,6 +69,7 @@ jobs:
         working-directory: site
         run: |
           npm ci
+          npm test
           npm run build
 
       - name: Publish validated products
