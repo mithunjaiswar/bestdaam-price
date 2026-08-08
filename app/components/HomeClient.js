@@ -389,25 +389,65 @@ export default function HomeClient({ products }) {
       </section>
 
       {hasQuery ? (
-        <aside className="amazon-search-companion" aria-label="Search on Amazon">
-          <div className="amazon-search-companion-copy">
-            <span className="amazon-search-companion-kicker">Want more options?</span>
-            <strong>Search Amazon for “{searchLabel}”</strong>
-            <p>
-              Open the same search directly on Amazon India. Prices and product
-              availability will be shown by Amazon.
-            </p>
-          </div>
-          <a
-            href={amazonSearchUrl}
-            className="buy-btn amazon-search-btn amazon-search-companion-btn"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            onClick={openAmazonSearch}
-          >
-            Search on Amazon ↗
-          </a>
-        </aside>
+        <div className="external-search-options">
+          <aside className="amazon-search-companion" aria-label="Search on Amazon">
+            <div className="amazon-search-companion-copy">
+              <span className="amazon-search-companion-kicker">Want more options?</span>
+              <strong>Search Amazon for “{searchLabel}”</strong>
+              <p>
+                Open the same search directly on Amazon India. Prices and product
+                availability will be shown by Amazon.
+              </p>
+            </div>
+            <a
+              href={amazonSearchUrl}
+              className="buy-btn amazon-search-btn amazon-search-companion-btn"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              onClick={openAmazonSearch}
+            >
+              Search on Amazon ↗
+            </a>
+          </aside>
+
+          <aside className="flipkart-request-companion" aria-label="Request on Flipkart">
+            <div className="amazon-search-companion-copy">
+              <span className="flipkart-request-kicker">Can&apos;t find the right match?</span>
+              <strong>Request “{searchLabel}” for Flipkart</strong>
+              <p>
+                Send us this search once. We&apos;ll try to verify and add a matching
+                Flipkart listing to BestDaam.
+              </p>
+              {requestState === "sent" ? (
+                <p className="request-status success">
+                  Request received. We&apos;ll process it through the product queue.
+                </p>
+              ) : null}
+              {requestState === "error" ? (
+                <p className="request-status error">
+                  We could not save the request. Please try again shortly.
+                </p>
+              ) : null}
+              {!requestEndpoint ? (
+                <p className="request-status error">
+                  Product requests are temporarily unavailable.
+                </p>
+              ) : null}
+            </div>
+            <button
+              type="button"
+              className="request-product-btn flipkart-request-btn"
+              onClick={requestProduct}
+              disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
+            >
+              {requestState === "sending"
+                ? "Saving request…"
+                : requestState === "sent"
+                  ? "Request saved ✓"
+                  : "Request on Flipkart"}
+            </button>
+          </aside>
+        </div>
       ) : null}
 
       {!hasQuery &&
@@ -454,40 +494,9 @@ export default function HomeClient({ products }) {
           <span className="empty-icon">⌕</span>
           <h2>We could not find this product yet</h2>
           <p>
-            Use the Amazon search option above, or send us a one-click request.
-            We will try to include a verified listing in an upcoming catalog update.
+            Use the Amazon search or Flipkart request options above. We will try
+            to include a verified listing in an upcoming catalog update.
           </p>
-          <div className="missing-product-actions">
-            <button
-              type="button"
-              className="request-product-btn"
-              onClick={requestProduct}
-              disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
-            >
-              {requestState === "sending"
-                ? "Saving request…"
-                : requestState === "sent"
-                  ? "Request saved ✓"
-                  : "Request this product"}
-            </button>
-          </div>
-          {requestState === "sent" ? (
-            <p className="request-status success">
-              Request received. Once verified, the product may appear in a
-              future catalog update.
-            </p>
-          ) : null}
-          {requestState === "error" ? (
-            <p className="request-status error">
-              We could not save the request. Please try again shortly.
-            </p>
-          ) : null}
-          {!requestEndpoint ? (
-            <p className="request-status error">
-              Product requests are temporarily unavailable. Please use Amazon
-              search for now.
-            </p>
-          ) : null}
         </div>
       ) : emptyStoreResults ? (
         <div className="no-results">

@@ -313,3 +313,8 @@
 - Kyun: Local/fuzzy catalog match imperfect hone par customer ko Amazon par wahi product manually dobara type kiye bina search karne dena aur affiliate opportunity lose na karna.
 - Kaunsi files: `app/components/HomeClient.js`, `app/globals.css`, `PROJECT-LOG.md`.
 - Dhyan rakhna: Ye Amazon product data/API result nahi hai; Amazon India search page affiliate-tagged new tab me khulta hai. Creators API eligibility milne tak ye safe fallback hai.
+### 2026-08-08 — Codex — Always-visible Flipkart product request
+- Kya badla: Har active search ke Amazon shortcut ke just neeche current query ke liye `Request on Flipkart` card add kiya. Button existing one-click request queue use karta hai aur sending, saved, error aur unavailable status wahi dikhata hai. Zero-result state ka duplicate request control hata diya.
+- Kyun: Catalog me imperfect ya missing match hone par customer ko result count ki parwah kiye bina exact Flipkart listing request karne dena.
+- Kaunsi files: `app/components/HomeClient.js`, `app/globals.css`, `PROJECT-LOG.md`.
+- Dhyan rakhna: Request automatic publication tabhi karegi jab backend processor ko high-confidence verified Flipkart match mile; unclear matches review queue me rahenge.

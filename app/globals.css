@@ -1088,18 +1088,32 @@ main.container {
   background: #d98b05;
 }
 
-.amazon-search-companion {
+.external-search-options {
   max-width: 1180px;
   margin: 22px auto 30px;
+  display: grid;
+  gap: 12px;
+}
+
+.amazon-search-companion,
+.flipkart-request-companion {
   padding: 20px 22px;
-  border: 1px solid #f1d399;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: linear-gradient(135deg, #fffaf0, #ffffff 70%);
   box-shadow: var(--shadow-sm);
+}
+
+.amazon-search-companion {
+  border: 1px solid #f1d399;
+  background: linear-gradient(135deg, #fffaf0, #ffffff 70%);
+}
+
+.flipkart-request-companion {
+  border: 1px solid #cdd7f4;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff 70%);
 }
 
 .amazon-search-companion-copy {
@@ -1116,7 +1130,18 @@ main.container {
   text-transform: uppercase;
 }
 
-.amazon-search-companion strong {
+.flipkart-request-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.amazon-search-companion strong,
+.flipkart-request-companion strong {
   display: block;
   overflow: hidden;
   color: var(--ink);
@@ -1125,13 +1150,19 @@ main.container {
   white-space: nowrap;
 }
 
-.amazon-search-companion p {
+.amazon-search-companion p,
+.flipkart-request-companion p {
   margin: 5px 0 0;
   color: var(--muted);
   font-size: 14px;
 }
 
 .amazon-search-companion-btn {
+  flex: 0 0 auto;
+  min-width: 190px;
+}
+
+.flipkart-request-btn {
   flex: 0 0 auto;
   min-width: 190px;
 }
@@ -1443,20 +1474,26 @@ main.container {
     display: none;
   }
 
-  .amazon-search-companion {
+  .external-search-options {
     margin: 18px 16px 26px;
+  }
+
+  .amazon-search-companion,
+  .flipkart-request-companion {
     padding: 18px;
     align-items: stretch;
     flex-direction: column;
     gap: 16px;
   }
 
-  .amazon-search-companion strong {
+  .amazon-search-companion strong,
+  .flipkart-request-companion strong {
     font-size: 17px;
     white-space: normal;
   }
 
-  .amazon-search-companion-btn {
+  .amazon-search-companion-btn,
+  .flipkart-request-btn {
     width: 100%;
     min-width: 0;
   }
