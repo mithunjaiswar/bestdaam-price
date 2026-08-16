@@ -16,6 +16,7 @@
 - [x] Amazon Associates tag and exact Amazon matches where verified
 - [x] Customer product-request queue and fast publishing workflow
 - [x] Supabase-ready product and history sync
+- [x] Product-page price insights, freshness warnings and similar alternatives
 - [ ] Amazon tax/bank setup — **Mithun**
 - [ ] Amazon eligibility sales target and official Product Advertising API access
 - [ ] Approved Cuelinks/Admitad feeds or APIs
@@ -27,7 +28,8 @@
 - [x] Catalog schema, duplicate-ID, URL, price and history validation
 - [ ] Replace direct storefront scraping with approved feeds/APIs
 - [ ] Add automated unit and integration coverage for search, matching and exports
-- [ ] Add workflow alerts and a clear stale-price indicator
+- [ ] Add workflow alerts
+- [x] Add a clear stale-price indicator
 - [ ] Reconcile analytics configuration and verify production events
 
 ## Stage 4 — User retention

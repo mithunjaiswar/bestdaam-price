@@ -928,6 +928,73 @@ main.container {
   font-weight: 600;
 }
 
+.freshness-note {
+  max-width: 680px;
+  margin: 9px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 650;
+}
+
+.freshness-note.fresh { color: #087c50; }
+.freshness-note.aging { color: #8a5b00; }
+.freshness-note.stale { color: #b42318; }
+
+.price-insights {
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 12px;
+}
+
+.price-insights > div {
+  min-height: 116px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.price-insights span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.price-insights strong {
+  color: var(--ink);
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+.price-insights p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.price-verdict.good { border-color: #bde8d7; background: var(--accent-soft); }
+.price-verdict.high { border-color: #ffd0ca; background: #fff5f3; }
+
+.similar-products-section { margin: 44px 0 20px; }
+
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.section-heading-row .section-title { margin: 0; }
+.section-heading-row > p { max-width: 420px; margin: 0; color: var(--muted); font-size: 13px; }
+
 .savings-note {
   margin: 18px 0;
   padding: 15px 18px;
@@ -1604,6 +1671,14 @@ main.container {
     min-width: 660px;
   }
 
+  .price-insights {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .price-insights > div {
+    min-height: 104px;
+  }
+
   .content-page {
     margin-top: 32px;
     padding: 25px;
@@ -1611,5 +1686,11 @@ main.container {
 
   .no-results {
     padding: 30px 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .price-insights {
+    grid-template-columns: 1fr;
   }
 }

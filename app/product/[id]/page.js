@@ -13,6 +13,9 @@ import BackToSearchLink from "../../components/BackToSearchLink";
 import ShareButtons from "../../components/ShareButtons";
 import StoreDealLink from "../../components/StoreDealLink";
 import SaveProductButton from "../../components/SaveProductButton";
+import DealGrid from "../../components/DealGrid";
+import { getPriceInsights, getFreshness } from "../../../lib/price-insights";
+import { getSimilarProducts } from "../../../lib/recommendations";
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
@@ -69,6 +72,9 @@ export default async function ProductPage({ params }) {
     String(entry.store || "").toLowerCase().includes("amazon")
   );
   const history = getPriceHistory(product);
+  const insights = getPriceInsights(history, lowest);
+  const freshness = getFreshness(product.lastUpdated);
+  const similarProducts = getSimilarProducts(products, product);
   const ratingValue = Number(product.rating);
   const ratingCount = parseRatingCount(product.ratings_reviews);
 
@@ -134,9 +140,14 @@ export default async function ProductPage({ params }) {
           <h1>{product.name}</h1>
           {product.lastUpdated && (
             <p className="last-updated">
-              Last price update: {product.lastUpdated}
+              Last price check: {product.lastUpdated} · {freshness.label}
+              {freshness.daysOld !== null ? ` (${freshness.daysOld} days ago)` : ""}
             </p>
           )}
+          <p className={`freshness-note ${freshness.tone}`}>
+            Store prices can change after our last check. Always confirm the final
+            price and availability on the retailer website.
+          </p>
         </div>
       </div>
 
@@ -222,7 +233,43 @@ export default async function ProductPage({ params }) {
       )}
 
       <h2 className="section-title">Price history</h2>
+      {insights && (
+        <section className="price-insights" aria-label="Price insights">
+          <div className={`price-verdict ${insights.tone}`}>
+            <span>Current signal</span>
+            <strong>{insights.verdict}</strong>
+            <p>{insights.explanation}</p>
+          </div>
+          <div>
+            <span>Recorded average</span>
+            <strong>{formatINR(insights.average)}</strong>
+          </div>
+          <div>
+            <span>Recorded range</span>
+            <strong>
+              {formatINR(insights.low)}–{formatINR(insights.high)}
+            </strong>
+          </div>
+          <div>
+            <span>Evidence</span>
+            <strong>{insights.observations} checks</strong>
+          </div>
+        </section>
+      )}
       <PriceHistoryChart points={history} />
+
+      {similarProducts.length > 0 && (
+        <section className="similar-products-section">
+          <div className="section-heading-row">
+            <div>
+              <p className="eyebrow">Explore alternatives</p>
+              <h2 className="section-title">Similar products</h2>
+            </div>
+            <p>Matched by category, product words and price range.</p>
+          </div>
+          <DealGrid products={similarProducts} />
+        </section>
+      )}
 
       <script
         type="application/ld+json"

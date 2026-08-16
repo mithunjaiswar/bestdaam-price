@@ -39,3 +39,15 @@ Open <http://localhost:3000>. Use `npm run build` before publishing.
 - `bestdaam-scraper`: legacy catalog automation and feed-processing utilities
 
 Never commit passwords, tokens, PAN/bank details or other secrets.
+
+## Cuelinks integration
+
+BestDaam can convert supported non-Amazon merchant URLs at click time through
+Cuelinks API v3. Configure `CUELINKS_API_KEY` and optionally
+`CUELINKS_CHANNEL_ID` as server-only Vercel environment variables. The key needs
+the `write:links` scope. If conversion is unavailable, unapproved, or fails, the
+shopper is safely redirected to the original merchant URL.
+
+Amazon links continue to use the direct Amazon Associates tag and are never
+routed through Cuelinks. Campaign approval is still required before Cuelinks
+reports a converted link as affiliated.
