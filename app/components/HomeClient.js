@@ -409,17 +409,10 @@ export default function HomeClient({ products }) {
               }}
             >
               <span className="category-group-icon" aria-hidden="true">✦</span>
-              <span>
-                <strong>All products</strong>
-                <small>{products.length.toLocaleString("en-IN")} items</small>
-              </span>
+              <strong>All products</strong>
             </button>
 
             {availableCategoryGroups.map((group) => {
-              const groupCount = group.categories.reduce(
-                (total, item) => total + (categoryCounts[item] || 0),
-                0
-              );
               const isActive = selectedCategoryGroup === group.id;
 
               return (
@@ -436,10 +429,7 @@ export default function HomeClient({ products }) {
                   <span className="category-group-icon" aria-hidden="true">
                     {group.icon}
                   </span>
-                  <span>
-                    <strong>{group.label}</strong>
-                    <small>{groupCount.toLocaleString("en-IN")} items</small>
-                  </span>
+                  <strong>{group.label}</strong>
                 </button>
               );
             })}
@@ -471,7 +461,6 @@ export default function HomeClient({ products }) {
                   >
                     <span aria-hidden="true">{CATEGORY_ICONS[item] || "•"}</span>
                     {item}
-                    <small>{categoryCounts[item] || 0}</small>
                   </button>
                 ))}
               </div>

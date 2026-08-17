@@ -320,7 +320,7 @@
 - Dhyan rakhna: Request automatic publication tabhi karegi jab backend processor ko high-confidence verified Flipkart match mile; unclear matches review queue me rahenge.
 
 ### 2026-08-17 — Codex — Category and subcategory navigation redesign
-- Kya badla: Homepage ki long flat category-pill list ko icon-based hierarchy me badla. Ab All Products, Electronics, Fashion aur Office & More main sections hain; selected section ke neeche sirf uski relevant subcategories aur live product counts dikhte hain.
+- Kya badla: Homepage ki long flat category-pill list ko premium round-icon hierarchy me badla. Ab All Products, Electronics, Fashion aur Office & More main sections hain; selected section ke neeche sirf uski relevant round-icon subcategories dikhte hain.
 - Kyun: Catalog ko jaldi scan karna, visual clutter kam karna aur shoppers ko Electronics → Earbuds/Headphones ya Fashion → Men's Clothing jaise clear paths dena.
 - Kaunsi files: `app/components/HomeClient.js`, `app/globals.css`, `PROJECT-LOG.md`.
-- Marketing handoff: Claude posts me “BestDaam now has cleaner category browsing with fast Electronics, Fashion and Office filters” use kar sakta hai. Product/category counts live catalog se aate hain; fixed count claim mat karna.
+- Marketing handoff: Claude posts me “BestDaam now has cleaner category browsing with fast Electronics, Fashion and Office filters” use kar sakta hai. Fixed product/category count claim mat karna.
