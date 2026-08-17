@@ -28,7 +28,7 @@ const CATEGORY_GROUPS = [
   {
     id: "electronics",
     label: "Electronics",
-    icon: "⚡",
+    icon: "smartphone",
     categories: [
       "Mobile",
       "iPhone",
@@ -47,34 +47,66 @@ const CATEGORY_GROUPS = [
   {
     id: "fashion",
     label: "Fashion",
-    icon: "👕",
+    icon: "shirt",
     categories: ["Men's Clothing"],
   },
   {
     id: "office-more",
     label: "Office & More",
-    icon: "✏️",
+    icon: "pencil",
     categories: ["Stationery", "Requested Products"],
   },
 ];
 
 const CATEGORY_ICONS = {
-  Camera: "📷",
-  Earbuds: "🎧",
-  Headphones: "🎧",
-  iPhone: "📱",
-  Laptop: "💻",
-  Mobile: "📱",
-  "Men's Clothing": "👔",
-  "Requested Products": "＋",
-  "Samsung Buds": "🎧",
-  Smartwatch: "⌚",
-  Speaker: "🔊",
-  Stationery: "✏️",
-  Tablet: "▣",
-  Television: "📺",
-  "Wired Earphones": "🎵",
+  Camera: "camera",
+  Earbuds: "headphones",
+  Headphones: "headphones",
+  iPhone: "smartphone",
+  Laptop: "laptop",
+  Mobile: "smartphone",
+  "Men's Clothing": "shirt",
+  "Requested Products": "plus",
+  "Samsung Buds": "headphones",
+  Smartwatch: "watch",
+  Speaker: "speaker",
+  Stationery: "pencil",
+  Tablet: "tablet",
+  Television: "television",
+  "Wired Earphones": "earphones",
 };
+
+function CategoryIcon({ name }) {
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: 1.8,
+  };
+
+  const paths = {
+    all: <><rect x="4" y="4" width="6" height="6" rx="1.5" /><rect x="14" y="4" width="6" height="6" rx="1.5" /><rect x="4" y="14" width="6" height="6" rx="1.5" /><rect x="14" y="14" width="6" height="6" rx="1.5" /></>,
+    camera: <><path d="M4 8h3l1.5-2h7L17 8h3v11H4z" /><circle cx="12" cy="13.5" r="3.2" /></>,
+    earphones: <><path d="M7 17V9a5 5 0 0 1 10 0v8" /><path d="M7 13H5v5h3v-4M17 13h2v5h-3v-4" /></>,
+    headphones: <><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><path d="M4 14h3v6H5a1 1 0 0 1-1-1zM20 14h-3v6h2a1 1 0 0 0 1-1z" /></>,
+    laptop: <><rect x="5" y="5" width="14" height="10" rx="1.5" /><path d="M3 18h18M9 18h6" /></>,
+    pencil: <><path d="m5 19 1-4L16 5l3 3L9 18z" /><path d="m14.5 6.5 3 3M6 15l3 3" /></>,
+    plus: <><circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" /></>,
+    shirt: <><path d="m8 5-4 2-2 5 4 2v6h12v-6l4-2-2-5-4-2a4.5 4.5 0 0 1-8 0Z" /></>,
+    smartphone: <><rect x="7" y="3" width="10" height="18" rx="2" /><path d="M10 6h4M11 18h2" /></>,
+    speaker: <><path d="M5 10v4h4l5 4V6L9 10z" /><path d="M17 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12" /></>,
+    tablet: <><rect x="5" y="3" width="14" height="18" rx="2" /><circle cx="12" cy="18" r=".5" /></>,
+    television: <><rect x="3" y="6" width="18" height="12" rx="2" /><path d="m9 3 3 3 3-3M9 21h6" /></>,
+    watch: <><path d="M9 2h6l1 4H8zM8 18h8l-1 4H9z" /><rect x="7" y="6" width="10" height="12" rx="3" /><path d="M12 9v3l2 1" /></>,
+  };
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...common}>
+      {paths[name] || paths.all}
+    </svg>
+  );
+}
 
 function findGroupForCategory(category) {
   return (
@@ -390,10 +422,9 @@ export default function HomeClient({ products }) {
         <section className="category-browser" aria-labelledby="category-heading">
           <div className="category-heading-row">
             <div>
-              <span className="category-eyebrow">Browse faster</span>
-              <h2 id="category-heading">Shop by category</h2>
+              <h2 id="category-heading"><span>Shop by category</span></h2>
             </div>
-            <span>Choose a section, then narrow it down</span>
+            <span>Select a category to explore</span>
           </div>
 
           <div className="category-groups">
@@ -408,7 +439,7 @@ export default function HomeClient({ products }) {
                 setCategory("All");
               }}
             >
-              <span className="category-group-icon" aria-hidden="true">✦</span>
+              <span className="category-group-icon"><CategoryIcon name="all" /></span>
               <strong>All products</strong>
             </button>
 
@@ -427,7 +458,7 @@ export default function HomeClient({ products }) {
                   }}
                 >
                   <span className="category-group-icon" aria-hidden="true">
-                    {group.icon}
+                    <CategoryIcon name={group.icon} />
                   </span>
                   <strong>{group.label}</strong>
                 </button>
@@ -438,17 +469,18 @@ export default function HomeClient({ products }) {
           {activeCategoryGroup ? (
             <div className="subcategory-panel">
               <span className="subcategory-label">
-                {activeCategoryGroup.label} categories
+                Explore {activeCategoryGroup.label}
               </span>
               <div className="subcategory-row">
                 <button
                   type="button"
-                  className={`subcategory-chip ${
+                  className={`subcategory-chip subcategory-all ${
                     selectedCategory === "All" ? "active" : ""
                   }`}
                   onClick={() => setCategory("All")}
                 >
-                  All {activeCategoryGroup.label}
+                  <span>All</span>
+                  <strong>All {activeCategoryGroup.label}</strong>
                 </button>
                 {activeCategoryGroup.categories.map((item) => (
                   <button
@@ -459,7 +491,7 @@ export default function HomeClient({ products }) {
                     }`}
                     onClick={() => setCategory(item)}
                   >
-                    <span aria-hidden="true">{CATEGORY_ICONS[item] || "•"}</span>
+                    <span><CategoryIcon name={CATEGORY_ICONS[item] || "all"} /></span>
                     {item}
                   </button>
                 ))}

@@ -324,3 +324,5 @@
 - Kyun: Catalog ko jaldi scan karna, visual clutter kam karna aur shoppers ko Electronics → Earbuds/Headphones ya Fashion → Men's Clothing jaise clear paths dena.
 - Kaunsi files: `app/components/HomeClient.js`, `app/globals.css`, `PROJECT-LOG.md`.
 - Marketing handoff: Claude posts me “BestDaam now has cleaner category browsing with fast Electronics, Fashion and Office filters” use kar sakta hai. Fixed product/category count claim mat karna.
+- Visual refinement: Emoji icons ko same-weight navy inline SVG line icons se replace kiya, heading highlight aur circular active state add ki. Ye icons retina-sharp hain aur external image load par depend nahi karte.
+- Minimal integration: Floating white card, border aur drop shadow remove kiye; category browser ab hero background ka natural full-width continuation hai. Compact equal-size circles aur icon-only focus ring se visual weight kam hua.
