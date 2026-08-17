@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { fetchProducts } from "../../lib/products";
 import { BUDGET_PAGES, getFeaturedDeals } from "../../lib/deals";
+import { fetchCuelinksOffers } from "../../lib/cuelinks-offers";
+import CuelinksOfferGrid from "../components/CuelinksOfferGrid";
 import DealGrid from "../components/DealGrid";
 
 export const metadata = {
@@ -13,7 +15,10 @@ export const metadata = {
 export const revalidate = 600;
 
 export default async function DealsPage() {
-  const products = await fetchProducts();
+  const [products, liveOffers] = await Promise.all([
+    fetchProducts(),
+    fetchCuelinksOffers(),
+  ]);
   const deals = getFeaturedDeals(products, 30);
 
   return (
@@ -33,7 +38,16 @@ export default async function DealsPage() {
           ))}
         </div>
       </section>
+      <CuelinksOfferGrid offers={liveOffers} />
+      <section className="catalog-deals" aria-labelledby="catalog-deals-title">
+        <div className="section-heading">
+          <div>
+            <span className="landing-eyebrow">Verified catalog prices</span>
+            <h2 id="catalog-deals-title">Affordable product picks</h2>
+          </div>
+        </div>
       <DealGrid products={deals} />
+      </section>
     </>
   );
 }
