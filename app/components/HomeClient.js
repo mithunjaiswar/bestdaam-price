@@ -339,7 +339,7 @@ export default function HomeClient({ products }) {
         action: "submit",
         query: query.trim(),
         label: searchLabel,
-        source: "bestdaam.in",
+        source: "pricevichar.com",
         website: "",
       });
 
@@ -371,7 +371,7 @@ export default function HomeClient({ products }) {
         </h1>
         <p>
           Search once, compare trusted stores, and shop with confidence.
-          BestDaam makes every deal easier to understand.
+          PriceVichar makes every deal easier to understand.
         </p>
 
         <div className="search-shell">
@@ -590,7 +590,7 @@ export default function HomeClient({ products }) {
               <strong>Request “{searchLabel}” for Flipkart</strong>
               <p>
                 Send us this search once. We&apos;ll try to verify and add a matching
-                Flipkart listing to BestDaam.
+                Flipkart listing to PriceVichar.
               </p>
               {requestState === "sent" ? (
                 <p className="request-status success">
@@ -634,7 +634,7 @@ export default function HomeClient({ products }) {
               <span className="results-kicker">Shopping pulse</span>
               <h2>Trending this week</h2>
               <p className="section-subtitle">
-                Popularity signals from Flipkart and BestDaam shopper activity.
+                Popularity signals from Flipkart and PriceVichar shopper activity.
               </p>
             </div>
             <Link href="/trending" className="text-link">

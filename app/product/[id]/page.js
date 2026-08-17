@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
   const priceSuffix = product.prices.length > 1 ? " onwards" : "";
 
   return {
-    title: `${product.name} — Price Comparison | BestDaam`,
+    title: `${product.name} — Price Comparison | PriceVichar`,
     description: `Compare the best available price for ${product.name} — ${formatINR(
       getLowestPrice(product)
     )}${priceSuffix}.`,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
       canonical: `/product/${product.id}`,
     },
     openGraph: {
-      title: `${product.name} — Price Comparison | BestDaam`,
+      title: `${product.name} — Price Comparison | PriceVichar`,
       description: `Compare current prices for ${product.name} from ${formatINR(
         getLowestPrice(product)
       )}.`,

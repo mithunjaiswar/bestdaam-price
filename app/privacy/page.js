@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy — BestDaam",
-  description: "How BestDaam handles your data and privacy.",
+  title: "Privacy Policy — PriceVichar",
+  description: "How PriceVichar handles your data and privacy.",
 };
 
 export default function PrivacyPage() {
@@ -9,7 +9,7 @@ export default function PrivacyPage() {
       <h1>Privacy Policy</h1>
       <p>Last updated: July 2026</p>
       <p>
-        BestDaam.in (&quot;we&quot;, &quot;our&quot;) respects your privacy.
+        PriceVichar.com (&quot;we&quot;, &quot;our&quot;) respects your privacy.
         This page explains what information we collect and how we use it.
       </p>
       <h2>What we collect</h2>
@@ -29,19 +29,19 @@ export default function PrivacyPage() {
       <p>
         When you click through to a store (for example Amazon or Flipkart),
         that store or an affiliate network may use cookies to attribute the
-        visit to BestDaam. These cookies are governed by the store&apos;s own
+        visit to PriceVichar. These cookies are governed by the store&apos;s own
         privacy policy. See our{" "}
         <a href="/disclosure">Affiliate Disclosure</a> for more.
       </p>
       <h2>Third-party websites</h2>
       <p>
-        BestDaam links to external stores. We are not responsible for the
+        PriceVichar links to external stores. We are not responsible for the
         content or privacy practices of those websites.
       </p>
       <h2>Contact</h2>
       <p>
         For any privacy questions, email{" "}
-        <a href="mailto:contact@bestdaam.in">contact@bestdaam.in</a>.
+        <a href="mailto:contact@pricevichar.com">contact@pricevichar.com</a>.
       </p>
     </article>
   );

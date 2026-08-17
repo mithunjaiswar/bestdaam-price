@@ -26,8 +26,8 @@ export function generateMetadata({ params }) {
   }
 
   return {
-    title: `Compare ${category} Prices | BestDaam`,
-    description: `Compare verified ${category} prices and find the best available deal on BestDaam.`,
+    title: `Compare ${category} Prices | PriceVichar`,
+    description: `Compare verified ${category} prices and find the best available deal on PriceVichar.`,
     alternates: { canonical: `/category/${params.slug}` },
   };
 }

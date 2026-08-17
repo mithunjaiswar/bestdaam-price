@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
   }
 
   return {
-    title: `${budget.heading} | BestDaam`,
+    title: `${budget.heading} | PriceVichar`,
     description: budget.description,
     alternates: { canonical: `/deals/${params.budget}` },
   };

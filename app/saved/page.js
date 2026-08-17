@@ -2,7 +2,7 @@ import { fetchProducts } from "../../lib/products";
 import SavedProductsClient from "../components/SavedProductsClient";
 
 export const metadata = {
-  title: "Saved Products | BestDaam",
+  title: "Saved Products | PriceVichar",
   description:
     "Review the products you saved and return anytime to compare their latest available prices.",
   robots: {
@@ -28,4 +28,3 @@ export default async function SavedProductsPage() {
     </section>
   );
 }
-

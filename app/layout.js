@@ -6,19 +6,22 @@ import SavedProductsNav from "./components/SavedProductsNav";
 import { absoluteUrl, safeJsonLd } from "../lib/seo";
 
 export const metadata = {
-  metadataBase: new URL("https://bestdaam.in"),
+  metadataBase: new URL("https://pricevichar.com"),
   other: {
     "verify-admitad": "f9807017ed",
   },
-  title: "BestDaam — Compare Prices. Buy Smarter.",
+  title: "PriceVichar — Compare Prices. Buy Smarter.",
   description:
     "Compare product prices across leading Indian online stores and find the best deal before you buy.",
+  icons: {
+    icon: "/pricevichar-icon.svg",
+  },
   openGraph: {
-    title: "BestDaam — Compare Prices. Buy Smarter.",
+    title: "PriceVichar — Compare Prices. Buy Smarter.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
-    url: "https://bestdaam.in",
-    siteName: "BestDaam",
+    url: "https://pricevichar.com",
+    siteName: "PriceVichar",
     locale: "en_IN",
     type: "website",
   },
@@ -27,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BestDaam — Compare Prices. Buy Smarter.",
+    title: "PriceVichar — Compare Prices. Buy Smarter.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
   },
@@ -41,14 +44,14 @@ export default function RootLayout({ children }) {
         "@type": "WebSite",
         "@id": `${absoluteUrl("/")}#website`,
         url: absoluteUrl("/"),
-        name: "BestDaam",
-        alternateName: "Best Daam",
+        name: "PriceVichar",
+        alternateName: "Price Vichar",
         inLanguage: "en-IN",
       },
       {
         "@type": "Organization",
         "@id": `${absoluteUrl("/")}#organization`,
-        name: "BestDaam",
+        name: "PriceVichar",
         url: absoluteUrl("/"),
       },
     ],
@@ -60,8 +63,8 @@ export default function RootLayout({ children }) {
         <header className="site-header">
           <div className="container header-inner">
             <div className="brand-lockup">
-              <Link href="/" className="logo" aria-label="BestDaam home">
-                Best<span>Daam</span>
+              <Link href="/" className="logo" aria-label="PriceVichar home">
+                Price<span>Vichar</span>
               </Link>
               <span className="brand-dot">IN</span>
             </div>
@@ -93,7 +96,7 @@ export default function RootLayout({ children }) {
               Prices and availability can change. Always confirm the final
               price on the retailer&apos;s website before purchasing.
             </p>
-            <p>© {new Date().getFullYear()} BestDaam. Made for smarter shopping in India.</p>
+            <p>© {new Date().getFullYear()} PriceVichar. Made for smarter shopping in India.</p>
           </div>
         </footer>
       </body>

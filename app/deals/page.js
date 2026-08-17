@@ -6,7 +6,7 @@ import CuelinksOfferGrid from "../components/CuelinksOfferGrid";
 import DealGrid from "../components/DealGrid";
 
 export const metadata = {
-  title: "Today's Affordable Deals | BestDaam",
+  title: "Today's Affordable Deals | PriceVichar",
   description:
     "Compare today's affordable product picks across trusted Indian online stores.",
   alternates: { canonical: "/deals" },

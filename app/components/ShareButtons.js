@@ -5,7 +5,7 @@ import { formatINR } from "../../lib/helpers";
 import { trackEvent } from "../../lib/tracking";
 
 function buildShareUrl(productId, source) {
-  const url = new URL(`/product/${productId}`, "https://bestdaam.in");
+  const url = new URL(`/product/${productId}`, "https://pricevichar.com");
   url.searchParams.set("utm_source", source);
   url.searchParams.set("utm_medium", "social");
   url.searchParams.set("utm_campaign", "deal_share");
@@ -15,7 +15,7 @@ function buildShareUrl(productId, source) {
 function shareText(product, price) {
   return `🔥 Affordable Deal\n\n${product.name}\nCurrent price: ${formatINR(
     price
-  )}\n\nCompare prices on BestDaam.\nPrices may change. Affiliate link.`;
+  )}\n\nCompare prices on PriceVichar.\nPrices may change. Affiliate link.`;
 }
 
 export default function ShareButtons({ product, price }) {

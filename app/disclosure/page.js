@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Affiliate Disclosure — BestDaam",
+  title: "Affiliate Disclosure — PriceVichar",
   description:
-    "How BestDaam earns affiliate commissions from stores like Amazon and Flipkart.",
+    "How PriceVichar earns affiliate commissions from stores like Amazon and Flipkart.",
 };
 
 export default function DisclosurePage() {
@@ -9,12 +9,12 @@ export default function DisclosurePage() {
     <article className="content-page">
       <h1>Affiliate Disclosure</h1>
       <p>
-        BestDaam.in is a free price comparison service. To keep it free, we
+        PriceVichar.com is a free price comparison service. To keep it free, we
         participate in affiliate programs offered by online stores and
         affiliate networks.
       </p>
       <p>
-        When you click a link on BestDaam and make a purchase on a store like
+        When you click a link on PriceVichar and make a purchase on a store like
         Amazon, Flipkart, Croma or Reliance Digital, we may earn a small
         commission from that store. <strong>This never costs you anything
         extra</strong> — you pay exactly the same price you would pay by

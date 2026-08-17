@@ -35,7 +35,7 @@ export default function SavedProductsClient({ products }) {
         <span aria-hidden="true">♡</span>
         <h2>Your saved list is empty</h2>
         <p>
-          Save products you are considering. BestDaam will keep them together
+          Save products you are considering. PriceVichar will keep them together
           so you can compare prices again later.
         </p>
         <Link href="/" className="buy-btn">
@@ -75,4 +75,3 @@ export default function SavedProductsClient({ products }) {
     </div>
   );
 }
-

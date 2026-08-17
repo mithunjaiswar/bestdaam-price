@@ -3,7 +3,7 @@ import { BUDGET_PAGES } from "../lib/deals";
 import { getCategories } from "../lib/helpers";
 import { slugify } from "../lib/slugs";
 
-const BASE = "https://bestdaam.in";
+const BASE = "https://pricevichar.com";
 
 export default async function sitemap() {
   const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/trending"].map((p) => ({

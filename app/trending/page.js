@@ -6,7 +6,7 @@ import { rankTrendingProducts } from "../../lib/trending";
 import { slugify } from "../../lib/slugs";
 
 export const metadata = {
-  title: "Trending Products This Week | BestDaam",
+  title: "Trending Products This Week | PriceVichar",
   description:
     "Discover products gaining shopper interest this week and compare their current prices.",
   alternates: { canonical: "/trending" },
@@ -30,7 +30,7 @@ export default async function TrendingPage({ searchParams }) {
         <h1>{period === "month" ? "Popular This Month" : "Trending This Week"}</h1>
         <p>
           A transparent popularity ranking built from Flipkart signals and
-          BestDaam shopper activity—not a claim of units sold.
+          PriceVichar shopper activity—not a claim of units sold.
         </p>
         <div className="landing-links">
           <Link
@@ -76,7 +76,7 @@ export default async function TrendingPage({ searchParams }) {
       <div className="trend-method-note">
         <strong>How ranking works:</strong> 70% Flipkart popularity signals
         (listing position, rating, review volume and price movement) + up to
-        30% available BestDaam activity (product views, store clicks, searches
+        30% available PriceVichar activity (product views, store clicks, searches
         and shares). Rankings are directional and do not represent units sold.
       </div>
 
