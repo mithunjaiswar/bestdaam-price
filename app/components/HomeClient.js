@@ -500,26 +500,6 @@ export default function HomeClient({ products }) {
           ) : null}
         </section>
 
-        <div className="budget-row" aria-label="Quick budget filters">
-          <span>Shop by budget</span>
-          {[
-            ["under-500", "Under ₹500"],
-            ["under-1000", "Under ₹1,000"],
-            ["under-5000", "Under ₹5,000"],
-          ].map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              className={`budget-chip ${selectedBudget === value ? "active" : ""}`}
-              onClick={() =>
-                setBudget(selectedBudget === value ? "all" : value)
-              }
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
         <div className="results-toolbar">
           <div>
             <span className="results-kicker">Explore our catalog</span>

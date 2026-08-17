@@ -326,3 +326,4 @@
 - Marketing handoff: Claude posts me “BestDaam now has cleaner category browsing with fast Electronics, Fashion and Office filters” use kar sakta hai. Fixed product/category count claim mat karna.
 - Visual refinement: Emoji icons ko same-weight navy inline SVG line icons se replace kiya, heading highlight aur circular active state add ki. Ye icons retina-sharp hain aur external image load par depend nahi karte.
 - Minimal integration: Floating white card, border aur drop shadow remove kiye; category browser ab hero background ka natural full-width continuation hai. Compact equal-size circles aur icon-only focus ring se visual weight kam hua.
+- Cleanup: Duplicate “Shop by budget” quick buttons remove kiye. Full Budget dropdown results toolbar mein available hai, isliye filtering capability unchanged hai.
