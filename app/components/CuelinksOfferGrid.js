@@ -1,3 +1,5 @@
+import OfferMerchantImage from "./OfferMerchantImage";
+
 function formatEndDate(value) {
   if (!value) return "Limited-time offer";
 
@@ -32,18 +34,10 @@ export default function CuelinksOfferGrid({ offers }) {
         {offers.map((offer) => (
           <article className="offer-card" key={offer.id}>
             <div className="offer-media">
-              {offer.image ? (
-                <img
-                  src={offer.image}
-                  alt={`${offer.campaign} logo`}
-                  loading="lazy"
-                  className="offer-image"
-                />
-              ) : (
-                <span className="offer-image-fallback" aria-hidden="true">
-                  {offer.campaign.charAt(0).toUpperCase()}
-                </span>
-              )}
+              <OfferMerchantImage
+                campaignId={offer.campaignId}
+                campaign={offer.campaign}
+              />
             </div>
             <div className="offer-card-topline">
               <span className="offer-merchant">{offer.campaign}</span>
