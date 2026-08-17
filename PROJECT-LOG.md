@@ -328,3 +328,4 @@
 - Minimal integration: Floating white card, border aur drop shadow remove kiye; category browser ab hero background ka natural full-width continuation hai. Compact equal-size circles aur icon-only focus ring se visual weight kam hua.
 - Cleanup: Duplicate “Shop by budget” quick buttons remove kiye. Full Budget dropdown results toolbar mein available hai, isliye filtering capability unchanged hai.
 - Brand favicon: Supplied BestDaam profile logo se wordmark/extra whitespace hata kar navy “B” price-tag + green tick ka square browser-tab icon add kiya. Next.js `app/icon.png` convention se favicon automatically serve hota hai.
+- Favicon transparency: White square background remove karke icon ko true RGBA transparency par convert kiya; browser tab mein ab sirf navy B mark aur green tick dikhenge.
