@@ -18,7 +18,7 @@ export default function CuelinksOfferGrid({ offers }) {
   if (!offers.length) return null;
 
   return (
-    <section className="live-offers" aria-labelledby="live-offers-title">
+    <section id="live-offers" className="live-offers" aria-labelledby="live-offers-title">
       <div className="section-heading offer-section-heading">
         <div>
           <span className="landing-eyebrow">Live partner offers</span>

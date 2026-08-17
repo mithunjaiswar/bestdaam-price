@@ -464,6 +464,17 @@ export default function HomeClient({ products }) {
                 </button>
               );
             })}
+
+            <Link
+              href="/deals#live-offers"
+              className="category-group-card category-offer-link"
+              aria-label="View limited-time partner offers"
+            >
+              <span className="category-group-icon category-offer-icon" aria-hidden="true">
+                <img src="/icons/limited-time-offers.png" alt="" />
+              </span>
+              <strong>Limited-time offers</strong>
+            </Link>
           </div>
 
           {activeCategoryGroup ? (

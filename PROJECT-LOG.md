@@ -330,3 +330,4 @@
 - Brand favicon: Supplied BestDaam profile logo se wordmark/extra whitespace hata kar navy “B” price-tag + green tick ka square browser-tab icon add kiya. Next.js `app/icon.png` convention se favicon automatically serve hota hai.
 - Favicon transparency: White square background remove karke icon ko true RGBA transparency par convert kiya; browser tab mein ab sirf navy B mark aur green tick dikhenge.
 - Favicon contrast: Outer area transparent rakhte hue B outline ke enclosed center ko solid white fill diya, taaki dark browser tabs par brand mark clear aur complete dikhe.
+- Limited-time offer navigation: Homepage category row mein supplied cart-clock icon ke saath “Limited-time offers” shortcut add kiya. Ye product filter nahi hai; `/deals#live-offers` par current Cuelinks partner promotions tak direct le jata hai.

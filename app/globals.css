@@ -392,6 +392,22 @@ main.container {
 .category-group-card:nth-child(2) .category-group-icon { background: #fff1df; }
 .category-group-card:nth-child(3) .category-group-icon { background: #ffeef3; }
 .category-group-card:nth-child(4) .category-group-icon { background: #eaf8ef; }
+.category-group-card:nth-child(5) .category-group-icon { background: #f1edff; }
+
+.category-offer-link {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.category-offer-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.category-offer-link:hover {
+  color: var(--primary);
+}
 
 .category-group-card:hover .category-group-icon,
 .category-group-card.active .category-group-icon {
@@ -1908,6 +1924,7 @@ main.container {
 .live-offers,
 .catalog-deals {
   margin-top: 2.5rem;
+  scroll-margin-top: 96px;
 }
 
 .offer-section-heading p {
