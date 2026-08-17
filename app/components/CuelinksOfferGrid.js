@@ -49,23 +49,22 @@ export default function CuelinksOfferGrid({ offers }) {
             <div className="offer-card-footer">
               <span>{formatEndDate(offer.endDate)}</span>
               <a
-                href={offer.trackingUrl}
+                href={offer.merchantUrl}
                 target="_blank"
-                rel="nofollow sponsored noopener"
+                rel="nofollow noopener"
                 className="offer-cta"
               >
-                View offer <span aria-hidden="true">→</span>
+                Visit store <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
         ))}
       </div>
       <p className="offer-disclosure">
-        Affiliate disclosure: BestDaam may earn a commission from qualifying
-        purchases. Offer eligibility and final price are confirmed by the
-        retailer.
+        Offer information is supplied by Cuelinks. These buttons currently open
+        the retailer directly; offer eligibility and final price are confirmed
+        by the retailer.
       </p>
     </section>
   );
 }
-
