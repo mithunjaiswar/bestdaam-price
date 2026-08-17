@@ -327,3 +327,4 @@
 - Visual refinement: Emoji icons ko same-weight navy inline SVG line icons se replace kiya, heading highlight aur circular active state add ki. Ye icons retina-sharp hain aur external image load par depend nahi karte.
 - Minimal integration: Floating white card, border aur drop shadow remove kiye; category browser ab hero background ka natural full-width continuation hai. Compact equal-size circles aur icon-only focus ring se visual weight kam hua.
 - Cleanup: Duplicate “Shop by budget” quick buttons remove kiye. Full Budget dropdown results toolbar mein available hai, isliye filtering capability unchanged hai.
+- Brand favicon: Supplied BestDaam profile logo se wordmark/extra whitespace hata kar navy “B” price-tag + green tick ka square browser-tab icon add kiya. Next.js `app/icon.png` convention se favicon automatically serve hota hai.
