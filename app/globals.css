@@ -292,13 +292,174 @@ main.container {
   cursor: pointer;
 }
 
-.category-row {
+.category-browser {
+  max-width: 1080px;
+  margin: 28px auto 0;
+  padding: 22px;
+  border: 1px solid rgba(37, 86, 232, 0.13);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 50px rgba(23, 39, 83, 0.08);
+  text-align: left;
+}
+
+.category-heading-row {
   display: flex;
-  justify-content: center;
-  gap: 9px;
-  flex-wrap: wrap;
-  max-width: 1040px;
-  margin: 0 auto;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.category-heading-row h2 {
+  margin: 3px 0 0;
+  color: var(--ink);
+  font-size: 21px;
+  letter-spacing: -0.035em;
+}
+
+.category-heading-row > span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.category-eyebrow {
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.category-groups {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.category-group-card {
+  min-width: 0;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ink-soft);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.category-group-card:hover {
+  border-color: #b9c7ef;
+  transform: translateY(-2px);
+}
+
+.category-group-card.active {
+  border-color: var(--primary);
+  background: linear-gradient(145deg, #eef3ff, #fff);
+  color: var(--primary);
+  box-shadow: 0 9px 24px rgba(37, 86, 232, 0.13);
+}
+
+.category-group-icon {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #f0f4ff;
+  font-size: 19px;
+}
+
+.category-group-card.active .category-group-icon {
+  background: var(--primary);
+  color: #fff;
+}
+
+.category-group-card strong,
+.category-group-card small {
+  display: block;
+}
+
+.category-group-card strong {
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-group-card small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.subcategory-panel {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.subcategory-label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.subcategory-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 1px 1px 7px;
+  scrollbar-width: thin;
+}
+
+.subcategory-chip {
+  min-height: 37px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 780;
+  cursor: pointer;
+}
+
+.subcategory-chip:hover,
+.subcategory-chip.active {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+}
+
+.subcategory-chip small {
+  min-width: 20px;
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: #eef2fb;
+  color: var(--muted);
+  font-size: 9px;
+  text-align: center;
+}
+
+.subcategory-chip.active small {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
 }
 
 .budget-row {
@@ -1475,6 +1636,10 @@ main.container {
 }
 
 @media (max-width: 900px) {
+  .category-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1529,6 +1694,47 @@ main.container {
 
   .hero > p {
     font-size: 16px;
+  }
+
+  .quick-searches {
+    margin-bottom: 18px;
+  }
+
+  .category-browser {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 19px;
+  }
+
+  .category-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .category-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .category-group-card {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .category-group-icon {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    font-size: 16px;
+  }
+
+  .category-group-card strong {
+    font-size: 12px;
+  }
+
+  .budget-row {
+    margin-top: 14px;
   }
 
   .search-box {

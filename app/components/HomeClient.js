@@ -24,16 +24,78 @@ const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
   "https://script.google.com/macros/s/AKfycbwAtwt08dqP0Hx2QonKSrJITCR_CxIKY_FUZmjn_qJUabK_1ueIxuG0xwESbwa5TSH0/exec";
 
+const CATEGORY_GROUPS = [
+  {
+    id: "electronics",
+    label: "Electronics",
+    icon: "⚡",
+    categories: [
+      "Mobile",
+      "iPhone",
+      "Laptop",
+      "Tablet",
+      "Television",
+      "Camera",
+      "Smartwatch",
+      "Speaker",
+      "Headphones",
+      "Earbuds",
+      "Wired Earphones",
+      "Samsung Buds",
+    ],
+  },
+  {
+    id: "fashion",
+    label: "Fashion",
+    icon: "👕",
+    categories: ["Men's Clothing"],
+  },
+  {
+    id: "office-more",
+    label: "Office & More",
+    icon: "✏️",
+    categories: ["Stationery", "Requested Products"],
+  },
+];
+
+const CATEGORY_ICONS = {
+  Camera: "📷",
+  Earbuds: "🎧",
+  Headphones: "🎧",
+  iPhone: "📱",
+  Laptop: "💻",
+  Mobile: "📱",
+  "Men's Clothing": "👔",
+  "Requested Products": "＋",
+  "Samsung Buds": "🎧",
+  Smartwatch: "⌚",
+  Speaker: "🔊",
+  Stationery: "✏️",
+  Tablet: "▣",
+  Television: "📺",
+  "Wired Earphones": "🎵",
+};
+
+function findGroupForCategory(category) {
+  return (
+    CATEGORY_GROUPS.find((group) => group.categories.includes(category))?.id ||
+    "all"
+  );
+}
+
 export default function HomeClient({ products }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
   const initialCategory = searchParams.get("category") || "All";
+  const initialGroup =
+    searchParams.get("group") || findGroupForCategory(initialCategory);
   const initialStore = searchParams.get("store") || "All";
   const initialBudget = searchParams.get("budget") || "all";
   const initialSort = searchParams.get("sort") || "price-low-high";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
+  const [categoryGroup, setCategoryGroup] = useState(initialGroup);
   const [store, setStore] = useState(initialStore);
   const [budget, setBudget] = useState(initialBudget);
   const [sortOrder, setSortOrder] = useState(initialSort);
@@ -41,6 +103,14 @@ export default function HomeClient({ products }) {
   const restoredScroll = useRef(false);
 
   const categories = ["All", ...getCategories(products)];
+  const categoryCounts = products.reduce((counts, product) => {
+    counts[product.category] = (counts[product.category] || 0) + 1;
+    return counts;
+  }, {});
+  const availableCategoryGroups = CATEGORY_GROUPS.map((group) => ({
+    ...group,
+    categories: group.categories.filter((item) => categories.includes(item)),
+  })).filter((group) => group.categories.length > 0);
   const stores = [
     "All",
     ...Array.from(
@@ -52,6 +122,13 @@ export default function HomeClient({ products }) {
     ).sort((a, b) => a.localeCompare(b)),
   ];
   const selectedCategory = categories.includes(category) ? category : "All";
+  const selectedCategoryGroup =
+    availableCategoryGroups.some((group) => group.id === categoryGroup)
+      ? categoryGroup
+      : findGroupForCategory(selectedCategory);
+  const activeCategoryGroup = availableCategoryGroups.find(
+    (group) => group.id === selectedCategoryGroup
+  );
   const selectedStore = stores.includes(store) ? store : "All";
   const selectedBudget = [
     "all",
@@ -82,8 +159,10 @@ export default function HomeClient({ products }) {
   const filteredResults = searchedResults.filter((p) => {
     const matchesCategory =
       hasQuery ||
-      selectedCategory === "All" ||
-      p.category === selectedCategory;
+      (selectedCategory === "All" && selectedCategoryGroup === "all") ||
+      (selectedCategory !== "All" && p.category === selectedCategory) ||
+      (selectedCategory === "All" &&
+        activeCategoryGroup?.categories.includes(p.category));
     const matchesStore =
       selectedStore === "All" ||
       (p.prices || []).some((entry) => entry.store === selectedStore);
@@ -131,6 +210,8 @@ export default function HomeClient({ products }) {
 
     if (selectedCategory !== "All") {
       params.set("category", selectedCategory);
+    } else if (selectedCategoryGroup !== "all") {
+      params.set("group", selectedCategoryGroup);
     }
 
     if (selectedStore !== "All") {
@@ -156,6 +237,7 @@ export default function HomeClient({ products }) {
     router,
     selectedBudget,
     selectedCategory,
+    selectedCategoryGroup,
     selectedSort,
     selectedStore,
   ]);
@@ -305,17 +387,97 @@ export default function HomeClient({ products }) {
           )}
         </div>
 
-        <div className="category-row">
-          {categories.map((c) => (
+        <section className="category-browser" aria-labelledby="category-heading">
+          <div className="category-heading-row">
+            <div>
+              <span className="category-eyebrow">Browse faster</span>
+              <h2 id="category-heading">Shop by category</h2>
+            </div>
+            <span>Choose a section, then narrow it down</span>
+          </div>
+
+          <div className="category-groups">
             <button
-              key={c}
-              className={`chip ${selectedCategory === c ? "active" : ""}`}
-              onClick={() => setCategory(c)}
+              type="button"
+              className={`category-group-card ${
+                selectedCategoryGroup === "all" ? "active" : ""
+              }`}
+              aria-pressed={selectedCategoryGroup === "all"}
+              onClick={() => {
+                setCategoryGroup("all");
+                setCategory("All");
+              }}
             >
-              {c}
+              <span className="category-group-icon" aria-hidden="true">✦</span>
+              <span>
+                <strong>All products</strong>
+                <small>{products.length.toLocaleString("en-IN")} items</small>
+              </span>
             </button>
-          ))}
-        </div>
+
+            {availableCategoryGroups.map((group) => {
+              const groupCount = group.categories.reduce(
+                (total, item) => total + (categoryCounts[item] || 0),
+                0
+              );
+              const isActive = selectedCategoryGroup === group.id;
+
+              return (
+                <button
+                  type="button"
+                  key={group.id}
+                  className={`category-group-card ${isActive ? "active" : ""}`}
+                  aria-pressed={isActive}
+                  onClick={() => {
+                    setCategoryGroup(group.id);
+                    setCategory("All");
+                  }}
+                >
+                  <span className="category-group-icon" aria-hidden="true">
+                    {group.icon}
+                  </span>
+                  <span>
+                    <strong>{group.label}</strong>
+                    <small>{groupCount.toLocaleString("en-IN")} items</small>
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {activeCategoryGroup ? (
+            <div className="subcategory-panel">
+              <span className="subcategory-label">
+                {activeCategoryGroup.label} categories
+              </span>
+              <div className="subcategory-row">
+                <button
+                  type="button"
+                  className={`subcategory-chip ${
+                    selectedCategory === "All" ? "active" : ""
+                  }`}
+                  onClick={() => setCategory("All")}
+                >
+                  All {activeCategoryGroup.label}
+                </button>
+                {activeCategoryGroup.categories.map((item) => (
+                  <button
+                    type="button"
+                    key={item}
+                    className={`subcategory-chip ${
+                      selectedCategory === item ? "active" : ""
+                    }`}
+                    onClick={() => setCategory(item)}
+                  >
+                    <span aria-hidden="true">{CATEGORY_ICONS[item] || "•"}</span>
+                    {item}
+                    <small>{categoryCounts[item] || 0}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </section>
 
         <div className="budget-row" aria-label="Quick budget filters">
           <span>Shop by budget</span>
