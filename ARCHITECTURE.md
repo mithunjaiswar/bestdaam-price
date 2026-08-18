@@ -1,10 +1,10 @@
-# BestDaam.in — Current Architecture
+# PriceVichar — Current Architecture
 
 ## Product goal
 
-BestDaam ek India-focused shopping comparison platform hai. Customer product
+PriceVichar ek India-focused shopping comparison platform hai. Customer product
 search karta hai, verified prices compare karta hai aur selected store ke
-affiliate link par jaata hai. Long-term goal comparison ke andar BestDaam ka
+affiliate link par jaata hai. Long-term goal comparison ke andar PriceVichar ka
 apna store add karna hai.
 
 ## Current system
@@ -12,12 +12,13 @@ apna store add karna hai.
 | Layer | Implementation | Status |
 |---|---|---|
 | Website | Next.js 15 App Router, React, JavaScript, plain CSS | Live on Vercel |
-| Domain | `bestdaam.in` | Live with HTTPS |
+| Domain | `pricevichar.com` | Live with HTTPS |
 | Catalog | `data/products.json` | 1,393 products, 15 categories |
 | Store coverage | Flipkart plus exact Amazon matches | Amazon coverage limited |
 | History | Catalog price-history snapshots | Available for current products |
 | Saved products | Browser local storage | Same-device only |
 | Requests | Google Apps Script queue + GitHub workflow | Automated |
+| Daily refresh | GitHub Actions at 01:00 UTC / 06:30 IST | Per-category failures isolated |
 | Cloud data | Optional Supabase sync | Secrets configured in GitHub |
 | Validation | Catalog validator + production build | Required before publication |
 

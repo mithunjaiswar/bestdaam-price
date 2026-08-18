@@ -10,14 +10,14 @@ export const metadata = {
   other: {
     "verify-admitad": "f9807017ed",
   },
-  title: "PriceVichar — Compare Prices. Buy Smarter.",
+  title: "PriceVichar — Compare Prices. Think Before You Buy.",
   description:
     "Compare product prices across leading Indian online stores and find the best deal before you buy.",
   icons: {
     icon: "/pricevichar-icon.svg",
   },
   openGraph: {
-    title: "PriceVichar — Compare Prices. Buy Smarter.",
+    title: "PriceVichar — Compare Prices. Think Before You Buy.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
     url: "https://pricevichar.com",
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PriceVichar — Compare Prices. Buy Smarter.",
+    title: "PriceVichar — Compare Prices. Think Before You Buy.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
   },
@@ -66,7 +66,6 @@ export default function RootLayout({ children }) {
               <Link href="/" className="logo" aria-label="PriceVichar home">
                 Price<span>Vichar</span>
               </Link>
-              <span className="brand-dot">IN</span>
             </div>
             <nav className="header-nav" aria-label="Main navigation">
               <SavedProductsNav />

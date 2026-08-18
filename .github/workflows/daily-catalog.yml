@@ -1,4 +1,4 @@
-name: Daily BestDaam catalog refresh
+name: Daily PriceVichar catalog refresh
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: bestdaam-catalog-writer
+  group: pricevichar-catalog-writer
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
     steps:
-      - name: Check out BestDaam
+      - name: Check out PriceVichar
         uses: actions/checkout@v4
         with:
           path: site
@@ -65,7 +65,7 @@ jobs:
       - name: Publish validated catalog
         working-directory: site
         run: |
-          git config user.name "BestDaam Daily Automation"
+          git config user.name "PriceVichar Daily Automation"
           git config user.email "actions@users.noreply.github.com"
           git add data/products.json
 

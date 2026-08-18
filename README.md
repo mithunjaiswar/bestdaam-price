@@ -1,17 +1,20 @@
-# BestDaam.in — India Price Comparison
+# PriceVichar — India Price Comparison
 
-BestDaam Indian shoppers ko products search karne, verified store prices compare
+PriceVichar Indian shoppers ko products search karne, verified store prices compare
 karne aur affiliate links se store par jaane deta hai.
 
-## Current status — 8 August 2026
+**Brand promise:** Compare prices. Think before you buy.
 
-- Live website: [bestdaam.in](https://bestdaam.in)
+## Current status — 18 August 2026
+
+- Live website: [pricevichar.com](https://pricevichar.com)
 - Next.js 15 website deployed on Vercel
 - 1,393 products across 15 categories
 - Flipkart price, image, price history and affiliate link on every catalog product
 - 31 products currently have an exact Amazon comparison
 - Search, category/store/budget filters, saved products, deals, trending, sharing and SEO pages are live
 - Customer product requests and catalog workflows run through GitHub Actions
+- Daily catalog job runs at 01:00 UTC (06:30 IST); store failures are isolated so one unavailable category does not cancel every update
 
 The catalog is no longer demo data. Multi-store coverage is still limited, so a
 single-store product is clearly shown as one verified price. Amazon prices must
@@ -42,7 +45,7 @@ Never commit passwords, tokens, PAN/bank details or other secrets.
 
 ## Cuelinks integration
 
-BestDaam can convert supported non-Amazon merchant URLs at click time through
+PriceVichar can convert supported non-Amazon merchant URLs at click time through
 Cuelinks API v3. Configure `CUELINKS_API_KEY` and optionally
 `CUELINKS_CHANNEL_ID` as server-only Vercel environment variables. The key needs
 the `write:links` scope. If conversion is unavailable, unapproved, or fails, the

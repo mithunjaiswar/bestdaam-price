@@ -100,16 +100,6 @@ input {
   color: var(--primary);
 }
 
-.brand-dot {
-  padding: 3px 7px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: #087c50;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
 .header-nav {
   display: flex;
   align-items: center;

@@ -363,11 +363,11 @@ export default function HomeClient({ products }) {
       <section className="hero">
         <div className="hero-eyebrow">
           <span className="status-dot" />
-          Prices refreshed daily
+          Prices checked daily
         </div>
         <h1>
-          Find the best price.
-          <span> Before you buy.</span>
+          Compare prices.
+          <span> Think before you buy.</span>
         </h1>
         <p>
           Search once, compare trusted stores, and shop with confidence.
