@@ -366,12 +366,12 @@ export default function HomeClient({ products }) {
           Prices checked daily
         </div>
         <h1>
-          Compare prices.
-          <span> Think before you buy.</span>
+          Search. Compare. Think.
+          <span> Buy better.</span>
         </h1>
         <p>
-          Search once, compare trusted stores, and shop with confidence.
-          PriceVichar makes every deal easier to understand.
+          Everything you need to make a smarter choice—right here on
+          PriceVichar.
         </p>
 
         <div className="search-shell">

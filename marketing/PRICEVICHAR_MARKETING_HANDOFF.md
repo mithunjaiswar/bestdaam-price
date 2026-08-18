@@ -6,7 +6,8 @@ Use this as the current source of truth for new social posts, captions, videos a
 
 - Name: **PriceVichar**
 - Website: **https://pricevichar.com**
-- Slogan: **Compare prices. Think before you buy.**
+- Slogan: **Search. Compare. Think. Buy better.**
+- Supporting line: **Everything you need to make a smarter choice—right here on PriceVichar.**
 - CTA: **PriceVichar par latest price check karo.**
 - Do not use `BestDaam`, `bestdaam.in` or the old yellow/cyan visual system in new content.
 
@@ -21,7 +22,7 @@ Use this as the current source of truth for new social posts, captions, videos a
 
 - Profile icon: white `P` with emerald check on a deep navy rounded square.
 - Primary colors: `#07183F`, `#1769E8`, `#14B86A`, `#FFFFFF`.
-- Recommended bio: `Compare prices across trusted Indian stores. Think before you buy. Latest checks: pricevichar.com`
+- Recommended bio: `Search. Compare. Think. Buy better. Latest price checks: pricevichar.com`
 
 ## Daily refresh
 

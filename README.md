@@ -3,7 +3,7 @@
 PriceVichar Indian shoppers ko products search karne, verified store prices compare
 karne aur affiliate links se store par jaane deta hai.
 
-**Brand promise:** Compare prices. Think before you buy.
+**Brand promise:** Search. Compare. Think. Buy better.
 
 ## Current status — 18 August 2026
 

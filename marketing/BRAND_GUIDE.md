@@ -4,7 +4,9 @@
 
 PriceVichar is an independent, customer-first Indian product and price-discovery platform. It helps shoppers compare available store prices, understand recorded price information, and confirm the final offer on the retailer site.
 
-**Primary slogan:** “Compare prices. Think before you buy.”
+**Primary slogan:** “Search. Compare. Think. Buy better.”
+
+**Supporting line:** “Everything you need to make a smarter choice—right here on PriceVichar.”
 
 **Primary CTA:** “PriceVichar par latest price check karo.”
 

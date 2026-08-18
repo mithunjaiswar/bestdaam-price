@@ -10,14 +10,14 @@ export const metadata = {
   other: {
     "verify-admitad": "f9807017ed",
   },
-  title: "PriceVichar — Compare Prices. Think Before You Buy.",
+  title: "PriceVichar — Search. Compare. Think. Buy Better.",
   description:
     "Compare product prices across leading Indian online stores and find the best deal before you buy.",
   icons: {
     icon: "/pricevichar-icon.svg",
   },
   openGraph: {
-    title: "PriceVichar — Compare Prices. Think Before You Buy.",
+    title: "PriceVichar — Search. Compare. Think. Buy Better.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
     url: "https://pricevichar.com",
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PriceVichar — Compare Prices. Think Before You Buy.",
+    title: "PriceVichar — Search. Compare. Think. Buy Better.",
     description:
       "Compare prices across leading Indian stores and choose the best deal.",
   },
