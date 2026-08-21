@@ -1,7 +1,8 @@
 export const metadata = {
   title: "About Us — PriceVichar",
   description:
-    "PriceVichar is an Indian price comparison website that helps you find the lowest price across Amazon, Flipkart, Croma and Reliance Digital.",
+    "Learn how PriceVichar helps Indian shoppers review verified prices and recorded price information before buying.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -13,17 +14,17 @@ export default function AboutPage() {
         Our mission is simple: help you compare clearly and buy wisely.
       </p>
       <p>
-        The same product is often sold at different prices on Amazon, Flipkart,
-        Croma and Reliance Digital. Checking each site one by one wastes time —
-        so we bring all the prices to one page, highlight the cheapest store,
-        and show you how the price has moved over the last 30 days.
+        The same product can be sold at different prices across online stores.
+        Where we have verified listings for the exact same product, we bring
+        those prices together and highlight the lowest available price. We also
+        show recorded price information when enough history is available.
       </p>
       <h2>How it works</h2>
       <ul>
         <li>Search for a product (for example: iPhone, mixer grinder, earbuds)</li>
-        <li>See prices from multiple stores side by side</li>
-        <li>The cheapest store is highlighted in green</li>
-        <li>Check the price history to decide if now is a good time to buy</li>
+        <li>Review one or more verified store prices currently in our catalog</li>
+        <li>Compare stores side by side when an exact multi-store match exists</li>
+        <li>Check available recorded price history before deciding</li>
         <li>Click through to the store and buy at the best price</li>
       </ul>
       <h2>Why trust us?</h2>

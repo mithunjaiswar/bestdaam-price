@@ -1,13 +1,14 @@
 export const metadata = {
   title: "Privacy Policy — PriceVichar",
   description: "How PriceVichar handles your data and privacy.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
   return (
     <article className="content-page">
       <h1>Privacy Policy</h1>
-      <p>Last updated: July 2026</p>
+      <p>Last updated: August 2026</p>
       <p>
         PriceVichar.com (&quot;we&quot;, &quot;our&quot;) respects your privacy.
         This page explains what information we collect and how we use it.

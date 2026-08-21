@@ -2,6 +2,7 @@ export const metadata = {
   title: "Affiliate Disclosure — PriceVichar",
   description:
     "How PriceVichar earns affiliate commissions from stores like Amazon and Flipkart.",
+  alternates: { canonical: "/disclosure" },
 };
 
 export default function DisclosurePage() {

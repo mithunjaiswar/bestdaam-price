@@ -1,3 +1,9 @@
+### 2026-08-22 — Codex — Canonical URLs and comparison claims corrected
+- What changed: Added page-specific canonical URLs for About, Privacy, Affiliate Disclosure and Saved Products. Updated About copy so single-store products are not described as multi-store comparisons and price history is only promised when available.
+- Why: Prevent non-home pages from inheriting the homepage canonical and keep public claims aligned with current verified catalog coverage.
+- Files changed: app/about/page.js, app/privacy/page.js, app/disclosure/page.js, app/saved/page.js, PROJECT-LOG.md.
+- Notes: Catalog validation and the full production build must remain green before deployment.
+
 ### 2026-07-27 — Daily automation — Catalog price refresh
 - Kya badla: Daily validated catalog refresh complete hua; 1200 products export hue.
 - Kyun: BestDaam par current Flipkart prices aur real price-history snapshots maintain karne ke liye.

@@ -5,6 +5,7 @@ export const metadata = {
   title: "Saved Products | PriceVichar",
   description:
     "Review the products you saved and return anytime to compare their latest available prices.",
+  alternates: { canonical: "/saved" },
   robots: {
     index: false,
     follow: true,
