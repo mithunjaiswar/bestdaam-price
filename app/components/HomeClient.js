@@ -466,7 +466,7 @@ export default function HomeClient({ products }) {
             })}
 
             <Link
-              href="/deals#live-offers"
+              href="/deals#limited-time-offers"
               className="category-group-card category-offer-link"
               aria-label="View limited-time partner offers"
             >

@@ -2,7 +2,9 @@ import Link from "next/link";
 import { fetchProducts } from "../../lib/products";
 import { BUDGET_PAGES, getFeaturedDeals } from "../../lib/deals";
 import { fetchCuelinksOffers } from "../../lib/cuelinks-offers";
+import { getCurrentEarnKaroOffers } from "../../lib/earnkaro-offers";
 import CuelinksOfferGrid from "../components/CuelinksOfferGrid";
+import EarnKaroOfferGrid from "../components/EarnKaroOfferGrid";
 import DealGrid from "../components/DealGrid";
 
 export const metadata = {
@@ -20,6 +22,7 @@ export default async function DealsPage() {
     fetchCuelinksOffers(),
   ]);
   const deals = getFeaturedDeals(products, 30);
+  const earnKaroOffers = getCurrentEarnKaroOffers();
 
   return (
     <>
@@ -38,7 +41,10 @@ export default async function DealsPage() {
           ))}
         </div>
       </section>
-      <CuelinksOfferGrid offers={liveOffers} />
+      <div id="limited-time-offers" className="partner-offers-anchor">
+        <EarnKaroOfferGrid offers={earnKaroOffers} />
+        <CuelinksOfferGrid offers={liveOffers} />
+      </div>
       <section className="catalog-deals" aria-labelledby="catalog-deals-title">
         <div className="section-heading">
           <div>

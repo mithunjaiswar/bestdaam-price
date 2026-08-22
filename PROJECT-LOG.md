@@ -1,3 +1,9 @@
+### 2026-08-22 — Codex — Expiry-safe EarnKaro offers added
+- What changed: Added a separate EarnKaro promotions feed to Limited-time Offers, six currently checked store campaigns, automatic review-window expiry, affiliate-link preference, catalog validation and daily-workflow publication support.
+- Why: Show useful short-lived partner promotions without mixing them with verified product-price comparisons or routing EarnKaro links through Cuelinks.
+- Files changed: data/earnkaro-offers.json, lib/earnkaro-offers.js, app/components/EarnKaroOfferGrid.js, app/deals/page.js, app/components/HomeClient.js, app/globals.css, scripts/validate-catalog.mjs, .github/workflows/daily-catalog.yml, PROJECT-LOG.md.
+- Notes: Offers auto-hide after their review date. The secured EK Affiliaters token converts merchant URLs to Profit Links during the cloud catalog workflow; never commit the token.
+
 ### 2026-08-22 — Codex — Canonical URLs and comparison claims corrected
 - What changed: Added page-specific canonical URLs for About, Privacy, Affiliate Disclosure and Saved Products. Updated About copy so single-store products are not described as multi-store comparisons and price history is only promised when available.
 - Why: Prevent non-home pages from inheriting the homepage canonical and keep public claims aligned with current verified catalog coverage.

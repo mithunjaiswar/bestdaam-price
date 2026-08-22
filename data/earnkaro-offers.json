@@ -1,0 +1,68 @@
+[
+  {
+    "id": "earnkaro-myntra-festive-bash-2026-08-22",
+    "merchant": "Myntra",
+    "title": "Festive Bash is live",
+    "description": "Get 40–80% off across selected top brands.",
+    "discountLabel": "40–80% off",
+    "merchantUrl": "https://www.myntra.com/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  },
+  {
+    "id": "earnkaro-ajio-kids-carnival-2026-08-22",
+    "merchant": "AJIO",
+    "title": "Kids Carnival",
+    "description": "Limited-period fashion offers on selected kids' products.",
+    "discountLabel": "Limited-time",
+    "merchantUrl": "https://www.ajio.com/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  },
+  {
+    "id": "earnkaro-dot-key-monsoon-glow-2026-08-22",
+    "merchant": "Dot & Key",
+    "title": "Monsoon Glow Sale",
+    "description": "Limited-period skincare promotion on selected products.",
+    "discountLabel": "Limited-time",
+    "merchantUrl": "https://www.dotandkey.com/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  },
+  {
+    "id": "earnkaro-mcaffeine-monsoon-sale-2026-08-22",
+    "merchant": "mCaffeine",
+    "title": "Dew Not Miss Monsoon Sale",
+    "description": "Limited-period beauty and personal-care promotion.",
+    "discountLabel": "Limited-time",
+    "merchantUrl": "https://www.mcaffeine.com/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  },
+  {
+    "id": "earnkaro-croma-up-to-50-2026-08-22",
+    "merchant": "Croma",
+    "title": "Electronics offers",
+    "description": "Save up to 50% on selected electronics and appliances.",
+    "discountLabel": "Up to 50% off",
+    "merchantUrl": "https://www.croma.com/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  },
+  {
+    "id": "earnkaro-shopsy-up-to-90-2026-08-22",
+    "merchant": "Shopsy",
+    "title": "Store-wide savings",
+    "description": "Save up to 90% on selected products and categories.",
+    "discountLabel": "Up to 90% off",
+    "merchantUrl": "https://www.shopsy.in/",
+    "affiliateUrl": "",
+    "checkedAt": "2026-08-22",
+    "expiresAt": "2026-08-25"
+  }
+]

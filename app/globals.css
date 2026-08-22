@@ -1917,6 +1917,14 @@ main.container {
   scroll-margin-top: 96px;
 }
 
+.partner-offers-anchor {
+  scroll-margin-top: 96px;
+}
+
+.earnkaro-offer-media {
+  background: linear-gradient(145deg, #f0fbf4, #e8f7ff);
+}
+
 .offer-section-heading p {
   max-width: 720px;
   margin-top: 0.5rem;
