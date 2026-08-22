@@ -355,3 +355,7 @@
 - Offer titles, images and already-converted EarnKaro links now refresh every 30 minutes.
 - Artwork is downloaded into the repository so cards do not depend on expiring Telegram CDN URLs.
 - Offers older than 48 hours are removed automatically; failures preserve the last valid catalog.
+# 2026-08-23 — Lightweight Amazon API eligibility check
+
+- Added a manual Amazon-only cloud workflow so Creators API eligibility can be
+  tested without running the complete catalog scraper.
