@@ -20,8 +20,8 @@ export default function EarnKaroOfferGrid({ offers }) {
           <span className="landing-eyebrow">EarnKaro limited-time offers</span>
           <h2 id="earnkaro-offers-title">Current store promotions</h2>
           <p>
-            Promotions checked on EarnKaro and automatically hidden after their
-            review window. These are store offers, not verified product prices.
+            Latest converted deals from our EarnKaro channel, refreshed
+            automatically. These are promotions, not verified product prices.
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function EarnKaroOfferGrid({ offers }) {
             <h3>{offer.title}</h3>
             <p>{offer.description}</p>
             <div className="offer-card-footer">
-              <span>{formatDate(offer.expiresAt, "Review by")}</span>
+              <span>{formatDate(offer.checkedAt, "Updated")}</span>
               <a
                 href={offer.destinationUrl}
                 target="_blank"
@@ -57,9 +57,9 @@ export default function EarnKaroOfferGrid({ offers }) {
         ))}
       </div>
       <p className="offer-disclosure">
-        Offer details were checked on {formatDate(offers[0].checkedAt, "")}. Final
-        price, eligibility and availability must be confirmed on the retailer
-        website. PriceVichar may earn a commission from eligible purchases.
+        Offers refresh throughout the day and older entries are removed
+        automatically. Final price, eligibility and availability must be confirmed
+        on the retailer website. PriceVichar may earn a commission from eligible purchases.
       </p>
     </section>
   );

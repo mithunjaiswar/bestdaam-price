@@ -53,7 +53,10 @@ for (const [index, offer] of earnKaroOffers.entries()) {
   offerIds.add(offer.id);
   assert(typeof offer.merchant === "string" && offer.merchant.trim(), `${label}: merchant is required`);
   assert(typeof offer.title === "string" && offer.title.trim(), `${label}: title is required`);
-  assert(/^\/offer-banners\/[a-z0-9-]+\.svg$/.test(offer.image), `${label}: invalid local offer image`);
+  assert(
+    /^\/(?:offer-banners|earnkaro-live)\/[a-z0-9-]+\.(?:svg|jpg|png)$/.test(offer.image),
+    `${label}: invalid local offer image`,
+  );
   assert(/^https:\/\//.test(offer.merchantUrl), `${label}: merchantUrl must use HTTPS`);
   if (offer.affiliateUrl) {
     assert(/^https:\/\//.test(offer.affiliateUrl), `${label}: affiliateUrl must use HTTPS`);

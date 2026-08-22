@@ -349,3 +349,9 @@
 - Favicon transparency: White square background remove karke icon ko true RGBA transparency par convert kiya; browser tab mein ab sirf navy B mark aur green tick dikhenge.
 - Favicon contrast: Outer area transparent rakhte hue B outline ke enclosed center ko solid white fill diya, taaki dark browser tabs par brand mark clear aur complete dikhe.
 - Limited-time offer navigation: Homepage category row mein supplied cart-clock icon ke saath “Limited-time offers” shortcut add kiya. Ye product filter nahi hai; `/deals#live-offers` par current Cuelinks partner promotions tak direct le jata hai.
+# 2026-08-22 — Automatic EarnKaro offer sync
+
+- Added a cloud-safe Telegram bridge that imports recent posts from `@Bestdaam_india`.
+- Offer titles, images and already-converted EarnKaro links now refresh every 30 minutes.
+- Artwork is downloaded into the repository so cards do not depend on expiring Telegram CDN URLs.
+- Offers older than 48 hours are removed automatically; failures preserve the last valid catalog.
