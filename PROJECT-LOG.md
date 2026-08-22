@@ -1,3 +1,9 @@
+### 2026-08-22 — Codex — EarnKaro promotional banners added
+- What changed: Replaced letter-only EarnKaro placeholders with six responsive local SVG campaign banners for Myntra, AJIO, Dot & Key, mCaffeine, Croma and Shopsy.
+- Why: Make limited-time offers visually clear and premium without relying on fragile third-party image hotlinks.
+- Files changed: data/earnkaro-offers.json, app/components/EarnKaroOfferGrid.js, app/globals.css, public/offer-banners/*.svg, scripts/validate-catalog.mjs, PROJECT-LOG.md.
+- Notes: Banner copy matches the reviewed offer data; update both the offer record and its banner when a campaign changes.
+
 ### 2026-08-22 — Codex — Expiry-safe EarnKaro offers added
 - What changed: Added a separate EarnKaro promotions feed to Limited-time Offers, six currently checked store campaigns, automatic review-window expiry, affiliate-link preference, catalog validation and daily-workflow publication support.
 - Why: Show useful short-lived partner promotions without mixing them with verified product-price comparisons or routing EarnKaro links through Cuelinks.

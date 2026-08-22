@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-labelledby="t d">
+  <title id="t">Shopsy store-wide savings</title><desc id="d">Selected products up to 90 percent off</desc>
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#6d1a79"/><stop offset="1" stop-color="#e34b90"/></linearGradient></defs>
+  <rect width="640" height="240" rx="28" fill="url(#g)"/><circle cx="558" cy="55" r="105" fill="#ffd166" opacity=".24"/>
+  <text x="42" y="58" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="700">SHOPSY</text><text x="42" y="116" fill="#fff" font-family="Arial,sans-serif" font-size="37" font-weight="800">BIG SAVINGS</text>
+  <rect x="42" y="145" width="238" height="55" rx="27" fill="#fff"/><text x="161" y="181" text-anchor="middle" fill="#8d247e" font-family="Arial,sans-serif" font-size="25" font-weight="800">UP TO 90% OFF</text>
+  <path d="M480 91h118l-12 92h-94z" fill="#fff"/><path d="M505 91c0-38 68-38 68 0" fill="none" stroke="#ffd166" stroke-width="9"/><circle cx="505" cy="189" r="9" fill="#ffd166"/><circle cx="572" cy="189" r="9" fill="#ffd166"/>
+</svg>

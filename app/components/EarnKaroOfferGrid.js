@@ -29,10 +29,12 @@ export default function EarnKaroOfferGrid({ offers }) {
       <div className="offer-grid">
         {offers.map((offer) => (
           <article className="offer-card" key={offer.id}>
-            <div className="offer-media earnkaro-offer-media" aria-hidden="true">
-              <span className="offer-image-fallback">
-                {offer.merchant.slice(0, 1).toUpperCase()}
-              </span>
+            <div className="offer-media earnkaro-offer-media">
+              <img
+                src={offer.image}
+                alt={`${offer.merchant} — ${offer.title}`}
+                className="earnkaro-offer-image"
+              />
             </div>
             <div className="offer-card-topline">
               <span className="offer-merchant">{offer.merchant}</span>
