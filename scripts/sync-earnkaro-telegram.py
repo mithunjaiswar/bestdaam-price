@@ -137,6 +137,11 @@ def write_fallback_svg(path: Path, merchant: str, title: str) -> None:
 
 def save_image(message_id: str, image_url: str, merchant: str, title: str) -> str:
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    existing_images = [
+        candidate
+        for suffix in (".jpg", ".png", ".svg")
+        if (candidate := IMAGE_DIR / f"telegram-{message_id}{suffix}").exists()
+    ]
     if image_url:
         try:
             payload, content_type = fetch(image_url)
@@ -146,6 +151,9 @@ def save_image(message_id: str, image_url: str, merchant: str, title: str) -> st
             return f"/earnkaro-live/{path.name}"
         except Exception as error:  # noqa: BLE001 - network fallback is intentional
             print(f"Image download failed for {message_id}: {error}", file=sys.stderr)
+
+    if existing_images:
+        return f"/earnkaro-live/{existing_images[0].name}"
 
     path = IMAGE_DIR / f"telegram-{message_id}.svg"
     write_fallback_svg(path, merchant, title)
