@@ -359,3 +359,10 @@
 
 - Added a manual Amazon-only cloud workflow so Creators API eligibility can be
   tested without running the complete catalog scraper.
+# 2026-08-23 — Phase 1 discovery improvements
+
+- Added an auto-updated live-offer rail to the homepage using the EarnKaro
+  Telegram feed, including images, affiliate links and trust labels.
+- Added direct Flipkart search beside the existing Amazon search and retained
+  the product-request queue as a separate fallback.
+- Added visible freshness, affiliate and final-price verification guidance.

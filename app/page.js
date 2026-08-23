@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { fetchProducts } from "../lib/products";
+import { getCurrentEarnKaroOffers } from "../lib/earnkaro-offers";
 import HomeClient from "./components/HomeClient";
 
 export const revalidate = 600;
@@ -13,10 +14,11 @@ export const metadata = {
 
 export default async function HomePage() {
   const products = await fetchProducts();
+  const latestOffers = getCurrentEarnKaroOffers().slice(0, 8);
 
   return (
     <Suspense fallback={<p className="loading-state">Loading the latest prices…</p>}>
-      <HomeClient products={products} />
+      <HomeClient products={products} latestOffers={latestOffers} />
     </Suspense>
   );
 }

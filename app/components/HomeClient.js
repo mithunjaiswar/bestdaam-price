@@ -19,6 +19,7 @@ import { trackEvent } from "../../lib/tracking";
 import DealGrid from "./DealGrid";
 import TrendingGrid from "./TrendingGrid";
 import SaveProductButton from "./SaveProductButton";
+import LatestOfferRail from "./LatestOfferRail";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -115,7 +116,7 @@ function findGroupForCategory(category) {
   );
 }
 
-export default function HomeClient({ products }) {
+export default function HomeClient({ products, latestOffers = [] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") || "";
@@ -228,6 +229,7 @@ export default function HomeClient({ products }) {
   const emptyStoreResults = !missingProduct && results.length === 0;
   const searchLabel = getSearchLabel(query);
   const amazonSearchUrl = getAmazonSearchUrl({ name: searchLabel });
+  const flipkartSearchUrl = `https://www.flipkart.com/search?q=${encodeURIComponent(searchLabel)}`;
   const requestEndpoint = PRODUCT_REQUEST_URL;
   const featuredDeals = getFeaturedDeals(products, 8);
   const trendingProducts = getTrendingProducts(products, "week", 10);
@@ -327,6 +329,14 @@ export default function HomeClient({ products }) {
     });
   }
 
+  function openFlipkartSearch() {
+    trackEvent("outbound_store_click", {
+      store: "Flipkart",
+      source: "search_companion",
+      query: query.trim(),
+    });
+  }
+
   async function requestProduct() {
     if (!requestEndpoint || requestState === "sending") {
       return;
@@ -418,6 +428,8 @@ export default function HomeClient({ products }) {
             )
           )}
         </div>
+
+        {!hasQuery ? <LatestOfferRail offers={latestOffers} /> : null}
 
         <section className="category-browser" aria-labelledby="category-heading">
           <div className="category-heading-row">
@@ -586,11 +598,11 @@ export default function HomeClient({ products }) {
 
           <aside className="flipkart-request-companion" aria-label="Request on Flipkart">
             <div className="amazon-search-companion-copy">
-              <span className="flipkart-request-kicker">Can&apos;t find the right match?</span>
-              <strong>Request “{searchLabel}” for Flipkart</strong>
+              <span className="flipkart-request-kicker">Search or request</span>
+              <strong>Find “{searchLabel}” on Flipkart</strong>
               <p>
-                Send us this search once. We&apos;ll try to verify and add a matching
-                Flipkart listing to PriceVichar.
+                Search Flipkart directly now, or request the product so we can
+                verify and add it to PriceVichar.
               </p>
               {requestState === "sent" ? (
                 <p className="request-status success">
@@ -608,18 +620,29 @@ export default function HomeClient({ products }) {
                 </p>
               ) : null}
             </div>
-            <button
-              type="button"
-              className="request-product-btn flipkart-request-btn"
-              onClick={requestProduct}
-              disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
-            >
-              {requestState === "sending"
-                ? "Saving request…"
-                : requestState === "sent"
-                  ? "Request saved ✓"
-                  : "Request on Flipkart"}
-            </button>
+            <div className="flipkart-search-actions">
+              <a
+                href={flipkartSearchUrl}
+                className="buy-btn flipkart-direct-search-btn"
+                target="_blank"
+                rel="nofollow noopener"
+                onClick={openFlipkartSearch}
+              >
+                Search Flipkart ↗
+              </a>
+              <button
+                type="button"
+                className="request-product-btn flipkart-request-btn"
+                onClick={requestProduct}
+                disabled={!requestEndpoint || requestState === "sending" || requestState === "sent"}
+              >
+                {requestState === "sending"
+                  ? "Saving request…"
+                  : requestState === "sent"
+                    ? "Request saved ✓"
+                    : "Request this product"}
+              </button>
+            </div>
           </aside>
         </div>
       ) : null}
