@@ -366,3 +366,7 @@
 - Added direct Flipkart search beside the existing Amazon search and retained
   the product-request queue as a separate fallback.
 - Added visible freshness, affiliate and final-price verification guidance.
+# 2026-08-23 — Homepage product sliders
+
+- Converted both “Trending this week” and “Today’s deals” into horizontal,
+  snap-aligned sliders matching the live-offer rail on desktop and mobile.

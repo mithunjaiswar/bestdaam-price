@@ -651,7 +651,7 @@ export default function HomeClient({ products, latestOffers = [] }) {
       selectedCategory === "All" &&
       selectedStore === "All" &&
       selectedBudget === "all" ? (
-        <section className="featured-deals-section trending-section">
+        <section className="featured-deals-section trending-section homepage-slider-section">
           <div className="section-heading-row">
             <div>
               <span className="results-kicker">Shopping pulse</span>
@@ -672,7 +672,7 @@ export default function HomeClient({ products, latestOffers = [] }) {
       selectedCategory === "All" &&
       selectedStore === "All" &&
       selectedBudget === "all" ? (
-        <section className="featured-deals-section">
+        <section className="featured-deals-section homepage-slider-section">
           <div className="section-heading-row">
             <div>
               <span className="results-kicker">Affordable picks</span>

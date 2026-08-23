@@ -1948,6 +1948,25 @@ main.container {
   scrollbar-width: thin;
 }
 
+.homepage-slider-section .grid,
+.homepage-slider-section .deal-grid {
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(255px, 292px);
+  gap: 16px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 4px 3px 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.homepage-slider-section .card {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
 .latest-offer-card {
   overflow: hidden;
   scroll-snap-align: start;
@@ -2050,6 +2069,12 @@ main.container {
   }
 
   .latest-offer-rail {
+    grid-auto-columns: minmax(245px, 82vw);
+  }
+
+  .homepage-slider-section .grid,
+  .homepage-slider-section .deal-grid {
+    grid-template-columns: none;
     grid-auto-columns: minmax(245px, 82vw);
   }
 
