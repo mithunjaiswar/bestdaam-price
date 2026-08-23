@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-364",
+    "merchant": "Flipkart",
+    "title": "Flipkart Grocery Loot : Upto 90% Off",
+    "description": "1: 2 : 3",
+    "discountLabel": "Upto 90% Off",
+    "image": "/earnkaro-live/telegram-364.jpg",
+    "merchantUrl": "https://fkrt.cc/hX8vf9D",
+    "affiliateUrl": "https://fkrt.cc/hX8vf9D",
+    "checkedAt": "2026-08-23",
+    "expiresAt": "2026-08-25",
+    "sourceUrl": "https://t.me/Bestdaam_india/364",
+    "publishedAt": "2026-08-23T05:34:57+00:00"
+  },
+  {
     "id": "earnkaro-telegram-363",
     "merchant": "Flipkart",
     "title": "Upto 80% Off On Branded Backpacks",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-24",
     "sourceUrl": "https://t.me/Bestdaam_india/346",
     "publishedAt": "2026-08-22T05:41:50+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-345",
-    "merchant": "Flipkart",
-    "title": "GRAB: FYTIKA Sea Buckthorn Juice 300ml @ ₹588",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "₹588",
-    "image": "/earnkaro-live/telegram-345.svg",
-    "merchantUrl": "https://fkrt.cc/hLOD39J",
-    "affiliateUrl": "https://fkrt.cc/hLOD39J",
-    "checkedAt": "2026-08-23",
-    "expiresAt": "2026-08-24",
-    "sourceUrl": "https://t.me/Bestdaam_india/345",
-    "publishedAt": "2026-08-22T05:36:05+00:00"
   }
 ]
