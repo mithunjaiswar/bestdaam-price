@@ -2,11 +2,12 @@ import { fetchProducts } from "../lib/products";
 import { BUDGET_PAGES } from "../lib/deals";
 import { getCategories } from "../lib/helpers";
 import { slugify } from "../lib/slugs";
+import { BUYING_GUIDES } from "../lib/guides";
 
 const BASE = "https://pricevichar.com";
 
 export default async function sitemap() {
-  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/trending"].map((p) => ({
+  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/trending", "/guides"].map((p) => ({
     url: `${BASE}${p}`,
     lastModified: new Date(),
   }));
@@ -28,6 +29,12 @@ export default async function sitemap() {
     changeFrequency: "daily",
     priority: 0.8,
   }));
+  const guidePages = Object.keys(BUYING_GUIDES).map((slug) => ({
+    url: `${BASE}/guides/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.75,
+  }));
 
-  return [...staticPages, ...budgetPages, ...categoryPages, ...productPages];
+  return [...staticPages, ...budgetPages, ...categoryPages, ...guidePages, ...productPages];
 }

@@ -370,3 +370,9 @@
 
 - Converted both “Trending this week” and “Today’s deals” into horizontal,
   snap-aligned sliders matching the live-offer rail on desktop and mobile.
+# 2026-08-23 — Growth foundation
+
+- Added an indexable buying-guide hub and four budget/category guide pages with
+  live catalog products, shopping tips, metadata, ItemList schema and sitemap entries.
+- Added Telegram deal-channel links for repeat traffic and instant offer alerts.
+- Added a six-hour cloud health check covering the homepage, deals, robots and sitemap.

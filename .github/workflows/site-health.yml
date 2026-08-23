@@ -1,0 +1,22 @@
+name: PriceVichar site health
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify public pages and SEO endpoints
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error https://pricevichar.com/ > home.html
+          curl --fail --location --silent --show-error https://pricevichar.com/deals > deals.html
+          curl --fail --location --silent --show-error https://pricevichar.com/robots.txt | grep -q "sitemap"
+          curl --fail --location --silent --show-error https://pricevichar.com/sitemap.xml | grep -q "pricevichar.com/product/"
+          grep -q "PriceVichar" home.html
+          grep -q "Today" deals.html
+          echo "PriceVichar public health checks passed."

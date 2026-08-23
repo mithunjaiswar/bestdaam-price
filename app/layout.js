@@ -71,6 +71,7 @@ export default function RootLayout({ children }) {
               <SavedProductsNav />
               <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
+              <Link href="/guides">Buying guides</Link>
               <Link href="/about">How it works</Link>
               <Link href="/disclosure">Affiliate disclosure</Link>
             </nav>
@@ -90,6 +91,10 @@ export default function RootLayout({ children }) {
               <Link href="/about">About</Link>
               <Link href="/disclosure">Affiliate Disclosure</Link>
               <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/guides">Buying Guides</Link>
+              <a href="https://t.me/Bestdaam_india" target="_blank" rel="noopener">
+                Telegram Deals
+              </a>
             </nav>
             <p>
               Prices and availability can change. Always confirm the final

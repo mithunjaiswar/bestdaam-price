@@ -2044,6 +2044,75 @@ main.container {
   font-weight: 750;
 }
 
+.offer-trust-row a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e8f1ff;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.guide-hero {
+  max-width: 850px;
+}
+
+.guide-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.guide-hub-card,
+.guide-tips {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-hub-card > span {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-hub-card h2 {
+  margin: 8px 0;
+  font-size: 25px;
+  letter-spacing: -0.035em;
+}
+
+.guide-hub-card p,
+.guide-tips li {
+  color: var(--muted);
+}
+
+.guide-hub-card strong {
+  color: var(--primary);
+}
+
+.guide-tips {
+  max-width: 900px;
+  margin: 0 auto 34px;
+}
+
+.guide-tips h2 {
+  margin: 0 0 12px;
+}
+
+.guide-tips ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.guide-tips li + li {
+  margin-top: 8px;
+}
+
 .flipkart-search-actions {
   display: flex;
   flex-direction: column;
@@ -2081,6 +2150,10 @@ main.container {
   .offer-trust-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .guide-hub-grid {
+    grid-template-columns: 1fr;
   }
 }
 

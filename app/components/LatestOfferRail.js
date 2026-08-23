@@ -54,6 +54,9 @@ export default function LatestOfferRail({ offers = [] }) {
         <span>↻ Refreshed every 30 minutes</span>
         <span>✓ Affiliate links converted</span>
         <span>₹ Final price confirmed on retailer</span>
+        <a href="https://t.me/Bestdaam_india" target="_blank" rel="noopener">
+          Get instant alerts on Telegram →
+        </a>
       </div>
     </section>
   );
