@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-379",
+    "merchant": "Myntra",
+    "title": "Myntra : Oversized TShirts Starts Rs.137",
+    "description": "Men's : Women's",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-379.jpg",
+    "merchantUrl": "https://myntr.it/NGf8SIn",
+    "affiliateUrl": "https://myntr.it/NGf8SIn",
+    "checkedAt": "2026-08-24",
+    "expiresAt": "2026-08-26",
+    "sourceUrl": "https://t.me/Bestdaam_india/379",
+    "publishedAt": "2026-08-23T19:11:48+00:00"
+  },
+  {
     "id": "earnkaro-telegram-378",
     "merchant": "Flipkart",
     "title": "5999 https://fkrt.cc/hyVfVDT",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-25",
     "sourceUrl": "https://t.me/Bestdaam_india/362",
     "publishedAt": "2026-08-22T18:37:35+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-361",
-    "merchant": "Flipkart",
-    "title": "2599 : https://fkrt.cc/hD0YfUh",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "Limited-time",
-    "image": "/earnkaro-live/telegram-361.jpg",
-    "merchantUrl": "https://fkrt.cc/hD0YfUh",
-    "affiliateUrl": "https://fkrt.cc/hD0YfUh",
-    "checkedAt": "2026-08-24",
-    "expiresAt": "2026-08-25",
-    "sourceUrl": "https://t.me/Bestdaam_india/361",
-    "publishedAt": "2026-08-22T18:32:38+00:00"
   }
 ]
