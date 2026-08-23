@@ -15,8 +15,10 @@ jobs:
           set -euo pipefail
           curl --fail --location --silent --show-error https://pricevichar.com/ > home.html
           curl --fail --location --silent --show-error https://pricevichar.com/deals > deals.html
-          curl --fail --location --silent --show-error https://pricevichar.com/robots.txt | grep -q "sitemap"
-          curl --fail --location --silent --show-error https://pricevichar.com/sitemap.xml | grep -q "pricevichar.com/product/"
+          curl --fail --location --silent --show-error https://pricevichar.com/robots.txt > robots.txt
+          curl --fail --location --silent --show-error https://pricevichar.com/sitemap.xml > sitemap.xml
+          grep -q "sitemap" robots.txt
+          grep -q "pricevichar.com/product/" sitemap.xml
           grep -q "PriceVichar" home.html
           grep -q "Today" deals.html
           echo "PriceVichar public health checks passed."
