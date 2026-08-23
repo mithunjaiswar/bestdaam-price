@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-380",
+    "merchant": "Flipkart",
+    "title": "Loot 949",
+    "description": "Limited-period offer. Check the retailer for final price and availability.",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-380.jpg",
+    "merchantUrl": "https://fkrt.cc/h8r0tEz",
+    "affiliateUrl": "https://fkrt.cc/h8r0tEz",
+    "checkedAt": "2026-08-24",
+    "expiresAt": "2026-08-26",
+    "sourceUrl": "https://t.me/Bestdaam_india/380",
+    "publishedAt": "2026-08-23T19:24:49+00:00"
+  },
+  {
     "id": "earnkaro-telegram-379",
     "merchant": "Myntra",
     "title": "Myntra : Oversized TShirts Starts Rs.137",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-25",
     "sourceUrl": "https://t.me/Bestdaam_india/363",
     "publishedAt": "2026-08-22T19:10:24+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-362",
-    "merchant": "Myntra",
-    "title": "Lakme Set of 3 Peach Milk Soft Vit E Creme - 300 g each",
-    "description": "Deal Price: ₹702 ₹2340",
-    "discountLabel": "Limited-time",
-    "image": "/earnkaro-live/telegram-362.jpg",
-    "merchantUrl": "https://myntr.it/WQiiiJs",
-    "affiliateUrl": "https://myntr.it/WQiiiJs",
-    "checkedAt": "2026-08-24",
-    "expiresAt": "2026-08-25",
-    "sourceUrl": "https://t.me/Bestdaam_india/362",
-    "publishedAt": "2026-08-22T18:37:35+00:00"
   }
 ]
