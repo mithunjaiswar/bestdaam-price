@@ -1,11 +1,25 @@
 [
   {
+    "id": "earnkaro-telegram-382",
+    "merchant": "Partner offer",
+    "title": "Hamara Mall By Bajaj: Portable Mini Projector LED Micro Projector @ ₹1,599",
+    "description": "USE CODE: SPRING20 P.C: Amz Selling @4,426",
+    "discountLabel": "₹1,599",
+    "image": "/earnkaro-live/telegram-382.jpg",
+    "merchantUrl": "https://bitli.in/40HwbA1",
+    "affiliateUrl": "https://bitli.in/40HwbA1",
+    "checkedAt": "2026-08-24",
+    "expiresAt": "2026-08-26",
+    "sourceUrl": "https://t.me/Bestdaam_india/382",
+    "publishedAt": "2026-08-24T04:53:25+00:00"
+  },
+  {
     "id": "earnkaro-telegram-381",
     "merchant": "Flipkart",
     "title": "Flipkart Grocery Loot : Upto 90% Off",
     "description": "1: 2 : 3",
     "discountLabel": "Upto 90% Off",
-    "image": "/earnkaro-live/telegram-381.svg",
+    "image": "/earnkaro-live/telegram-381.jpg",
     "merchantUrl": "https://fkrt.cc/hnZvaN9",
     "affiliateUrl": "https://fkrt.cc/hnZvaN9",
     "checkedAt": "2026-08-24",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-25",
     "sourceUrl": "https://t.me/Bestdaam_india/365",
     "publishedAt": "2026-08-23T05:54:36+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-363",
-    "merchant": "Flipkart",
-    "title": "Upto 80% Off On Branded Backpacks",
-    "description": "Skybags : Safari : Wildcraft : Gear : Lavie : American Tourister",
-    "discountLabel": "Upto 80% Off",
-    "image": "/earnkaro-live/telegram-363.jpg",
-    "merchantUrl": "https://fkrt.cc/hGsmFhx",
-    "affiliateUrl": "https://fkrt.cc/hGsmFhx",
-    "checkedAt": "2026-08-24",
-    "expiresAt": "2026-08-25",
-    "sourceUrl": "https://t.me/Bestdaam_india/363",
-    "publishedAt": "2026-08-22T19:10:24+00:00"
   }
 ]
