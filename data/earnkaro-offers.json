@@ -1,5 +1,33 @@
 [
   {
+    "id": "earnkaro-telegram-384",
+    "merchant": "Flipkart",
+    "title": "Flipkart Loot: Furniture Deals Starting @199",
+    "description": "Link: Wakefit & Kurlon Mattresses Starting @2,499 Shoe Racks Starting @199 Work From Home Tables Starting @1,999 Laptop Tables @263",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-384.svg",
+    "merchantUrl": "https://fkrt.cc/hEJyabL",
+    "affiliateUrl": "https://fkrt.cc/hEJyabL",
+    "checkedAt": "2026-08-24",
+    "expiresAt": "2026-08-26",
+    "sourceUrl": "https://t.me/Bestdaam_india/384",
+    "publishedAt": "2026-08-24T05:18:43+00:00"
+  },
+  {
+    "id": "earnkaro-telegram-383",
+    "merchant": "Partner offer",
+    "title": "Hamara Mall By Bajaj: Haldiram's Gathiya Namkeen 200g @ ₹45",
+    "description": "USE CODE: SPRING20 P.C: Amz Selling @55",
+    "discountLabel": "₹45",
+    "image": "/earnkaro-live/telegram-383.jpg",
+    "merchantUrl": "https://bitli.in/de6Wwro",
+    "affiliateUrl": "https://bitli.in/de6Wwro",
+    "checkedAt": "2026-08-24",
+    "expiresAt": "2026-08-26",
+    "sourceUrl": "https://t.me/Bestdaam_india/383",
+    "publishedAt": "2026-08-24T05:16:46+00:00"
+  },
+  {
     "id": "earnkaro-telegram-382",
     "merchant": "Partner offer",
     "title": "Hamara Mall By Bajaj: Portable Mini Projector LED Micro Projector @ ₹1,599",
@@ -222,33 +250,5 @@
     "expiresAt": "2026-08-25",
     "sourceUrl": "https://t.me/Bestdaam_india/367",
     "publishedAt": "2026-08-23T06:42:26+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-366",
-    "merchant": "Flipkart",
-    "title": "Premium Tasty & Healthy Mix Dry Fruits Pack of 500 gms Assor...",
-    "description": "Deal Price: ₹270 ₹899",
-    "discountLabel": "Limited-time",
-    "image": "/earnkaro-live/telegram-366.jpg",
-    "merchantUrl": "https://fkrt.cc/h5Qt289",
-    "affiliateUrl": "https://fkrt.cc/h5Qt289",
-    "checkedAt": "2026-08-24",
-    "expiresAt": "2026-08-25",
-    "sourceUrl": "https://t.me/Bestdaam_india/366",
-    "publishedAt": "2026-08-23T06:07:25+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-365",
-    "merchant": "Partner offer",
-    "title": "Hamara Mall By Bajaj: Rosemary Oil Shots For Visible Hair Growth @ ₹548",
-    "description": "USE CODE: SPRING20 P.C: Amz Selling @715",
-    "discountLabel": "₹548",
-    "image": "/earnkaro-live/telegram-365.jpg",
-    "merchantUrl": "https://bitli.in/gVrMEkL",
-    "affiliateUrl": "https://bitli.in/gVrMEkL",
-    "checkedAt": "2026-08-24",
-    "expiresAt": "2026-08-25",
-    "sourceUrl": "https://t.me/Bestdaam_india/365",
-    "publishedAt": "2026-08-23T05:54:36+00:00"
   }
 ]
