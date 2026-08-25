@@ -1,5 +1,33 @@
 [
   {
+    "id": "earnkaro-telegram-435",
+    "merchant": "Flipkart",
+    "title": "GRAB: HORLICKS Protein Powder Launch Bonanza @ ₹2,100",
+    "description": "Limited-period offer. Check the retailer for final price and availability.",
+    "discountLabel": "₹2,100",
+    "image": "/earnkaro-live/telegram-435.svg",
+    "merchantUrl": "https://fkrt.cc/heF7MgB",
+    "affiliateUrl": "https://fkrt.cc/heF7MgB",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/435",
+    "publishedAt": "2026-08-25T15:04:42+00:00"
+  },
+  {
+    "id": "earnkaro-telegram-434",
+    "merchant": "Flipkart",
+    "title": "GRAB: Optimum Nutrition (ON) Gold Standard 100% Whey Protein 1.7kg, Double Rich Chocolate @ ₹6,999",
+    "description": "Limited-period offer. Check the retailer for final price and availability.",
+    "discountLabel": "₹6,999",
+    "image": "/earnkaro-live/telegram-434.jpg",
+    "merchantUrl": "https://fkrt.cc/hN5Zfzw",
+    "affiliateUrl": "https://fkrt.cc/hN5Zfzw",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/434",
+    "publishedAt": "2026-08-25T14:40:40+00:00"
+  },
+  {
     "id": "earnkaro-telegram-433",
     "merchant": "Flipkart",
     "title": "Loot: Noise Alt Buds @1,499",
@@ -222,33 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/418",
     "publishedAt": "2026-08-25T06:27:25+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-417",
-    "merchant": "AJIO",
-    "title": "AJIO LOOT: Rakhi Set Of 2 Start @48",
-    "description": "Low To High: USE CODE: RAKHIFREEDEL at Checkout.",
-    "discountLabel": "Start @48",
-    "image": "/earnkaro-live/telegram-417.jpg",
-    "merchantUrl": "https://ajiio.in/s1Bj7i2",
-    "affiliateUrl": "https://ajiio.in/s1Bj7i2",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/417",
-    "publishedAt": "2026-08-25T06:19:27+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-416",
-    "merchant": "Flipkart",
-    "title": "Colgate Visible White Teeth Whitening Toothpaste Combo (480g, Pack of 4) @ ₹487",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "₹487",
-    "image": "/earnkaro-live/telegram-416.svg",
-    "merchantUrl": "https://fkrt.cc/hSKRQe3",
-    "affiliateUrl": "https://fkrt.cc/hSKRQe3",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/416",
-    "publishedAt": "2026-08-25T05:46:39+00:00"
   }
 ]
