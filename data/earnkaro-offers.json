@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-436",
+    "merchant": "Partner offer",
+    "title": "Tiaraa LOOT: Get 3 products @ 249 INR (Including shipping)",
+    "description": "Use code : LOOT3 Link",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-436.jpg",
+    "merchantUrl": "https://bitli.in/J2J0nN4",
+    "affiliateUrl": "https://bitli.in/J2J0nN4",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/436",
+    "publishedAt": "2026-08-25T16:37:38+00:00"
+  },
+  {
     "id": "earnkaro-telegram-435",
     "merchant": "Flipkart",
     "title": "GRAB: HORLICKS Protein Powder Launch Bonanza @ ₹2,100",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/419",
     "publishedAt": "2026-08-25T06:34:48+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-418",
-    "merchant": "Myntra",
-    "title": "Myntra : Doormats & Curtains Starts 113",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "Limited-time",
-    "image": "/earnkaro-live/telegram-418.jpg",
-    "merchantUrl": "https://myntr.it/3fYzZOi",
-    "affiliateUrl": "https://myntr.it/3fYzZOi",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/418",
-    "publishedAt": "2026-08-25T06:27:25+00:00"
   }
 ]
