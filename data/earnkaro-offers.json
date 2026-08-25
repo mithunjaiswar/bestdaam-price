@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-421",
+    "merchant": "AJIO",
+    "title": "AJIO: PNG silver Rakhis Start @218",
+    "description": "Rakhis starting 39",
+    "discountLabel": "Start @218",
+    "image": "/earnkaro-live/telegram-421.jpg",
+    "merchantUrl": "https://ajiio.in/7uWjSBM",
+    "affiliateUrl": "https://ajiio.in/7uWjSBM",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/421",
+    "publishedAt": "2026-08-25T07:51:13+00:00"
+  },
+  {
     "id": "earnkaro-telegram-420",
     "merchant": "Partner offer",
     "title": "Hamara Mall By Bajaj: Haldiram's Mysore Pak Packed Sweets 250g (Pack of 2) @ ₹402",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-26",
     "sourceUrl": "https://t.me/Bestdaam_india/404",
     "publishedAt": "2026-08-24T13:21:57+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-403",
-    "merchant": "Flipkart",
-    "title": "Loot: TATA 1mg Vitamin D3+K2 Advanced Tablets, 60 Tablets @ ₹205",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "₹205",
-    "image": "/earnkaro-live/telegram-403.jpg",
-    "merchantUrl": "https://fkrt.cc/hKSqTxS",
-    "affiliateUrl": "https://fkrt.cc/hKSqTxS",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-26",
-    "sourceUrl": "https://t.me/Bestdaam_india/403",
-    "publishedAt": "2026-08-24T13:16:47+00:00"
   }
 ]
