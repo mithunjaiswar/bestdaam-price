@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-433",
+    "merchant": "Flipkart",
+    "title": "Loot: Noise Alt Buds @1,499",
+    "description": "Extra 25% Off Coupon Code : NOISE25DB Add Coupon: Then Buy Now",
+    "discountLabel": "25% Off",
+    "image": "/earnkaro-live/telegram-433.svg",
+    "merchantUrl": "https://fkrt.cc/hvBnoll",
+    "affiliateUrl": "https://fkrt.cc/hvBnoll",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/433",
+    "publishedAt": "2026-08-25T14:07:08+00:00"
+  },
+  {
     "id": "earnkaro-telegram-432",
     "merchant": "Flipkart",
     "title": "Infinix 32 Inch HD Ready Smart TV at ₹8,549",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/416",
     "publishedAt": "2026-08-25T05:46:39+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-415",
-    "merchant": "Flipkart",
-    "title": "Flipkart: Furniture Sale Live Upto 80% Off",
-    "description": "Link: Mattress Start @299: Bean Bags Start @449: Premium Furniture Start @7,999 Recliner Sofa Start @12,499 Office Chair",
-    "discountLabel": "Upto 80% Off",
-    "image": "/earnkaro-live/telegram-415.jpg",
-    "merchantUrl": "https://fkrt.cc/hEy3SKO",
-    "affiliateUrl": "https://fkrt.cc/hEy3SKO",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/415",
-    "publishedAt": "2026-08-25T05:28:53+00:00"
   }
 ]
