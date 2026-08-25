@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-424",
+    "merchant": "Flipkart",
+    "title": "Upcoming: boltt ACE 5G Start @12,999",
+    "description": "boltt EVO (4GB 64GB) @9,999 Sale LIVE: 1st September | 12 PM Be Ready!!",
+    "discountLabel": "Start @12,999",
+    "image": "/earnkaro-live/telegram-424.jpg",
+    "merchantUrl": "https://fkrt.cc/hkuGjPz",
+    "affiliateUrl": "https://fkrt.cc/hkuGjPz",
+    "checkedAt": "2026-08-25",
+    "expiresAt": "2026-08-27",
+    "sourceUrl": "https://t.me/Bestdaam_india/424",
+    "publishedAt": "2026-08-25T09:36:11+00:00"
+  },
+  {
     "id": "earnkaro-telegram-423",
     "merchant": "Partner offer",
     "title": "Hamara Mall By Bajaj: Biotique Honey Gel Soothe & Nourish Foaming Face Wash 150ml @ ₹220",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-26",
     "sourceUrl": "https://t.me/Bestdaam_india/407",
     "publishedAt": "2026-08-24T13:35:06+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-406",
-    "merchant": "Flipkart",
-    "title": "GRAB: MUSCLEBLAZE Biozyme Performance Whey Protein 1kg, Rich Chocolate @ ₹3,749",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "₹3,749",
-    "image": "/earnkaro-live/telegram-406.jpg",
-    "merchantUrl": "https://fkrt.cc/hI8DSSg",
-    "affiliateUrl": "https://fkrt.cc/hI8DSSg",
-    "checkedAt": "2026-08-25",
-    "expiresAt": "2026-08-26",
-    "sourceUrl": "https://t.me/Bestdaam_india/406",
-    "publishedAt": "2026-08-24T13:29:05+00:00"
   }
 ]
