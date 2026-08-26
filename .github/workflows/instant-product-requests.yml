@@ -59,7 +59,24 @@ jobs:
 
       - name: Process pending customer requests
         working-directory: scraper
-        run: python process_product_requests.py
+        run: |
+          # Google Apps Script occasionally returns a short-lived 404 from its
+          # redirect host. Retry the same stable deployment before failing the
+          # scheduled job.
+          for attempt in 1 2 3; do
+            if python process_product_requests.py; then
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo "Product request API failed after 3 attempts."
+              exit 1
+            fi
+
+            wait_seconds=$((attempt * 15))
+            echo "Product request API attempt $attempt failed; retrying in ${wait_seconds}s."
+            sleep "$wait_seconds"
+          done
 
       - name: Export requested products
         working-directory: scraper
