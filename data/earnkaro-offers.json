@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-452",
+    "merchant": "Flipkart",
+    "title": "Loot: OPEN SECRET Rakhi Chocolate Gift Hamper for Brother @326",
+    "description": "Limited-period offer. Check the retailer for final price and availability.",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-452.svg",
+    "merchantUrl": "https://fkrt.cc/hTm4jNV",
+    "affiliateUrl": "https://fkrt.cc/hTm4jNV",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/452",
+    "publishedAt": "2026-08-26T12:49:56+00:00"
+  },
+  {
     "id": "earnkaro-telegram-451",
     "merchant": "Partner offer",
     "title": "Hamara Mall By Bajaj: NATURAL TATTVA Himalayan Rock Salt (Sendha Namak) 1kg @ ₹90",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/435",
     "publishedAt": "2026-08-25T15:04:42+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-434",
-    "merchant": "Flipkart",
-    "title": "GRAB: Optimum Nutrition (ON) Gold Standard 100% Whey Protein 1.7kg, Double Rich Chocolate @ ₹6,999",
-    "description": "Limited-period offer. Check the retailer for final price and availability.",
-    "discountLabel": "₹6,999",
-    "image": "/earnkaro-live/telegram-434.jpg",
-    "merchantUrl": "https://fkrt.cc/hN5Zfzw",
-    "affiliateUrl": "https://fkrt.cc/hN5Zfzw",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/434",
-    "publishedAt": "2026-08-25T14:40:40+00:00"
   }
 ]
