@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-448",
+    "merchant": "Flipkart",
+    "title": "Loot: Cute Fellow Women's Lehenga Cholis Start @499",
+    "description": "Limited-period offer. Check the retailer for final price and availability.",
+    "discountLabel": "Start @499",
+    "image": "/earnkaro-live/telegram-448.jpg",
+    "merchantUrl": "https://fkrt.cc/hCtaEge",
+    "affiliateUrl": "https://fkrt.cc/hCtaEge",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/448",
+    "publishedAt": "2026-08-26T09:10:16+00:00"
+  },
+  {
     "id": "earnkaro-telegram-447",
     "merchant": "Flipkart",
     "title": "Loot : Upto 90% Off On Metronaut Men's Clothing.",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/431",
     "publishedAt": "2026-08-25T13:05:13+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-430",
-    "merchant": "Flipkart",
-    "title": "Loot: Best Smart TV Deals | Starting @ ₹8,999",
-    "description": "Infinix 32 Inch HD Ready Smart Linux TV @ ₹8,999 Infinix Y-Series 40 Inch QLED Full HD Smart Linux TV @ ₹13,999 • Get Upto 10% Off Using Bank Offers",
-    "discountLabel": "Upto 10% Off",
-    "image": "/earnkaro-live/telegram-430.svg",
-    "merchantUrl": "https://fkrt.cc/hEbcxhc",
-    "affiliateUrl": "https://fkrt.cc/hEbcxhc",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/430",
-    "publishedAt": "2026-08-25T12:53:24+00:00"
   }
 ]
