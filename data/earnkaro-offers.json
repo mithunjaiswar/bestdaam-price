@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-438",
+    "merchant": "Flipkart",
+    "title": "Flipkart Grocery Loot : Upto 90% Off",
+    "description": "1: 2 : 3",
+    "discountLabel": "Upto 90% Off",
+    "image": "/earnkaro-live/telegram-438.jpg",
+    "merchantUrl": "https://fkrt.cc/hwXxXst",
+    "affiliateUrl": "https://fkrt.cc/hwXxXst",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/438",
+    "publishedAt": "2026-08-26T04:02:11+00:00"
+  },
+  {
     "id": "earnkaro-telegram-437",
     "merchant": "Flipkart",
     "title": "Upto 87% Off On Branded Watches.",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/421",
     "publishedAt": "2026-08-25T07:51:13+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-420",
-    "merchant": "Partner offer",
-    "title": "Hamara Mall By Bajaj: Haldiram's Mysore Pak Packed Sweets 250g (Pack of 2) @ ₹402",
-    "description": "USE CODE: SPRING20 P.C: Amz Selling @792",
-    "discountLabel": "₹402",
-    "image": "/earnkaro-live/telegram-420.jpg",
-    "merchantUrl": "https://bitli.in/lS8Y5Kd",
-    "affiliateUrl": "https://bitli.in/lS8Y5Kd",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/420",
-    "publishedAt": "2026-08-25T07:05:13+00:00"
   }
 ]
