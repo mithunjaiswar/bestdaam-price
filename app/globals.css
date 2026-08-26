@@ -2301,3 +2301,99 @@ main.container {
     flex-direction: column;
   }
 }
+.social-start-hero {
+  margin: 28px 0 34px;
+  padding: clamp(28px, 6vw, 64px);
+  border-radius: 28px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(61, 214, 160, 0.28), transparent 34%),
+    linear-gradient(135deg, #071a3d 0%, #102c62 58%, #0b6b67 100%);
+  box-shadow: 0 24px 65px rgba(7, 26, 61, 0.2);
+}
+
+.social-start-hero .landing-eyebrow,
+.social-start-hero p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.social-start-hero h1 {
+  max-width: 760px;
+  margin: 8px 0 12px;
+  font-size: clamp(2.2rem, 6vw, 4.7rem);
+  line-height: 0.98;
+}
+
+.social-start-hero > p:not(.landing-eyebrow) {
+  max-width: 720px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.social-start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-start-hero .buy-btn,
+.social-start-hero .secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.social-start-hero .secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.social-proof-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.social-start-section {
+  margin: 46px 0;
+}
+
+.social-follow-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 52px 0 32px;
+  padding: 28px;
+  border: 1px solid #dce5f2;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f7faff, #f2fff9);
+}
+
+.social-follow-card h2 {
+  max-width: 700px;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 720px) {
+  .social-follow-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .social-start-hero .buy-btn,
+  .social-start-hero .secondary-btn {
+    width: 100%;
+  }
+}

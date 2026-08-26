@@ -53,6 +53,11 @@ export default function RootLayout({ children }) {
         "@id": `${absoluteUrl("/")}#organization`,
         name: "PriceVichar",
         url: absoluteUrl("/"),
+        sameAs: [
+          "https://www.instagram.com/pricevichar/",
+          "https://www.youtube.com/@pricevichar",
+          "https://t.me/Bestdaam_india",
+        ],
       },
     ],
   };
@@ -92,6 +97,13 @@ export default function RootLayout({ children }) {
               <Link href="/disclosure">Affiliate Disclosure</Link>
               <Link href="/privacy">Privacy Policy</Link>
               <Link href="/guides">Buying Guides</Link>
+              <Link href="/start">Start here</Link>
+              <a href="https://www.instagram.com/pricevichar/" target="_blank" rel="noopener">
+                Instagram
+              </a>
+              <a href="https://www.youtube.com/@pricevichar" target="_blank" rel="noopener">
+                YouTube
+              </a>
               <a href="https://t.me/Bestdaam_india" target="_blank" rel="noopener">
                 Telegram Deals
               </a>
