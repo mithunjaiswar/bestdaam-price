@@ -11,7 +11,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: bestdaam-catalog-writer
+  # Share one writer lock with the daily catalog and EarnKaro workflows so
+  # two automations never try to publish catalog changes at the same time.
+  group: pricevichar-catalog-writer
   cancel-in-progress: false
 
 jobs:
@@ -83,6 +85,10 @@ jobs:
             echo "No new catalog product to publish."
           else
             git commit -m "Add requested customer products"
+            # The scraper can leave generated files outside the publish set.
+            # Keep the validated catalog commit, but move those ephemeral
+            # changes aside so rebase can run cleanly in this disposable job.
+            git stash push --include-untracked -m "request-automation-generated-files" || true
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
