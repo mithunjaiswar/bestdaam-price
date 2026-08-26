@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
         sameAs: [
           "https://www.instagram.com/pricevichar/",
           "https://www.youtube.com/@pricevichar",
-          "https://t.me/Bestdaam_india",
+          "https://web.telegram.org/k/#@pricevichar",
         ],
       },
     ],
@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
               <a href="https://www.youtube.com/@pricevichar" target="_blank" rel="noopener">
                 YouTube
               </a>
-              <a href="https://t.me/Bestdaam_india" target="_blank" rel="noopener">
+              <a href="https://web.telegram.org/k/#@pricevichar" target="_blank" rel="noopener">
                 Telegram Deals
               </a>
             </nav>

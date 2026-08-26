@@ -33,7 +33,7 @@ export default async function StartPage() {
           <Link href="/?focus=search" className="buy-btn">Search a product</Link>
           <Link href="/deals" className="secondary-btn">See today&apos;s deals</Link>
           <a
-            href="https://t.me/Bestdaam_india"
+            href="https://web.telegram.org/k/#@pricevichar"
             target="_blank"
             rel="noopener"
             className="secondary-btn"
