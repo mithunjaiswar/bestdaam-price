@@ -1,5 +1,33 @@
 [
   {
+    "id": "earnkaro-telegram-450",
+    "merchant": "Flipkart",
+    "title": "Flipkart Loot : 80% Off On Branded Shoes",
+    "description": "Puma : Reebok : Adidas : FILA : Duke : Wrogn : Hush Puppies",
+    "discountLabel": "80% Off",
+    "image": "/earnkaro-live/telegram-450.jpg",
+    "merchantUrl": "https://fkrt.cc/hBa0FpD",
+    "affiliateUrl": "https://fkrt.cc/hBa0FpD",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/450",
+    "publishedAt": "2026-08-26T11:09:41+00:00"
+  },
+  {
+    "id": "earnkaro-telegram-449",
+    "merchant": "AJIO",
+    "title": "AJIO: Men's Branded T-shirt Under @499",
+    "description": "Men's: Women's",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-449.jpg",
+    "merchantUrl": "https://ajiio.in/3myM8Ad",
+    "affiliateUrl": "https://ajiio.in/3myM8Ad",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/449",
+    "publishedAt": "2026-08-26T11:01:34+00:00"
+  },
+  {
     "id": "earnkaro-telegram-448",
     "merchant": "Flipkart",
     "title": "Loot: Cute Fellow Women's Lehenga Cholis Start @499",
@@ -222,33 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/433",
     "publishedAt": "2026-08-25T14:07:08+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-432",
-    "merchant": "Flipkart",
-    "title": "Infinix 32 Inch HD Ready Smart TV at ₹8,549",
-    "description": "Infinix Y-Series 40 Inch QLED Full HD Smart TV at ₹13,299 • Get Upto 10% Off Using Flipkart Axis Bank Credit Card",
-    "discountLabel": "Upto 10% Off",
-    "image": "/earnkaro-live/telegram-432.svg",
-    "merchantUrl": "https://fkrt.cc/hqAdxgr",
-    "affiliateUrl": "https://fkrt.cc/hqAdxgr",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/432",
-    "publishedAt": "2026-08-25T13:21:02+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-431",
-    "merchant": "Partner offer",
-    "title": "Hamara Mall By Bajaj: Organic Kala Chana 500g @ ₹90",
-    "description": "USE CODE: SPRING20 P.C: Amz Selling @94",
-    "discountLabel": "₹90",
-    "image": "/earnkaro-live/telegram-431.jpg",
-    "merchantUrl": "https://bitli.in/11Yojti",
-    "affiliateUrl": "https://bitli.in/11Yojti",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/431",
-    "publishedAt": "2026-08-25T13:05:13+00:00"
   }
 ]
