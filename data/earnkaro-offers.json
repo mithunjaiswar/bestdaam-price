@@ -1,5 +1,19 @@
 [
   {
+    "id": "earnkaro-telegram-439",
+    "merchant": "Flipkart",
+    "title": "Flipkart Loot: Furniture Deals Starting @199",
+    "description": "Link: Wakefit & Kurlon Mattresses Starting @2,499 Shoe Racks Starting @199 Work From Home Tables Starting @1,999 Laptop Tables @263",
+    "discountLabel": "Limited-time",
+    "image": "/earnkaro-live/telegram-439.svg",
+    "merchantUrl": "https://fkrt.cc/hMLiFUo",
+    "affiliateUrl": "https://fkrt.cc/hMLiFUo",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/439",
+    "publishedAt": "2026-08-26T04:45:47+00:00"
+  },
+  {
     "id": "earnkaro-telegram-438",
     "merchant": "Flipkart",
     "title": "Flipkart Grocery Loot : Upto 90% Off",
@@ -236,19 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/422",
     "publishedAt": "2026-08-25T08:13:38+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-421",
-    "merchant": "AJIO",
-    "title": "AJIO: PNG silver Rakhis Start @218",
-    "description": "Rakhis starting 39",
-    "discountLabel": "Start @218",
-    "image": "/earnkaro-live/telegram-421.jpg",
-    "merchantUrl": "https://ajiio.in/7uWjSBM",
-    "affiliateUrl": "https://ajiio.in/7uWjSBM",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/421",
-    "publishedAt": "2026-08-25T07:51:13+00:00"
   }
 ]
