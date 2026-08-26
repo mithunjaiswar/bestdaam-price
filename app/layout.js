@@ -7,6 +7,9 @@ import { absoluteUrl, safeJsonLd } from "../lib/seo";
 
 export const metadata = {
   metadataBase: new URL("https://pricevichar.com"),
+  verification: {
+    google: "u5NeuM_E6s_g97U-XyuXUDJQwIU4faWBbfOe8GPsEg8",
+  },
   other: {
     "verify-admitad": "f9807017ed",
   },
