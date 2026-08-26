@@ -1,5 +1,33 @@
 [
   {
+    "id": "earnkaro-telegram-447",
+    "merchant": "Flipkart",
+    "title": "Loot : Upto 90% Off On Metronaut Men's Clothing.",
+    "description": "Shirts Starts at 204 : Trousers Starts at 282 : Kurtas Starts at 200",
+    "discountLabel": "Upto 90% Off",
+    "image": "/earnkaro-live/telegram-447.svg",
+    "merchantUrl": "https://fkrt.cc/hoHkI0x",
+    "affiliateUrl": "https://fkrt.cc/hoHkI0x",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/447",
+    "publishedAt": "2026-08-26T08:31:58+00:00"
+  },
+  {
+    "id": "earnkaro-telegram-446",
+    "merchant": "Flipkart",
+    "title": "Flipkart: Women's Saaree Starts @548",
+    "description": "Silk Sarees : Kanjivaram : Daily Wear : Organza Saaree : Sequin Saaree : Blouse",
+    "discountLabel": "Starts @548",
+    "image": "/earnkaro-live/telegram-446.jpg",
+    "merchantUrl": "https://fkrt.cc/hISXWAT",
+    "affiliateUrl": "https://fkrt.cc/hISXWAT",
+    "checkedAt": "2026-08-26",
+    "expiresAt": "2026-08-28",
+    "sourceUrl": "https://t.me/Bestdaam_india/446",
+    "publishedAt": "2026-08-26T08:14:31+00:00"
+  },
+  {
     "id": "earnkaro-telegram-445",
     "merchant": "Flipkart",
     "title": "Flipkart: Men’s Casual Sneakers Starting @199",
@@ -222,33 +250,5 @@
     "expiresAt": "2026-08-27",
     "sourceUrl": "https://t.me/Bestdaam_india/430",
     "publishedAt": "2026-08-25T12:53:24+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-429",
-    "merchant": "Flipkart",
-    "title": "\"💥 Native Smart Door Lock",
-    "description": "🔥 Special Limited Time Deal From ₹15954 ⚡ Grab or Gone!!\"",
-    "discountLabel": "Limited-time",
-    "image": "/earnkaro-live/telegram-429.jpg",
-    "merchantUrl": "https://fkrt.cc/h9vj9Nz",
-    "affiliateUrl": "https://fkrt.cc/h9vj9Nz",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/429",
-    "publishedAt": "2026-08-25T12:32:38+00:00"
-  },
-  {
-    "id": "earnkaro-telegram-428",
-    "merchant": "Flipkart",
-    "title": "Flipkart: Value 365 Deals Start @99",
-    "description": "Deals Of The Day: Everything @99",
-    "discountLabel": "Start @99",
-    "image": "/earnkaro-live/telegram-428.jpg",
-    "merchantUrl": "https://fkrt.cc/hLx2icf",
-    "affiliateUrl": "https://fkrt.cc/hLx2icf",
-    "checkedAt": "2026-08-26",
-    "expiresAt": "2026-08-27",
-    "sourceUrl": "https://t.me/Bestdaam_india/428",
-    "publishedAt": "2026-08-25T11:36:16+00:00"
   }
 ]
