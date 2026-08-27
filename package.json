@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node scripts/validate-catalog.mjs",
+    "test": "node scripts/validate-catalog.mjs && node scripts/validate-search.mjs",
     "sync:earnkaro": "python3 scripts/sync-earnkaro-telegram.py"
   },
   "dependencies": {
