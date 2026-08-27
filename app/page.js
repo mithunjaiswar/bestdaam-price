@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { fetchProducts } from "../lib/products";
 import { getCurrentEarnKaroOffers } from "../lib/earnkaro-offers";
 import HomeClient from "./components/HomeClient";
@@ -12,13 +11,24 @@ export const metadata = {
   alternates: { canonical: "/" },
 };
 
-export default async function HomePage() {
+export default async function HomePage({ searchParams }) {
   const products = await fetchProducts();
   const latestOffers = getCurrentEarnKaroOffers().slice(0, 8);
+  const params = await searchParams;
+  const initialFilters = {
+    query: typeof params?.q === "string" ? params.q : "",
+    category: typeof params?.category === "string" ? params.category : "All",
+    group: typeof params?.group === "string" ? params.group : "",
+    store: typeof params?.store === "string" ? params.store : "All",
+    budget: typeof params?.budget === "string" ? params.budget : "all",
+    sort: typeof params?.sort === "string" ? params.sort : "price-low-high",
+  };
 
   return (
-    <Suspense fallback={<p className="loading-state">Loading the latest prices…</p>}>
-      <HomeClient products={products} latestOffers={latestOffers} />
-    </Suspense>
+    <HomeClient
+      products={products}
+      latestOffers={latestOffers}
+      initialFilters={initialFilters}
+    />
   );
 }

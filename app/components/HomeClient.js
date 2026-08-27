@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import {
   getCategories,
   getLowestPrice,
@@ -116,16 +116,19 @@ function findGroupForCategory(category) {
   );
 }
 
-export default function HomeClient({ products, latestOffers = [] }) {
+export default function HomeClient({
+  products,
+  latestOffers = [],
+  initialFilters = {},
+}) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const initialQuery = searchParams.get("q") || "";
-  const initialCategory = searchParams.get("category") || "All";
+  const initialQuery = initialFilters.query || "";
+  const initialCategory = initialFilters.category || "All";
   const initialGroup =
-    searchParams.get("group") || findGroupForCategory(initialCategory);
-  const initialStore = searchParams.get("store") || "All";
-  const initialBudget = searchParams.get("budget") || "all";
-  const initialSort = searchParams.get("sort") || "price-low-high";
+    initialFilters.group || findGroupForCategory(initialCategory);
+  const initialStore = initialFilters.store || "All";
+  const initialBudget = initialFilters.budget || "all";
+  const initialSort = initialFilters.sort || "price-low-high";
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
   const [categoryGroup, setCategoryGroup] = useState(initialGroup);
