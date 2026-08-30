@@ -79,6 +79,7 @@ export default function RootLayout({ children }) {
               <SavedProductsNav />
               <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
+              <Link href="/amazon-deals">Amazon picks</Link>
               <Link href="/guides">Buying guides</Link>
               <Link href="/about">How it works</Link>
               <Link href="/disclosure">Affiliate disclosure</Link>
@@ -100,6 +101,7 @@ export default function RootLayout({ children }) {
               <Link href="/disclosure">Affiliate Disclosure</Link>
               <Link href="/privacy">Privacy Policy</Link>
               <Link href="/guides">Buying Guides</Link>
+              <Link href="/amazon-deals">Amazon Shopping Picks</Link>
               <Link href="/start">Start here</Link>
               <a href="https://www.instagram.com/pricevichar/" target="_blank" rel="noopener">
                 Instagram

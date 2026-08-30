@@ -7,7 +7,7 @@ import { BUYING_GUIDES } from "../lib/guides";
 const BASE = "https://pricevichar.com";
 
 export default async function sitemap() {
-  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/trending", "/guides", "/start"].map((p) => ({
+  const staticPages = ["", "/about", "/privacy", "/disclosure", "/deals", "/amazon-deals", "/trending", "/guides", "/start"].map((p) => ({
     url: `${BASE}${p}`,
     lastModified: new Date(),
   }));

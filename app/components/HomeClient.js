@@ -654,6 +654,28 @@ export default function HomeClient({
       selectedCategory === "All" &&
       selectedStore === "All" &&
       selectedBudget === "all" ? (
+        <section className="amazon-growth-banner" aria-labelledby="amazon-growth-title">
+          <div>
+            <span className="results-kicker">Useful shopping shortcuts</span>
+            <h2 id="amazon-growth-title">Explore popular needs on Amazon</h2>
+            <p>
+              Start with curated search ideas, then confirm the exact product,
+              seller and final price on Amazon India.
+            </p>
+          </div>
+          <Link
+            href="/amazon-deals?utm_source=pricevichar&utm_medium=website&utm_campaign=amazon_10_sales"
+            className="buy-btn amazon-search-btn"
+          >
+            Explore Amazon picks →
+          </Link>
+        </section>
+      ) : null}
+
+      {!hasQuery &&
+      selectedCategory === "All" &&
+      selectedStore === "All" &&
+      selectedBudget === "all" ? (
         <section className="featured-deals-section trending-section homepage-slider-section">
           <div className="section-heading-row">
             <div>
