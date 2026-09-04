@@ -240,7 +240,10 @@ def main() -> None:
     payload, _ = fetch(CHANNEL_URL)
     offers = parse_messages(payload.decode("utf-8", errors="replace"), now)
     if not offers:
-        raise RuntimeError("No recent affiliate offers found; existing catalog was preserved")
+        # An empty 48-hour window is a normal state, not a sync failure. Keep the
+        # last known-good catalog and let the rest of the deployment continue.
+        print("No recent affiliate offers found; existing catalog was preserved.")
+        return
 
     keep = {Path(offer["image"]).name for offer in offers}
     if IMAGE_DIR.exists():
