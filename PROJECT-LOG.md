@@ -1,3 +1,9 @@
+### 2026-09-13 — Codex — Searchable saved-product shortlist
+- What changed: Added saved-list search (including existing typo/link matching), budget filters, recent/price sorting, result counts, filter reset and separate loading/filtered-empty states. Clarified recorded prices and browser-local storage.
+- Why: Help returning shoppers narrow their shortlist and find products within budget without requiring Amazon API access.
+- Files: app/components/SavedProductsClient.js and SavedProductsClient.module.css.
+- Notes: No catalog mutation or new API dependency. Existing save/remove and cross-tab synchronization retained.
+
 ### 2026-08-22 — Codex — EarnKaro promotional banners added
 - What changed: Replaced letter-only EarnKaro placeholders with six responsive local SVG campaign banners for Myntra, AJIO, Dot & Key, mCaffeine, Croma and Shopsy.
 - Why: Make limited-time offers visually clear and premium without relying on fragile third-party image hotlinks.

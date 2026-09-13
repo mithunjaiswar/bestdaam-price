@@ -1,0 +1,9 @@
+.toolbar { display: flex; flex-wrap: wrap; gap: 16px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+.toolbar label { display: flex; flex: 1 1 180px; flex-direction: column; gap: 8px; font-size: 13px; font-weight: 700; min-width: 0; }
+.toolbar .search { flex: 2 1 260px; }
+.toolbar input, .toolbar select { width: 100%; min-height: 46px; border: 1px solid #bdc8e7; border-radius: 10px; padding: 10px 12px; background: white; color: #152340; font: inherit; font-size: 16px; }
+.toolbar input:focus-visible, .toolbar select:focus-visible, .summary button:focus-visible { outline: 3px solid #3269dc; outline-offset: 3px; }
+.summary { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 14px; }
+.summary p { margin: 0; font-weight: 700; }
+.summary button { border: 0; background: transparent; color: #244fab; text-decoration: underline; padding: 10px; font: inherit; cursor: pointer; }
+.note { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 12px 0 22px; }
