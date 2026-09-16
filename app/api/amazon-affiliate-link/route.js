@@ -23,6 +23,11 @@ function normalizeInput(value) {
   }
 }
 
+function getAmazonProductId(url) {
+  const match = url.pathname.match(/\/(?:dp|gp\/product|gp\/aw\/d)\/([A-Z0-9]{10})(?:[/?]|$)/i);
+  return match?.[1]?.toUpperCase() || null;
+}
+
 export async function POST(request) {
   const { url } = await request.json().catch(() => ({}));
   const sourceUrl = normalizeInput(url);
@@ -58,7 +63,15 @@ export async function POST(request) {
     );
   }
 
+  const productId = getAmazonProductId(destination);
+  if (productId) {
+    return NextResponse.json({
+      url: `https://www.amazon.in/dp/${productId}?tag=${ASSOCIATE_TAG}`,
+    });
+  }
+
   destination.protocol = "https:";
+  destination.search = "";
   destination.searchParams.set("tag", ASSOCIATE_TAG);
   return NextResponse.json({ url: destination.toString() });
 }

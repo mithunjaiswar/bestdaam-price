@@ -59,7 +59,7 @@ export default function AmazonAffiliateLinkBuilder() {
       {error && <p className="affiliate-builder-error" role="alert">{error}</p>}
       {result && (
         <div className="affiliate-builder-result">
-          <p>Your link is ready with tracking tag <strong>bestdaam0a-21</strong>.</p>
+          <p>Your clean affiliate link is ready with tracking tag <strong>bestdaam0a-21</strong>.</p>
           <input aria-label="Generated affiliate link" readOnly value={result} />
           <div>
             <button className="share-btn copy" type="button" onClick={copyLink}>
