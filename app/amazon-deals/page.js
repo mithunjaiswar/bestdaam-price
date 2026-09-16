@@ -137,6 +137,15 @@ export default function AmazonDealsPage() {
         <Link href="/guides" className="text-link">Open buying guides →</Link>
       </section>
 
+      <section className="amazon-link-builder-cta">
+        <div>
+          <span className="landing-eyebrow">PriceVichar tool</span>
+          <h2>Already have an Amazon product link?</h2>
+          <p>Create your PriceVichar affiliate link in seconds.</p>
+        </div>
+        <Link href="/affiliate-link-builder" className="buy-btn">Open link builder →</Link>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListJsonLd) }}
