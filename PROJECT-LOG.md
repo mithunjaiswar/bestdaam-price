@@ -382,3 +382,10 @@
   live catalog products, shopping tips, metadata, ItemList schema and sitemap entries.
 - Added Telegram deal-channel links for repeat traffic and instant offer alerts.
 - Added a six-hour cloud health check covering the homepage, deals, robots and sitemap.
+### 2026-10-18 — Codex — Direct shopping recommendations and homepage repairs
+- Added /recommendations, a homepage section and a visible mobile Video picks navigation link. A dedicated recommendation feed keeps creator picks separate from the daily price catalog.
+- Added the supplied B0HFT1CZJH affiliate link (bestdaam0a-21); manually confirmed the Amazon product title as 19TH JULY JEWELS non-piercing hoop earrings. No static price, discount or availability claim is published.
+- Optimized the supplied Video Project.mp4 from 39 MB to about 2 MB; video loads only on demand, with a local preview image and AI-presenter disclosure.
+- Homepage now renders 24 catalog cards initially with Show more, preserves campaign parameters and anchor links, removes forced search focus, and avoids restoring scroll over a direct section link.
+- Use https://pricevichar.com/recommendations in Instagram bio / YouTube profile. Shorts description URLs are not clickable; social account settings were not changed.
+- Validation: catalog/search checks and production build passed. Browser checks confirmed the exact affiliate URL, 24 initial cards, expansion to 48, and 13 matches for iPhone 15. Existing unrelated local work remains untouched.

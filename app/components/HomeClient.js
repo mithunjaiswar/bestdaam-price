@@ -20,6 +20,7 @@ import DealGrid from "./DealGrid";
 import TrendingGrid from "./TrendingGrid";
 import SaveProductButton from "./SaveProductButton";
 import LatestOfferRail from "./LatestOfferRail";
+import Recommendations from "./Recommendations";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -137,6 +138,7 @@ export default function HomeClient({
   const [sortOrder, setSortOrder] = useState(initialSort);
   const [requestState, setRequestState] = useState("idle");
   const restoredScroll = useRef(false);
+  const [visibleCount, setVisibleCount] = useState(24);
 
   const categories = ["All", ...getCategories(products)];
   const categoryCounts = products.reduce((counts, product) => {
@@ -238,7 +240,8 @@ export default function HomeClient({
   const trendingProducts = getTrendingProducts(products, "week", 10);
 
   useEffect(() => {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(window.location.search);
+    ["q", "category", "group", "store", "budget", "sort"].forEach((key) => params.delete(key));
     const normalizedQuery = query.trim();
 
     if (normalizedQuery) {
@@ -263,8 +266,8 @@ export default function HomeClient({
       params.set("sort", selectedSort);
     }
 
-    const nextUrl = params.toString() ? `/?${params.toString()}` : "/";
-    const currentUrl = `${window.location.pathname}${window.location.search}`;
+    const nextUrl = `${params.toString() ? `/?${params.toString()}` : "/"}${window.location.hash}`;
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
 
     if (nextUrl !== currentUrl) {
       router.replace(nextUrl, { scroll: false });
@@ -280,11 +283,18 @@ export default function HomeClient({
   ]);
 
   useEffect(() => {
+    setVisibleCount(24);
+  }, [query, selectedBudget, selectedCategory, selectedCategoryGroup, selectedSort, selectedStore]);
+
+  useEffect(() => {
     if (restoredScroll.current) {
       return;
     }
 
     restoredScroll.current = true;
+    if (window.location.hash || window.sessionStorage.getItem("bestdaam-home-url") !== `${window.location.pathname}${window.location.search}`) {
+      return;
+    }
     const savedScroll = Number(
       window.sessionStorage.getItem("bestdaam-home-scroll")
     );
@@ -292,6 +302,9 @@ export default function HomeClient({
     if (!Number.isFinite(savedScroll) || savedScroll <= 0) {
       return;
     }
+
+    const savedCount = Number(window.sessionStorage.getItem("bestdaam-home-count"));
+    if (Number.isFinite(savedCount) && savedCount > 24) setVisibleCount(savedCount);
 
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
@@ -301,6 +314,7 @@ export default function HomeClient({
   }, []);
 
   function rememberHomePosition() {
+    window.sessionStorage.setItem("bestdaam-home-count", String(visibleCount));
     window.sessionStorage.setItem(
       "bestdaam-home-scroll",
       String(window.scrollY)
@@ -373,6 +387,7 @@ export default function HomeClient({
 
   return (
     <>
+      {!hasQuery && selectedCategory === "All" && selectedCategoryGroup === "all" && selectedStore === "All" && selectedBudget === "all" ? <Recommendations compact /> : null}
       <section className="hero">
         <div className="hero-eyebrow">
           <span className="status-dot" />
@@ -403,7 +418,7 @@ export default function HomeClient({
                 submitSearch();
               }
             }}
-            autoFocus
+            aria-label="Search products"
           />
           <button
             type="button"
@@ -728,7 +743,7 @@ export default function HomeClient({
         </div>
       ) : (
         <div className="grid">
-          {results.map((p) => (
+          {results.slice(0, visibleCount).map((p) => (
             <article key={p.id} className="card card-with-save">
               <SaveProductButton product={p} compact />
               <Link
@@ -784,6 +799,12 @@ export default function HomeClient({
           ))}
         </div>
       )}
+      {results.length > visibleCount && !missingProduct && !emptyStoreResults ? (
+        <div className="catalog-load-more">
+          <p>Showing {Math.min(visibleCount, results.length)} of {results.length} products</p>
+          <button type="button" className="secondary-btn" onClick={() => setVisibleCount((count) => count + 24)}>Show more products</button>
+        </div>
+      ) : null}
     </>
   );
 }

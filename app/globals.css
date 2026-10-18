@@ -24,6 +24,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.catalog-load-more { text-align: center; padding: 24px 0 40px; color: var(--muted); }
+.catalog-load-more button { cursor: pointer; min-height: 44px; }
+
 body {
   margin: 0;
   background:
@@ -2602,4 +2605,10 @@ main.container {
   .social-start-hero .secondary-btn {
     width: 100%;
   }
+}
+
+.header-nav { flex-wrap: wrap; gap: 16px; }
+@media (max-width: 640px) {
+  .header-nav { gap: 10px; }
+  .header-nav > a.recommendations-nav-link { display: inline-flex; color: var(--primary); }
 }

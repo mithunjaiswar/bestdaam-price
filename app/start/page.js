@@ -5,6 +5,7 @@ import { getTrendingProducts } from "../../lib/trending";
 import { BUYING_GUIDES } from "../../lib/guides";
 import TrendingGrid from "../components/TrendingGrid";
 import LatestOfferRail from "../components/LatestOfferRail";
+import Recommendations from "../components/Recommendations";
 
 export const revalidate = 600;
 
@@ -22,6 +23,7 @@ export default async function StartPage() {
 
   return (
     <>
+      <Recommendations compact />
       <section className="social-start-hero">
         <p className="landing-eyebrow">Seen PriceVichar on Instagram or YouTube?</p>
         <h1>Think before you buy.</h1>

@@ -76,6 +76,7 @@ export default function RootLayout({ children }) {
               </Link>
             </div>
             <nav className="header-nav" aria-label="Main navigation">
+              <Link href="/recommendations" className="recommendations-nav-link">Video picks</Link>
               <SavedProductsNav />
               <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
@@ -97,6 +98,7 @@ export default function RootLayout({ children }) {
         <footer className="site-footer">
           <div className="container">
             <nav className="footer-links">
+              <Link href="/recommendations">Recommended products</Link>
               <Link href="/about">About</Link>
               <Link href="/disclosure">Affiliate Disclosure</Link>
               <Link href="/privacy">Privacy Policy</Link>
