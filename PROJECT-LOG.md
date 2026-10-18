@@ -395,3 +395,6 @@
 - Replaced the AI-presenter/video card with the actual product image, description, seller-listed features, material, weight and dimensions. Removed hosted video and presenter poster assets from the site.
 - Added YouTube channel and Instagram profile links for external videos. No exact public post URLs were supplied; no specific reel URL is invented.
 - The direct shopping URL for this product is /recommendations/B0HFT1CZJH. Both collection and detail pages retain the supplied bestdaam0a-21 affiliate URL.
+
+### 2026-10-18 — Codex — Recommendations only inside their menu section
+- Removed recommendation cards from the homepage and Start here page at Mithun's request. Product recommendations remain accessible through the Recommended by PriceVichar menu entry and their direct collection/detail URLs.

@@ -20,7 +20,6 @@ import DealGrid from "./DealGrid";
 import TrendingGrid from "./TrendingGrid";
 import SaveProductButton from "./SaveProductButton";
 import LatestOfferRail from "./LatestOfferRail";
-import Recommendations from "./Recommendations";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -387,7 +386,6 @@ export default function HomeClient({
 
   return (
     <>
-      {!hasQuery && selectedCategory === "All" && selectedCategoryGroup === "all" && selectedStore === "All" && selectedBudget === "all" ? <Recommendations compact /> : null}
       <section className="hero">
         <div className="hero-eyebrow">
           <span className="status-dot" />
