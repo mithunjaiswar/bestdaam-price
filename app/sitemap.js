@@ -3,6 +3,7 @@ import { BUDGET_PAGES } from "../lib/deals";
 import { getCategories } from "../lib/helpers";
 import { slugify } from "../lib/slugs";
 import { BUYING_GUIDES } from "../lib/guides";
+import recommendations from "../data/recommendations.json";
 
 const BASE = "https://pricevichar.com";
 
@@ -36,5 +37,6 @@ export default async function sitemap() {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...budgetPages, ...categoryPages, ...guidePages, ...productPages];
+  const recommendationPages = recommendations.map((pick) => ({ url: `${BASE}/recommendations/${pick.id}` }));
+  return [...staticPages, ...recommendationPages, ...budgetPages, ...categoryPages, ...guidePages, ...productPages];
 }

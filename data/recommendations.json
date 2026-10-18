@@ -2,11 +2,15 @@
   {
     "id": "B0HFT1CZJH",
     "name": "Non-piercing hoop earrings",
+    "fullName": "Non Piercing Hoop Earrings for Men & Women | Spring Clip-On Ear Cuff",
     "brand": "19TH JULY JEWELS",
     "category": "Jewellery",
-    "description": "The spring clip-on earrings featured in our video. No ear piercing required. Check the exact style, size and current price on Amazon before ordering.",
+    "description": "Spring clip-on hoop earrings for men and women. Wear the hoop style without an ear piercing, with a simple clip-on fastening for everyday styling.",
     "affiliateUrl": "https://www.amazon.in/dp/B0HFT1CZJH?tag=bestdaam0a-21",
-    "video": "/recommendations/non-piercing-hoops.mp4",
-    "poster": "/recommendations/non-piercing-hoops.jpg"
+    "image": "https://m.media-amazon.com/images/I/41CqguoN1PL._SY695_.jpg",
+    "features": ["Non-piercing hoop design", "Spring clip-on fastening", "Suitable for men and women", "Electroplated finish"],
+    "specifications": {"Material": "Stainless steel", "Style": "Hoop / clip-on ear cuff", "Occasion": "Daily wear", "Item weight": "5 g", "Listed dimensions (L × W × H)": "25 × 30 × 25 mm", "Country of origin": "India", "Manufacturer": "19th July Jewels", "Amazon product ID": "B0HFT1CZJH"},
+    "youtubeUrl": "https://www.youtube.com/@pricevichar",
+    "instagramUrl": "https://www.instagram.com/pricevichar/"
   }
 ]

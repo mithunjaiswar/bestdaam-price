@@ -1,27 +1,43 @@
 .section { padding: 28px 0 32px; scroll-margin-top: 100px; }
-.heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; }
+.back { display: inline-block; color: var(--primary); margin-bottom: 20px; font-size: 14px; font-weight: 700; }
+.heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
 .heading h1, .heading h2 { margin: 4px 0 8px; color: var(--navy); font-size: clamp(26px, 4vw, 38px); letter-spacing: -.04em; line-height: 1.15; }
 .heading p { margin: 0; color: var(--muted); }
 .heading .eyebrow { color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
-.card { display: grid; grid-template-columns: minmax(180px, 280px) minmax(0, 1fr); align-items: center; overflow: hidden; background: white; border: 1px solid var(--line); border-radius: 24px; scroll-margin-top: 110px; }
-.media { position: relative; background: #edece8; }
-.media img, .media video { display: block; width: 100%; height: 360px; object-fit: cover; }
-.media video { object-fit: contain; background: #111; }
-.play { position: absolute; bottom: 16px; left: 16px; background: #fff; color: var(--navy); padding: 8px 14px; border-radius: 30px; font-weight: 800; font-size: 13px; }
-.copy { padding: 24px 32px; }
-.copy h2 { margin: 8px 0 12px; color: var(--navy); font-size: clamp(24px, 3vw, 32px); line-height: 1.2; }
+.products { display: grid; gap: 24px; }
+.card { display: grid; grid-template-columns: minmax(220px, 32%) minmax(0, 1fr); align-items: center; overflow: hidden; background: white; border: 1px solid var(--line); border-radius: 20px; scroll-margin-top: 110px; }
+.detail { grid-template-columns: minmax(260px, 44%) minmax(0, 1fr); }
+.media { padding: 28px; background: #fff; }
+.media img { display: block; width: 100%; height: 280px; object-fit: contain; }
+.detail .media img { height: 400px; }
+.copy { padding: 28px; }
+.copy h2 { margin: 8px 0 12px; color: var(--navy); font-size: clamp(23px, 2.4vw, 30px); line-height: 1.25; }
+.copy h2 a:hover { color: var(--primary); }
 .copy p { color: var(--ink-soft); margin: 12px 0; }
 .badge { display: inline-block; background: var(--accent-soft); color: #08714c; padding: 5px 10px; border-radius: 8px; font-weight: 800; font-size: 12px; }
 .copy .brand { font-size: 11px; letter-spacing: .1em; font-weight: 800; margin: 18px 0 0; }
-.buy { margin-top: 8px; text-align: center; }
-.copy .note, .disclosure { font-size: 12px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 20px; }
+.buy { text-align: center; }
+.copy .note, .note, .disclosure { font-size: 12px; color: var(--muted); }
 .disclosure a { text-decoration: underline; }
+.features { padding-left: 20px; color: var(--ink-soft); font-size: 14px; }
+.features li { margin-bottom: 5px; }
+.social { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 16px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; }
+.social span { color: var(--muted); }
+.social a { color: var(--primary); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.specs { grid-column: 1 / -1; border-top: 1px solid var(--line); padding: 24px 28px; }
+.specs h2 { margin: 0 0 16px; }
+.specs dl { margin: 0; max-width: 800px; }
+.specs dl > div { display: grid; grid-template-columns: minmax(140px, 1fr) 2fr; gap: 16px; border-bottom: 1px solid var(--line); padding: 12px 0; font-size: 14px; }
+.specs dt { font-weight: 700; color: var(--ink-soft); }
+.specs dd { margin: 0; }
 @media (max-width: 640px) {
   .section { padding-top: 22px; }
   .heading { align-items: flex-start; flex-direction: column; }
-  .card { grid-template-columns: 1fr; border-radius: 18px; }
-  .media img, .media video { height: 230px; }
-  .media img { object-position: center 65%; }
-  .copy { padding: 20px; }
-  .buy { display: flex; width: 100%; min-height: 48px; justify-content: center; }
+  .card, .detail { grid-template-columns: 1fr; border-radius: 18px; }
+  .media { padding: 20px; }
+  .media img, .detail .media img { height: 240px; }
+  .copy, .specs { padding: 20px; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .actions a { display: flex; min-height: 48px; justify-content: center; text-align: center; }
 }

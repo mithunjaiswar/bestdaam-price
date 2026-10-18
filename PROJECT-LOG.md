@@ -389,3 +389,9 @@
 - Homepage now renders 24 catalog cards initially with Show more, preserves campaign parameters and anchor links, removes forced search focus, and avoids restoring scroll over a direct section link.
 - Use https://pricevichar.com/recommendations in Instagram bio / YouTube profile. Shorts description URLs are not clickable; social account settings were not changed.
 - Validation: catalog/search checks and production build passed. Browser checks confirmed the exact affiliate URL, 24 initial cards, expansion to 48, and 13 matches for iPhone 15. Existing unrelated local work remains untouched.
+
+### 2026-10-18 — Codex — Product-first recommendation correction
+- Renamed the main navigation entry to Recommended by PriceVichar as requested. The recommendations collection lists product photos and links to dedicated detail pages.
+- Replaced the AI-presenter/video card with the actual product image, description, seller-listed features, material, weight and dimensions. Removed hosted video and presenter poster assets from the site.
+- Added YouTube channel and Instagram profile links for external videos. No exact public post URLs were supplied; no specific reel URL is invented.
+- The direct shopping URL for this product is /recommendations/B0HFT1CZJH. Both collection and detail pages retain the supplied bestdaam0a-21 affiliate URL.

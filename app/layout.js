@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
               </Link>
             </div>
             <nav className="header-nav" aria-label="Main navigation">
-              <Link href="/recommendations" className="recommendations-nav-link">Video picks</Link>
+              <Link href="/recommendations" className="recommendations-nav-link">Recommended by PriceVichar</Link>
               <SavedProductsNav />
               <Link href="/trending">Trending</Link>
               <Link href="/deals">Today&apos;s deals</Link>
