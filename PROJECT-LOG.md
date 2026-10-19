@@ -398,3 +398,8 @@
 
 ### 2026-10-18 — Codex — Recommendations only inside their menu section
 - Removed recommendation cards from the homepage and Start here page at Mithun's request. Product recommendations remain accessible through the Recommended by PriceVichar menu entry and their direct collection/detail URLs.
+
+### 2026-10-19 — Codex — Recommendation cards styled like the supplied Trending section
+- Updated only the dedicated recommendations collection to a rounded, lightly tinted panel with horizontal, snap-aligned vertical product cards, large product imagery, category/name, current-price link and direct details/buy actions.
+- Added rail controls when multiple real recommendations exist. The current supplied earrings remain the only pick; no placeholder products, ratings or prices were invented.
+- Full product details and social links remain on the existing detail page. Homepage and Start here still show no recommendation section.

@@ -31,6 +31,26 @@
 .specs dl > div { display: grid; grid-template-columns: minmax(140px, 1fr) 2fr; gap: 16px; border-bottom: 1px solid var(--line); padding: 12px 0; font-size: 14px; }
 .specs dt { font-weight: 700; color: var(--ink-soft); }
 .specs dd { margin: 0; }
+.collection { margin: 28px 0 40px; padding: 30px; border: 1px solid #dedaff; border-radius: 28px; background: radial-gradient(ellipse at top right, #eeeaff 0%, transparent 58%), #fff; }
+.collection .heading h1, .collection .heading h2 { font-size: clamp(26px, 3.5vw, 38px); margin: 10px 0 14px; }
+.collection .products { display: flex; align-items: stretch; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding: 4px 2px 18px; scrollbar-width: thin; scrollbar-color: #bec8ec transparent; }
+.collection .card { display: flex; flex-direction: column; align-items: stretch; flex: 0 0 280px; max-width: 100%; border-radius: 22px; scroll-snap-align: start; box-shadow: 0 4px 18px rgba(16,24,40,.04); transition: border-color .2s, box-shadow .2s; }
+.collection .card:hover { border-color: #bac9ff; box-shadow: 0 8px 24px rgba(36,87,230,.08); }
+.collection .media { position: relative; overflow: hidden; margin: 14px 14px 0; padding: 12px; background: #f7f8fc; border: 1px solid #eef0f6; border-radius: 18px; }
+.collection .media img { height: 235px; mix-blend-mode: multiply; transform: scale(1.6); }
+.pickLabel { position: absolute; z-index: 1; top: 10px; left: 10px; border-radius: 20px; padding: 5px 10px; background: var(--navy); color: white; font-size: 10px; font-weight: 800; pointer-events: none; }
+.collection .copy { display: flex; flex: 1; flex-direction: column; padding: 18px; }
+.collection .badge { padding: 0; color: var(--primary); background: none; text-transform: uppercase; letter-spacing: .04em; font-size: 11px; }
+.collection .copy .brand { margin: 10px 0 0; font-size: 10px; letter-spacing: .04em; }
+.collection .copy h2 { font-size: 20px; letter-spacing: -.035em; margin: 8px 0 10px; }
+.collection .copy > p:not(.brand):not(.note):not(.priceHint) { font-size: 13px; margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.collection .copy .priceHint { margin: auto 0 0; padding-top: 12px; color: #08714c; font-weight: 800; font-size: 19px; }
+.priceHint span { display: block; color: var(--muted); font-weight: 500; font-size: 12px; }
+.collection .actions { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 16px; }
+.collection .actions a { justify-content: center; text-align: center; font-size: 12px; min-height: 42px; }
+.collection .note { margin-bottom: 0; font-size: 11px; }
+.railControls { display: flex; gap: 8px; align-self: flex-end; }
+.railControls button { border: 1px solid var(--line); border-radius: 50%; background: white; width: 40px; height: 40px; color: var(--primary); cursor: pointer; }
 @media (max-width: 640px) {
   .section { padding-top: 22px; }
   .heading { align-items: flex-start; flex-direction: column; }
@@ -40,4 +60,9 @@
   .copy, .specs { padding: 20px; }
   .actions { flex-direction: column; align-items: stretch; }
   .actions a { display: flex; min-height: 48px; justify-content: center; text-align: center; }
+  .collection { padding: 20px 14px; margin: 20px 0 30px; border-radius: 22px; }
+  .collection .heading { gap: 12px; }
+  .collection .card { flex-basis: min(280px, 82vw); }
+  .collection .media img { height: 220px; }
+  .collection .railControls { align-self: flex-start; }
 }
