@@ -20,6 +20,7 @@ import DealGrid from "./DealGrid";
 import TrendingGrid from "./TrendingGrid";
 import SaveProductButton from "./SaveProductButton";
 import LatestOfferRail from "./LatestOfferRail";
+import Recommendations from "./Recommendations";
 
 const PRODUCT_REQUEST_URL =
   process.env.NEXT_PUBLIC_PRODUCT_REQUEST_URL ||
@@ -689,6 +690,8 @@ export default function HomeClient({
       selectedCategory === "All" &&
       selectedStore === "All" &&
       selectedBudget === "all" ? (
+        <>
+        <Recommendations compact />
         <section className="featured-deals-section trending-section homepage-slider-section">
           <div className="section-heading-row">
             <div>
@@ -704,6 +707,7 @@ export default function HomeClient({
           </div>
           <TrendingGrid products={trendingProducts} />
         </section>
+        </>
       ) : null}
 
       {!hasQuery &&

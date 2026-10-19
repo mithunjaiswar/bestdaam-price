@@ -403,3 +403,7 @@
 - Updated only the dedicated recommendations collection to a rounded, lightly tinted panel with horizontal, snap-aligned vertical product cards, large product imagery, category/name, current-price link and direct details/buy actions.
 - Added rail controls when multiple real recommendations exist. The current supplied earrings remain the only pick; no placeholder products, ratings or prices were invented.
 - Full product details and social links remain on the existing detail page. Homepage and Start here still show no recommendation section.
+
+### 2026-10-19 — Codex — Homepage recommendation slider requested
+- Mithun explicitly requested the slider on the main page, superseding the earlier homepage exclusion. Added the compact recommendation rail above Trending this week, with an All recommendations link and the existing product detail/buy destinations.
+- Kept the main search area first and retained dedicated recommendation/detail pages.
