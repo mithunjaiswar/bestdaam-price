@@ -27,11 +27,11 @@ export default function Recommendations({ compact = false, productId }) {
       </div>
       <div className={styles.products} ref={rail} role={!detailed ? "region" : undefined} aria-label={!detailed ? "Recommended products" : undefined} tabIndex={!detailed ? 0 : undefined}>
         {products.map((pick) => (
-          <article id={pick.id} className={`${styles.card} ${detailed ? styles.detail : ""}`} key={pick.id}>
+          <article id={pick.id} className={`${styles.card} ${detailed ? styles.detail : ""}`} key={pick.id} style={{"--product-image-scale": pick.imageScale || 1}}>
             <div className={styles.media}>
               {!detailed && <span className={styles.pickLabel}>PriceVichar pick</span>}
               <Link href={`/recommendations/${pick.id}`} aria-label={`View details for ${pick.name}`}>
-                <img src={pick.image} alt={`${pick.brand} stainless steel non-piercing hoop earrings`} width="600" height="600" referrerPolicy="no-referrer" />
+                <img src={pick.image} alt={`${pick.brand} ${pick.name}`} width="600" height="600" referrerPolicy="no-referrer" />
               </Link>
             </div>
             <div className={styles.copy}>

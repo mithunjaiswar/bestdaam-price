@@ -407,3 +407,8 @@
 ### 2026-10-19 — Codex — Homepage recommendation slider requested
 - Mithun explicitly requested the slider on the main page, superseding the earlier homepage exclusion. Added the compact recommendation rail above Trending this week, with an All recommendations link and the existing product detail/buy destinations.
 - Kept the main search area first and retained dedicated recommendation/detail pages.
+
+### 2026-10-19 — Codex — VEHTRI makeup bag recommendation
+- Added the supplied B09YD8LLKF product to the first position in recommendations and the homepage rail, with a dedicated /recommendations/B09YD8LLKF detail URL and clean Amazon affiliate URL using bestdaam0a-21.
+- Manually verified the Small variant, photo and seller-listed details on Amazon. Reviewed the supplied video for context; retained the requested photo/details presentation without embedding or uploading the video.
+- Made image descriptions and card image scaling product-specific so the new bag does not inherit the earrings label or zoom.
