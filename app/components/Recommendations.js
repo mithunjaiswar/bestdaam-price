@@ -59,6 +59,14 @@ export default function Recommendations({ compact = false, productId }) {
               <dl>{Object.entries(pick.specifications).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
               <p className={styles.note}>Details are based on the seller&apos;s listing. Confirm the exact size, finish and pack contents on Amazon.</p>
             </div>}
+            {detailed && pick.video && <div className={styles.productVideo}>
+              <h2>Watch the product video</h2>
+              <video controls playsInline preload="none" poster={pick.videoPoster} width="540" height="960" aria-label={`${pick.brand} ${pick.name} promotional video`}>
+                <source src={pick.video} type="video/mp4" />
+                Your browser does not support video playback.
+              </video>
+              <p className={styles.note}>AI-generated promotional video. Refer to the product photo and Amazon listing for exact packaging and details.</p>
+            </div>}
           </article>
         ))}
       </div>

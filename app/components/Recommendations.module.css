@@ -31,6 +31,9 @@
 .specs dl > div { display: grid; grid-template-columns: minmax(140px, 1fr) 2fr; gap: 16px; border-bottom: 1px solid var(--line); padding: 12px 0; font-size: 14px; }
 .specs dt { font-weight: 700; color: var(--ink-soft); }
 .specs dd { margin: 0; }
+.productVideo { grid-column: 1 / -1; border-top: 1px solid var(--line); padding: 24px 28px; }
+.productVideo h2 { margin: 0 0 16px; }
+.productVideo video { display: block; width: min(100%, 320px); height: auto; max-height: 540px; background: #111; border-radius: 16px; }
 .collection { margin: 28px 0 40px; padding: 30px; border: 1px solid #dedaff; border-radius: 28px; background: radial-gradient(ellipse at top right, #eeeaff 0%, transparent 58%), #fff; }
 .collection .heading h1, .collection .heading h2 { font-size: clamp(26px, 3.5vw, 38px); margin: 10px 0 14px; }
 .collection .products { display: flex; align-items: stretch; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding: 4px 2px 18px; scrollbar-width: thin; scrollbar-color: #bec8ec transparent; }

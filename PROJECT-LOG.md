@@ -412,3 +412,8 @@
 - Added the supplied B09YD8LLKF product to the first position in recommendations and the homepage rail, with a dedicated /recommendations/B09YD8LLKF detail URL and clean Amazon affiliate URL using bestdaam0a-21.
 - Manually verified the Small variant, photo and seller-listed details on Amazon. Reviewed the supplied video for context; retained the requested photo/details presentation without embedding or uploading the video.
 - Made image descriptions and card image scaling product-specific so the new bag does not inherit the earrings label or zoom.
+
+### 2026-10-24 — Codex — Vaseline Cocoa Radiant recommendation and supplied video
+- Added B0FQNVY42Q as the latest recommendation, including the homepage slider, a dedicated detail URL, real product photo and clean bestdaam0a-21 affiliate link.
+- Manually confirmed the Amazon variant: Vaseline Intensive Care Cocoa Radiant Body Oil, 200 ml. Published seller-attributed product details without a fixed price or discount claim.
+- User explicitly requested the supplied Video Project 2.mp4 on this product. Added an optimized video with manual playback only on its detail page, plus an AI promotional-video label. Other products and collection cards keep the photo/details presentation.
