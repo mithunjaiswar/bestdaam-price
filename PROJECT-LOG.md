@@ -417,3 +417,8 @@
 - Added B0FQNVY42Q as the latest recommendation, including the homepage slider, a dedicated detail URL, real product photo and clean bestdaam0a-21 affiliate link.
 - Manually confirmed the Amazon variant: Vaseline Intensive Care Cocoa Radiant Body Oil, 200 ml. Published seller-attributed product details without a fixed price or discount claim.
 - User explicitly requested the supplied Video Project 2.mp4 on this product. Added an optimized video with manual playback only on its detail page, plus an AI promotional-video label. Other products and collection cards keep the photo/details presentation.
+
+### 2026-10-26 — Codex — kahula lint remover recommendation
+- Added B0CRKQ2116 as the latest recommendation with a dedicated detail route and clean Amazon affiliate URL using bestdaam0a-21. Manually confirmed the Beige variant, product photo and seller-listed features.
+- Reviewed the supplied Video Project 4.mp4 for context. The user requested YouTube/Instagram links for this item, so no video was embedded or uploaded. Exact post URLs were requested; existing PriceVichar channel/profile links are the fallback.
+- Expanded the homepage rail from three to eight picks so adding this fourth recommendation does not remove an earlier product from the slider.

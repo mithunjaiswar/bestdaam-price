@@ -9,7 +9,7 @@ import styles from "./Recommendations.module.css";
 export default function Recommendations({ compact = false, productId }) {
   const detailed = Boolean(productId);
   const rail = useRef(null);
-  const products = detailed ? picks.filter((pick) => pick.id === productId) : compact ? picks.slice(0, 3) : picks;
+  const products = detailed ? picks.filter((pick) => pick.id === productId) : compact ? picks.slice(0, 8) : picks;
   return (
     <section id="recommendations" className={`${styles.section} ${!detailed ? styles.collection : ""}`} aria-labelledby="recommendations-title">
       {detailed ? <Link className={styles.back} href="/recommendations">← All recommendations</Link> : null}
