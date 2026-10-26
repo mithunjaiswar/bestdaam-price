@@ -422,3 +422,6 @@
 - Added B0CRKQ2116 as the latest recommendation with a dedicated detail route and clean Amazon affiliate URL using bestdaam0a-21. Manually confirmed the Beige variant, product photo and seller-listed features.
 - Reviewed the supplied Video Project 4.mp4 for context. The user requested YouTube/Instagram links for this item, so no video was embedded or uploaded. Exact post URLs were requested; existing PriceVichar channel/profile links are the fallback.
 - Expanded the homepage rail from three to eight picks so adding this fourth recommendation does not remove an earlier product from the slider.
+
+### 2026-10-26 — Codex — Exact lint remover social video links
+- Replaced the lint remover's fallback social profiles with Mithun's supplied YouTube Short ZzmwxrWs_5s and Instagram Reel De9eWiyoysJ. Removed share-tracking parameters from both URLs; other recommendations keep their existing links.
